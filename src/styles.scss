@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+$valholl: #00B3BF;
+
+@font-face {
+    font-family: "AncientRunes";
+    src: local("AncientRunes"), url(./app/assets/fonts/AncientRunes.ttf) format('truetype');
+    font-weight: 100 1000;
+}
+
+@font-face {
+    font-family: "AsgardianWars";
+    src: local("AsgardianWars"), url(./app/assets/fonts/AsgardianWars.ttf) format('truetype');
+    font-weight: 100 1000;
+}
+
+@font-face {
+    font-family: "SQUEEG";
+    src: local("SQUEEG"), url(./app/assets/fonts/SQUEEG.ttf) format('truetype');
+    font-weight: 100 1000;
+}
+
+@font-face {
+    font-family: "Tagesschrift";
+    src: local("Tagesschrift"), url(./app/assets/fonts/Tagesschrift.ttf) format('truetype');
+    font-weight: 100 1000;
+}
+
+@font-face {
+    font-family: "Zamolxis";
+    src: local("Zamolxis"), url(./app/assets/fonts/Zamolxis.ttf) format('truetype');
+    font-weight: 100 1000;
+}
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $valholl;
+    color: white;
+    font-family: 'Tagesschrift';
+
+    h1 {
+        // font-family: 'SQUEEG';
+        // font-family: 'AsgardianWars';
+        font-family: 'Zamolxis';
+    }
+
+    .runes {
+        font-family: 'AncientRunes';
+    }
+}

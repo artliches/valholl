@@ -1,0 +1,23 @@
+.zerk-layout {
+    display: grid;
+    place-items: center;
+
+    .zerk-header {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            font-size: 6rem;
+            margin: 0;
+            letter-spacing: 2rem;
+        }
+        .runes {
+            font-size: 1.5rem;
+        }
+        .subtitle {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+        }
+    }
+}
