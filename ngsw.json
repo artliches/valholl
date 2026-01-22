@@ -1,0 +1,81 @@
+{
+  "configVersion": 1,
+  "timestamp": 1769104906842,
+  "index": "/valholl/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/valholl/favicon.ico",
+        "/valholl/index.html",
+        "/valholl/main-2XIDKXII.js",
+        "/valholl/manifest.webmanifest",
+        "/valholl/styles-RGSL64YK.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/valholl/icons/android-chrome-192x192.png",
+        "/valholl/icons/android-chrome-512x512.png",
+        "/valholl/icons/apple-touch-icon.png",
+        "/valholl/icons/favicon-16x16.png",
+        "/valholl/icons/favicon-32x32.png",
+        "/valholl/media/AncientRunes-KBSVL2DR.ttf",
+        "/valholl/media/AsgardianWars-FGDKQTCT.ttf",
+        "/valholl/media/SQUEEG-7TKGBRGY.ttf",
+        "/valholl/media/Tagesschrift-BJ6BEKAC.ttf",
+        "/valholl/media/Zamolxis-SJZGQOHX.ttf"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/valholl/favicon.ico": "285ba3ae62f8bb691426bfddb7b1662b900f1a39",
+    "/valholl/icons/android-chrome-192x192.png": "0c22fefb9bc2e297d06bfac71f8391cd08fb47b2",
+    "/valholl/icons/android-chrome-512x512.png": "bd453cdce72fd39eea806009d27e21b97901336f",
+    "/valholl/icons/apple-touch-icon.png": "8efb43b4b4e94b2faabeb04087ecd183e888f46d",
+    "/valholl/icons/favicon-16x16.png": "fe85aad5abae056ca0a3a8b0da73c9bb82707828",
+    "/valholl/icons/favicon-32x32.png": "de1151d1ff28b1c27a69915c79a201dab796dcb8",
+    "/valholl/index.html": "9ccba2433d2e04fd0f708de2db0006e1c55bfb81",
+    "/valholl/main-2XIDKXII.js": "55f722fd65ad26b64e5616f0d27111efc11cb3db",
+    "/valholl/manifest.webmanifest": "8c3486121c5f68a5d4c75a4f4d88309fefe8fd93",
+    "/valholl/media/AncientRunes-KBSVL2DR.ttf": "bf42dc98cce1d0f9d4ecd40747b95b99168891c5",
+    "/valholl/media/AsgardianWars-FGDKQTCT.ttf": "521c689628204eb7f11c32b49c39de0086e87afe",
+    "/valholl/media/SQUEEG-7TKGBRGY.ttf": "28d4ef0ed8829e5a2155f460605f307ea6ecfeb7",
+    "/valholl/media/Tagesschrift-BJ6BEKAC.ttf": "aa160c977a0586cf93d84c2421ce6e0967632b2b",
+    "/valholl/media/Zamolxis-SJZGQOHX.ttf": "9ab539a9802ab7a76b10418f0c6786ff8588d193",
+    "/valholl/styles-RGSL64YK.css": "5988a93ca3d46e11ec677e671a9f80b45fe161fe"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
