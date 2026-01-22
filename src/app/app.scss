@@ -1,6 +1,13 @@
+@use './assets/colors';
+
 .zerk-layout {
     display: grid;
-    place-items: center;
+    height: 100vh;
+    place-items: start center;
+    grid-gap: 1rem;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
 
     .zerk-header {
         margin-top: 1rem;
@@ -8,16 +15,114 @@
         flex-direction: column;
         align-items: center;
         h1 {
-            font-size: 6rem;
+            font-size: 2rem;
             margin: 0;
-            letter-spacing: 2rem;
+            letter-spacing: 0.5rem;
         }
         .runes {
-            font-size: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
         }
         .subtitle {
-            margin-top: 1rem;
-            font-size: 1.5rem;
+            text-align: center;
+            // margin-top: 1rem;
+            font-size: 0.9rem;
+            color: colors.$section-border-color;
         }
+    }
+    .zerk-body-layout {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "body";   
+        
+        .zerk-body {
+            grid-area: body;
+            .zerk-section {
+                border-top: 2px solid colors.$section-border-color;
+                border-bottom: 2px solid colors.$section-border-color;
+                padding: 0.5rem;
+            }
+        }
+    }
+    .zerk-footer {
+        padding-top: 0.5rem;
+        border-top: 2px solid colors.$section-border-color;
+        text-align: center;
+        font-size: 0.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+}
+
+//MEDIUM PHONE
+@media only screen and (min-width: 375px) {
+    .zerk-layout {
+        .zerk-header {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .runes {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+//LARGE PHONE
+@media only screen and (min-width: 425px) {
+    .zerk-layout {
+        .zerk-header {
+            h1 {
+                font-size: 3rem;
+            }
+            .runes {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+//TABLET
+@media only screen and (min-width: 768px) {
+    .zerk-layout {
+        .zerk-header {
+            h1 {
+                font-size: 5rem;
+                letter-spacing: 1rem;
+            }
+            .runes {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+//SMALL DESKTOP
+@media only screen and (min-width: 1024px) {
+        .zerk-layout {
+            .zerk-header {
+                h1 {
+                    font-size: 7rem;
+                    letter-spacing: 1rem;
+                }
+                .runes {
+                    font-size: 2.5rem;
+                }
+            }
+    }
+}
+
+//LARGE DESKTOP
+@media only screen and (min-width: 1440px) {
+    .zerk-layout {
+        .zerk-body-layout {
+            grid-template-columns: 1fr 65% 1fr;
+            grid-template-areas:
+                ".  body    .";
+        }        
     }
 }

@@ -1,4 +1,4 @@
-$valholl: #00B3BF;
+@use './app/assets/colors';
 
 @font-face {
     font-family: "AncientRunes";
@@ -30,6 +30,11 @@ $valholl: #00B3BF;
     font-weight: 100 1000;
 }
 
+::selection {
+    background-color: colors.$section-border-color;
+    color: white;
+}
+
 
 html, body {
     height: 100%;
@@ -39,7 +44,7 @@ html, body {
 }
 
 body {
-    background-color: $valholl;
+    background-color: colors.$valholl;
     color: white;
     font-family: 'Tagesschrift';
 
@@ -51,5 +56,35 @@ body {
 
     .runes {
         font-family: 'AncientRunes';
+    }
+
+    .clickable {
+        background-color: black;
+        color: colors.$valholl;
+        font-weight: bold;
+        padding: 0.25rem 0.1rem;
+        cursor: pointer;
+        user-select: none;
+
+        &:hover {
+            background-color: colors.$slightly-yellow;
+            color: black;
+        }
+
+        &:active {
+            background-color: black;
+            color: colors.$slightly-yellow;
+        }
+    }
+}
+
+.social-link {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    &:hover {
+        background-color: colors.$slightly-yellow;
+        color: black;
     }
 }
