@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1769104906842,
+  "timestamp": 1769195544065,
   "index": "/valholl/index.html",
   "assetGroups": [
     {
@@ -13,9 +13,9 @@
       "urls": [
         "/valholl/favicon.ico",
         "/valholl/index.html",
-        "/valholl/main-2XIDKXII.js",
+        "/valholl/main-HKPP6OKV.js",
         "/valholl/manifest.webmanifest",
-        "/valholl/styles-RGSL64YK.css"
+        "/valholl/styles-XZCIH6NN.css"
       ],
       "patterns": []
     },
@@ -49,15 +49,15 @@
     "/valholl/icons/apple-touch-icon.png": "8efb43b4b4e94b2faabeb04087ecd183e888f46d",
     "/valholl/icons/favicon-16x16.png": "fe85aad5abae056ca0a3a8b0da73c9bb82707828",
     "/valholl/icons/favicon-32x32.png": "de1151d1ff28b1c27a69915c79a201dab796dcb8",
-    "/valholl/index.html": "9ccba2433d2e04fd0f708de2db0006e1c55bfb81",
-    "/valholl/main-2XIDKXII.js": "55f722fd65ad26b64e5616f0d27111efc11cb3db",
+    "/valholl/index.html": "a5d655ae2e97e15f0913b6edee0c1b66073a529c",
+    "/valholl/main-HKPP6OKV.js": "af9961c1dbf4f34f35dcc5768c5843ee6afa3c2a",
     "/valholl/manifest.webmanifest": "8c3486121c5f68a5d4c75a4f4d88309fefe8fd93",
     "/valholl/media/AncientRunes-KBSVL2DR.ttf": "bf42dc98cce1d0f9d4ecd40747b95b99168891c5",
     "/valholl/media/AsgardianWars-FGDKQTCT.ttf": "521c689628204eb7f11c32b49c39de0086e87afe",
     "/valholl/media/SQUEEG-7TKGBRGY.ttf": "28d4ef0ed8829e5a2155f460605f307ea6ecfeb7",
     "/valholl/media/Tagesschrift-BJ6BEKAC.ttf": "aa160c977a0586cf93d84c2421ce6e0967632b2b",
     "/valholl/media/Zamolxis-SJZGQOHX.ttf": "9ab539a9802ab7a76b10418f0c6786ff8588d193",
-    "/valholl/styles-RGSL64YK.css": "5988a93ca3d46e11ec677e671a9f80b45fe161fe"
+    "/valholl/styles-XZCIH6NN.css": "2621d589329072806ebe742435363cdf7934cdec"
   },
   "navigationUrls": [
     {
