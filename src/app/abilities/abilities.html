@@ -1,21 +1,23 @@
 <div class="abilities-layout">
-    <span class="section-header">
-        <h2 (click)="rerollAllAbilities()" class="clickable">ABILITIES</h2>
-    </span>
-    <span class="section-body">
-        <span class="abilities-layout">
-            @for (ability of abilitiesArray; track $index) {
-                <div class="ability-layout">
-                    <div class="clickable">{{ ability.name | uppercase }}</div>
-                    <span class="descrip">{{ ability.descrip }}</span>
-                    <span class="value">
-                        @if (ability.value === 0) {
-                            ±
-                        }
-                        {{ ability.value }}
-                    </span>
-                </div>
-            }
+    <div class="section-border">
+        <span class="section-header">
+            <h2 (click)="rerollAllAbilities()" class="clickable">ABILITIES</h2>
         </span>
-    </span>
+        <span class="section-body">
+            <span class="abilities-layout">
+                @for (ability of abilitiesArray; track $index) {
+                    <div class="ability-layout">
+                        <div class="clickable">{{ ability.name | uppercase }}</div>
+                        <span class="descrip">{{ ability.descrip }}</span>
+                        <span class="value">
+                            @if (ability.value === 0) {
+                                ±
+                            }
+                            {{ ability.value }}
+                        </span>
+                    </div>
+                }
+            </span>
+        </span>
+    </div>
 </div>

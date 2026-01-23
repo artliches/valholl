@@ -4,13 +4,12 @@
     display: grid;
     height: 100vh;
     place-items: start center;
-    grid-gap: 1rem;
 
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
 
     .zerk-header {
-        margin-top: 1rem;
+        margin: 1rem 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -25,7 +24,6 @@
         }
         .subtitle {
             text-align: center;
-            // margin-top: 1rem;
             font-size: 0.9rem;
             color: colors.$section-border-color;
         }
@@ -41,7 +39,6 @@
             grid-area: body;
             >div {
                 border-top: 1px solid colors.$section-border-color;
-                padding: 0.5rem 0;
                 &:first-of-type {
                     border-width: 2px;
                 }
@@ -134,7 +131,6 @@
                     }
                     .identity {
                         grid-area: identity;
-                        padding-right: 0.5rem;
                         border-right: 1px solid colors.$section-border-color;
                     }
                 }

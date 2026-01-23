@@ -70,6 +70,7 @@ body {
         padding: 0.25rem 0.1rem;
         cursor: pointer;
         user-select: none;
+        width: max-content;
 
         &:hover {
             background-color: colors.$slightly-yellow;
