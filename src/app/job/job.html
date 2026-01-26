@@ -1,0 +1,21 @@
+<div class="job-layout">
+    <div class="section-border">
+        <div class="section-header">
+            <h2 class="clickable">{{ jobObj.name | uppercase }}</h2>
+        </div>
+        <div class="section-body">
+            <div class="descrip-section">
+                <em><span [innerHTML]="jobObj.descrip"></span></em>
+            </div>
+
+            <div class="special-section">
+                <span [innerHTML]="jobObj.special"></span>
+            </div>
+
+            <div class="features-section">
+                <div (click)="rerollFeature()" class="clickable">{{ chosenFeature.title | uppercase}}</div>
+                <div><span [innerHTML]="chosenFeature.descrip"></span></div>
+            </div>
+        </div>
+    </div>
+</div>

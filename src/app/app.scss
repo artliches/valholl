@@ -38,7 +38,7 @@
         .zerk-body {
             grid-area: body;
             >div {
-                border-top: 1px solid colors.$section-border-color;
+                border-top: 2px solid colors.$section-border-color;
                 &:first-of-type {
                     border-width: 2px;
                 }
@@ -121,10 +121,10 @@
                 .zerk-body {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
-                    grid-auto-rows: min-content;
+                    grid-auto-rows: max-content;
                     grid-template-areas:
                         "abilities      abilities"
-                        "identity       .";
+                        "identity       job";
 
                     .abilities {
                         grid-area: abilities;
@@ -132,6 +132,10 @@
                     .identity {
                         grid-area: identity;
                         border-right: 1px solid colors.$section-border-color;
+                    }
+                    .job {
+                        grid-area: job;
+                        border-left: 1px solid colors.$section-border-color;
                     }
                 }
             }

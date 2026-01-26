@@ -178,3 +178,64 @@ export const BELIEFS = [
     `Iron is your shield. You carry a small iron nail, always with you, a touch of metal that protects you from curses and the dark magic that threatens to wrap around your soul.`,
     `Scars aren’t just marks on your skin; they’re spirits that linger, watching over you, protecting you from the dangers yet to come.`,
 ];
+
+export const JOBS = [
+    //MIDGARDS BERSERKERS
+    {
+        name: `Midgard's Berserkers`,
+        descrip: `Berserkrs, hailing from the wild and untamed lands of Midgard, are <strong>legendary warriors</strong> feared across
+        the Nine Realms for their unmatched ferocity in battle. They fight with the <strong>strength of the gods</strong> and the
+        <strong>fury of wild beasts</strong>, driven by an inner rage that ignites in the heat of combat.
+        Berserkrs are known to <strong>charge headfirst into the thick of battle</strong>, their war cries echoing across the
+        battlefield, <strong>shrugging off wounds that would fell lesser men</strong>.`,
+        stats: {
+            fortitude: 4,
+            might: 5,
+            guile: 2,
+            swift: 3,
+            wits: 1,
+            hp: 10,
+            fates: 2,
+        },
+        special: `<strong class="underline">WRATH OF MAN:</strong> If you deliver the final blow to an enemy you heal 1HP.`,
+        features: [
+            {
+                title: `Wyrd of the Wolf-Skin`,
+                descrip: `
+                <strong>Once per day</strong>, you can enter a trance that blurs the line between man and beast, lasting for <strong>d6 rounds</strong>. <p>In this state, you are granted a <strong>+2 to attacks</strong> and can <strong>track enemies by scent</strong>.</p> <p><strong>When the trance ends</strong>, Test <strong>Wits DR14</strong>. <p><strong class="underline">On a failure</strong>, the lingering spirit of the wolf compels you to <strong>lash out at the nearest being</strong>, driven by a hunger beyond conscious discernment.</p>`
+            },
+
+            {
+                title: `Iron Vigor`,
+                descrip: `
+                The iron within your blood fortifies your will, mingling with the essence of your fallen foes. <p><strong>When you drink the blood of a defeated enemy</strong>, taking a <em>full round</em> to do so, you <strong>recover d6HP</strong> and do <strong>double damage on your next attack</strong>.</p> <p>But blood is a double-edged sword—<em>if your enemy’s blood was tainted</em>, Test <strong>Fortitude DR12</strong>.</p> <p><strong class="underline">On a failure</strong>, you are afflicted with a raging fever.</p>`
+            },
+            {
+                title: `Storm of the Aesir`,
+                descrip: `
+                Your rage summons the fury of the storm, a tempest that crackles around your weapon. <p><strong class="underline">Once per battle</strong>, after a successful attack, you can call upon this power, causing your <strong>attack to deal an additional d6 lightning damage</strong>.</p>`
+            },
+            {
+                title: `Oath to the Ancestors`,
+                descrip: `
+                You are bound by blood to your ancestors—their eyes are ever upon you, judging your every deed. <p><strong class="underline">Once per session</strong>, you can call upon their aid, allowing you to <strong>reroll any failed attack or defence</strong>.</p>`
+            },
+            {
+                title: `Berserkr's Toll`,
+                descrip: `
+                Pain becomes your ally, each battle etching its mark upon your body and soul. <p><strong class="underline">After taking damage</strong>, you can choose to channel your suffering into raw power. <strong>For every 3HP lost</strong>, you gain a <strong>+1 bonus to damage rolls for the remainder of the battle</strong>.</p>`
+            },
+            {
+                title: `Blood Eagle Ritual`,
+                descrip: `
+                In the most desperate of moments you invoke the ancient, dreaded Blood Eagle, a ritual that demands both time and soul. <p>This gruesome act takes a <strong>full round</strong> and can only be performed <strong class="underline">once per session</strong>. <strong>Your next attack automatically hits</strong>, dealing <strong>maximum damage</strong> as the gods momentarily favour your brutality.</p> <p>But this act leaves a mark on you—Test <strong>Might DR14</strong> at the end of the session.</p> <p><strong class="underline">On a failure</strong>, the spirit of the slain haunts you, bringing nightmares and a <strong>−1 penalty to all rolls</strong> until the spirit is appeased through sacrafice or ritual.</p>`
+            },
+        ],
+        startingEquipment: [
+            `<strong>Heavy War-Axe</strong> <em>(d8 damage)</em>`,
+            `1d4 food`,
+            `1d4 water`,
+            `2d6x10‡ Trinkets`,
+        ],
+    }
+];

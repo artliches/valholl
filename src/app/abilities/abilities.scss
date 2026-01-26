@@ -1,7 +1,6 @@
 @use '../assets/colors';
 
 .abilities-layout {
-    background-color: colors.$section-border-color;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content 1fr;
