@@ -5,7 +5,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: min-content 1fr;
     .section-border {
-        background-color: colors.$valholl;
         padding: 0.1rem 0.1rem 0.3rem 0.1rem;
         border-radius: 5px;
         display: grid;
@@ -14,10 +13,16 @@
         }
         .section-body {
             .abilities-layout {
-                background-color: colors.$valholl;
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
+                .stats-layout {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    &:last-of-type {
+                        border-top: 2px dotted colors.$section-border-color;
+                        margin-top: 0.5rem;
+                        padding-top: 0.5rem;
+                    }
+                }
 
                 .ability-layout {
                     display: grid;
@@ -64,9 +69,11 @@
             padding: 0.5rem;
             .section-body {
                 .abilities-layout {
-                    flex-direction: unset;
-                    flex-flow: wrap;
-                    justify-content: space-evenly;
+                    .stats-layout {
+                        flex-direction: unset;
+                        flex-flow: wrap;
+                        justify-content: space-evenly;
+                    }
                 }
             }
         }

@@ -13,6 +13,7 @@ export interface JobObj {
     special: string,
     features: FeaturesObj[],
     startingEquipment: string[],
+    trinkets: string,
 };
 
 export interface StatsObj {

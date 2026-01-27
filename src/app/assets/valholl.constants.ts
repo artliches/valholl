@@ -235,8 +235,8 @@ export const JOBS = [
             `<strong>Heavy War-Axe</strong> <em>(d8 damage)</em>`,
             `1d4 food`,
             `1d4 water`,
-            `2d6x10‡ Trinkets`,
         ],
+        trinkets: `2d6x10`,
     },
     // Asgard’s Valkyrie
     {
@@ -315,8 +315,8 @@ export const JOBS = [
             `Sword of the Valkyrie (d8 damage).`,
             `d4 food`,
             `d4 water.`,
-            `3d6x10‡ Trinkets`,
         ],
+        trinkets: `3d6x10`,
     },
 ];
 

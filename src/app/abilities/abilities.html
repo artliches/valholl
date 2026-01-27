@@ -1,27 +1,64 @@
 <div class="abilities-layout">
     <div class="section-border">
         <span class="section-header">
-            <h2 (click)="rerollAllAbilities()" class="clickable">ABILITIES</h2>
+            <h2 (click)="rerollAllAbilities(); rerollFates(); rerollTrinkets();" class="clickable">ABILITIES</h2>
         </span>
         <span class="section-body">
             <span class="abilities-layout">
-                @for (ability of abilitiesArray; track $index) {
-                    <div class="ability-layout">
-                        <div (click)="rerollAbility(ability)" class="clickable">{{ ability.name | uppercase }}</div>
-                        <span class="descrip">{{ ability.descrip }}</span>
-                        <span class="value">
-                            @if (ability.value === 0) {
-                                ±
+                <div class="stats-layout">
+                    @for (ability of abilitiesArray; track $index) {
+                        <div class="ability-layout">
+                            <div (click)="rerollAbility(ability)" class="clickable">{{ ability.name | uppercase }}</div>
+                            <span class="descrip">{{ ability.descrip }}</span>
+                            <span class="value">
+                                @if (ability.value === 0) {
+                                    ±
+                                }
+                                {{ ability.value }}
+                            </span>
+                            @if (showRolls) {
+                                <span class="rolled-die">
+                                    <em>[{{ ability.rolledDie }}] + {{ ability.modifier }}</em>
+                                </span>
                             }
-                            {{ ability.value }}
+                        </div>
+                    }  
+                </div>
+                <div class="stats-layout">
+                    <div class="ability-layout">
+                        <div (click)="rollHP()" class="clickable">HP</div>
+                        <span class="descrip">
+                            <div>0: <span class="underline">Broken</span></div>
+                            <div>Negative: <strong>DEAD</strong></div>
                         </span>
+                        <span class="value">{{ hpObj.value }}</span>
                         @if (showRolls) {
                             <span class="rolled-die">
-                                <em>[{{ ability.rolledDie }}] + {{ ability.modifier }}</em>
+                                <em>[ {{hpObj.rolledDie[0]}} {{hpObj.modifier >= 0 ? '+' : '' }} {{hpObj.modifier}} ]</em>
                             </span>
                         }
                     </div>
-                }
+                    <div class="ability-layout">
+                        <div (click)="rerollFates()" class="clickable">FATES</div>
+                        <span class="descrip">
+                           Blessings or curses woven into your life by the <strong>Norns</strong>.
+                        </span>
+                        <span class="value">{{ fates }} (d{{ statsObj.fates }})</span>
+                    </div>
+
+                    <div class="ability-layout">
+                        <div (click)="rerollTrinkets()" class="clickable">TRINKETS</div>
+                        <span class="descrip">
+                           Worthless to the dead.
+                        </span>
+                        <span class="value">{{ trinketsObj.value }} ‡</span>
+                        @if (showRolls) {
+                            <span class="rolled-die">
+                                <em>[ {{ trinketsObj.rolledSum }} x {{ trinketsObj.multipiler }} ]</em>
+                            </span>
+                        }
+                    </div>
+                </div>
             </span>
         </span>
     </div>

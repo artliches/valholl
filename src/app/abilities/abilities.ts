@@ -55,18 +55,70 @@ export class Abilities implements OnInit, OnChanges {
     }
   ];
   statsObj: StatsObj = {} as StatsObj;
+  hpObj: any = {
+    value: 0,
+    rolledDie: [],
+    modifier: 0,
+  };
+
+  fates: number = 0;
+
+  trinketsObj: any = {
+    value: 0,
+    rolledSum: 0,
+    rawString: '',
+    numDie: 0,
+    dieSize: 0,
+    multipiler: 0,
+  };
 
   ngOnInit(): void {
-      // this.rerollAllAbilities();
+      // this.rerollAllAbilities(); ‡
   }
 
   ngOnChanges(changes: SimpleChanges): void {
       if (changes && changes['currentJob']) {
         const currJob = changes['currentJob'];
         this.statsObj = currJob.currentValue.stats;
+        this.trinketsObj.rawString = currJob.currentValue.trinkets;
 
         this.rerollAllAbilities();
+        this.rollHP();
+        this.rerollFates();
+        this.rollTrinkets();
       }
+  }
+
+  private rollTrinkets() {
+    const indexOfD = this.trinketsObj.rawString.indexOf('d');
+    const indexOfX = this.trinketsObj.rawString.indexOf('x');
+
+    this.trinketsObj.numDie = Number(this.trinketsObj.rawString.slice(0, indexOfD));
+    this.trinketsObj.dieSize = Number(this.trinketsObj.rawString.slice(indexOfD + 1, indexOfX));
+    this.trinketsObj.multipiler = Number(this.trinketsObj.rawString.slice(indexOfX + 1));
+
+    this.rerollTrinkets();
+  }
+
+  rerollTrinkets() {
+    this.trinketsObj.rolledSum = this.randomNumberService.rollMultipleDie(
+      this.trinketsObj.numDie, this.trinketsObj.dieSize
+    );
+
+    this.trinketsObj.value = this.trinketsObj.rolledSum * this.trinketsObj.multipiler;
+  }
+
+  rerollFates() {
+    this.fates = this.randomNumberService.getRandomNumber(1, this.statsObj.fates);
+  }
+
+  rollHP() {
+    this.hpObj.rolledDie = [];
+    this.hpObj.value = 0;
+
+    this.hpObj.rolledDie.push(this.randomNumberService.getRandomNumber(1, this.statsObj.hp));
+    this.hpObj.modifier = this.abilitiesArray.find(ability => ability.name === 'fortitude')?.value;
+    this.hpObj.value = this.hpObj.rolledDie[0] + this.hpObj.modifier >= 1 ? this.hpObj.rolledDie[0] + this.hpObj.modifier : 1;
   }
 
   rerollAllAbilities() {
@@ -87,6 +139,10 @@ export class Abilities implements OnInit, OnChanges {
 
     let rawNumber = ability.rolledDie.reduce(this.reducerFunction, 0) + ability.modifier;    
     this.convertRawNumberToAbilityMod(rawNumber, ability);
+
+    if (ability.name === 'fortitude') {
+      this.rollHP();
+    }
   }
 
   private reducerFunction(partialSum: number, currValue: number) {
