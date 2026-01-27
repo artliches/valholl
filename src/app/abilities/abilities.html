@@ -1,14 +1,14 @@
 <div class="abilities-layout">
     <div class="section-border">
         <span class="section-header">
-            <h2 (click)="rerollAllAbilities(); rerollFates(); rerollTrinkets();" class="clickable">ABILITIES</h2>
+            <h2 (click)="rerollAllAbilities(); rollHP(); rerollFates(); rerollTrinkets();" class="clickable">ABILITIES</h2>
         </span>
         <span class="section-body">
             <span class="abilities-layout">
                 <div class="stats-layout">
                     @for (ability of abilitiesArray; track $index) {
                         <div class="ability-layout">
-                            <div (click)="rerollAbility(ability)" class="clickable">{{ ability.name | uppercase }}</div>
+                            <div (click)="rerollAbility(ability, false)" class="clickable">{{ ability.name | uppercase }}</div>
                             <span class="descrip">{{ ability.descrip }}</span>
                             <span class="value">
                                 @if (ability.value === 0) {

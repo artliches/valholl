@@ -125,11 +125,11 @@ export class Abilities implements OnInit, OnChanges {
     this.abilitiesArray.forEach(ability => {
       ability.modifier = this.statsObj[ability.name as keyof typeof this.statsObj];
 
-      this.rerollAbility(ability);
+      this.rerollAbility(ability, true);
     });
   }
 
-  rerollAbility(ability: AbilityObj) {
+  rerollAbility(ability: AbilityObj, rerollAll: boolean) {
     ability.rolledDie = [];
     ability.value = 0;
 
@@ -140,8 +140,9 @@ export class Abilities implements OnInit, OnChanges {
     let rawNumber = ability.rolledDie.reduce(this.reducerFunction, 0) + ability.modifier;    
     this.convertRawNumberToAbilityMod(rawNumber, ability);
 
-    if (ability.name === 'fortitude') {
-      this.rollHP();
+    if (ability.name === 'fortitude' && !rerollAll) {
+      this.hpObj.modifier = ability.value;
+      this.hpObj.value = this.hpObj.rolledDie[0] + this.hpObj.modifier;
     }
   }
 
