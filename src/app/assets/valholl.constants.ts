@@ -237,5 +237,107 @@ export const JOBS = [
             `1d4 water`,
             `2d6x10‡ Trinkets`,
         ],
-    }
+    },
+    // Asgard’s Valkyrie
+    {
+        name: `Asgard’s Valkyrie`,
+        descrip: `<p>
+            Selected by <strong>Odin</strong> himself, the Valkyries are warrior maidens who move with the <strong>grace of a tempest</strong> and
+            the <strong>inevitability of fate</strong>.
+        </p>
+        <p>
+            Tasked with carrying the souls of the fallen to Valhalla, they stand as both <strong>guide</strong>
+            and <strong>guardian</strong>, walking the razor’s edge between life and death.
+        </p>
+        <p>
+            Trained in the sacred arts of battle and blessed with the Allfather’s divine magic, the Valkyries command
+            awe, their presence as <strong>ominous as the storm clouds that signal a coming reckoning</strong>.
+        </p>`,
+        stats: {
+            fortitude: 5,
+            might: 4,
+            guile: 1,
+            swift: 3,
+            wits: 2,
+            hp: 8,
+            fates: 3,
+        },
+        special: `<strong class="underline">FLIGHT</strong>. You can fly. Roll <strong>d6</strong> at the <span class="underline">end of every round</span>. <strong class="underline">On a result of 1</strong>, you must land for <strong>d4 rounds</strong> to catch your breath.`,
+        features: [
+            {
+                title: `Eyes of the Fallen`,
+                descrip: `<strong class="underline">Once per day</strong>, you can peer into the soul of a creature, uncovering its deepest flaw, its greatest
+                weakness—<em>a truth it cannot hide</em>. <p>
+                    This revelation grants you a <strong>+2 bonus</strong> to attacks against that
+                    creature for the <strong class="underline">rest of the battle</strong>, striking with the precision of one who sees the end before it
+                    begins.
+                </p>`
+            },
+            {
+                title: `Wings of the Storm`,
+                descrip: `<strong class="underline">Once per day</strong>, ethereal wings unfurl, allowing you to take to the skies for <strong>d6 rounds</strong>. <p>
+                    Dive-bombing your enemies from above, your attacks gain a <strong>+2 bonus</strong>, each strike delivered with the force of a
+                    thunderclap, as if the sky itself has joined your battle.
+                </p>`
+            },
+            {
+                title: `Voice of the Chooser`,
+                descrip: `<strong class="underline">Once per battle</strong>, you can issue a command that must be obeyed.
+                <p><strong> Test Fortitude DR14</strong>.</p>
+                <p><strong class="underline">On a success</strong>, one enemy of your choice is compelled to <strong>follow your command for the next round</strong>— whether it’s to stand down, turn their weapon on an ally, or flee in terror.</p>`
+            },
+            {
+                title: `Spear of the Worthy`,
+                descrip: `<strong class="underline">Once per battle</strong>, when an ally is attacked, you can interpose your spear, infused with divine
+                protection. <p><strong>Test Fortitude DR14.</strong></p> 
+                <p><strong class="underline">On a success</strong>, the attack is <strong>completely negated</strong>, the force of the blow dissipating as if it had struck the unyielding will of the gods themselves.</p>`
+            },
+            {
+                title: `Raven's Favour`,
+                descrip: `<strong class="underline">Once per day</strong>, you can call upon raven spirits to scout ahead or relay information from afar.
+                <p>
+                    They reveal hidden dangers or secrets in the area, <strong>
+                        granting you and your allies advantage on
+                        your next Test
+                    </strong>. In their whispers, you hear the murmur of the world’s hidden truths, guiding you
+                    through the darkness.
+                </p>`
+            },
+            {
+                title: `Valhalla's Call`,
+                descrip: `<strong class="underline">Once per day</strong>, unleash a battle cry that reverberates with the spirit of fallen heroes.
+                <p>All allies that can hear you gain a <strong>+2 bonus to attacks</strong> for <strong>d6 rounds</strong>, their spirits lifted by the echo of Valhalla’s call, as if the very halls of the afterlife are cheering them on.</p>`
+            },
+        ],
+        startingEquipment: [
+            `A suit of Divine Armour (tier 4).`,
+            `Spear of the Valkyrie (d10 damage).`,
+            `Sword of the Valkyrie (d8 damage).`,
+            `d4 food`,
+            `d4 water.`,
+            `3d6x10‡ Trinkets`,
+        ],
+    },
 ];
+
+    // {
+    //     name: ``,
+    //     descrip: ``,
+    //     stats: {
+    //         fortitude: ,
+    //         might: ,
+    //         guile: ,
+    //         swift: ,
+    //         wits: ,
+    //         hp: ,
+    //         fates: ,
+    //     },
+    //     special: ``,
+    //     features: [
+    //         {
+    //             title: ``,
+    //             descrip:
+    //         },
+    //     ],
+    //     startingEquipment: [],
+    // },

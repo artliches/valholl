@@ -7,7 +7,7 @@
             <span class="abilities-layout">
                 @for (ability of abilitiesArray; track $index) {
                     <div class="ability-layout">
-                        <div class="clickable">{{ ability.name | uppercase }}</div>
+                        <div (click)="rerollAbility(ability)" class="clickable">{{ ability.name | uppercase }}</div>
                         <span class="descrip">{{ ability.descrip }}</span>
                         <span class="value">
                             @if (ability.value === 0) {
@@ -15,6 +15,11 @@
                             }
                             {{ ability.value }}
                         </span>
+                        @if (showRolls) {
+                            <span class="rolled-die">
+                                <em>[{{ ability.rolledDie }}] + {{ ability.modifier }}</em>
+                            </span>
+                        }
                     </div>
                 }
             </span>

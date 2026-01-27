@@ -93,6 +93,10 @@ body {
     .underline {
         text-decoration: underline;
     }
+
+    .dark-font {
+        color: colors.$section-border-color;
+    }
 }
 
 .social-link {

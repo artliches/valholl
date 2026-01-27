@@ -8,26 +8,32 @@
 
     <div class="zerk-body-layout">
         <div class="zerk-body">
+            <div class="job">
+                <app-job
+                    (jobEmitter)="getNewJob($event)" 
+                ></app-job>
+            </div>
             <div class="abilities">
-                <app-abilities></app-abilities>
+                <app-abilities
+                    [currentJob]="currentJob"
+                    [showRolls]="showRolls"
+                ></app-abilities>
             </div>
             <div class="identity">
                 <app-names></app-names>
-            </div>
-            <div class="job">
-                <app-job></app-job>
             </div>
 
         </div>
     </div>
 
     <div class="zerk-footer">
+        <div (click)="showRolls = !showRolls" class="clickable">{{ showRolls ? 'HIDE' : 'SHOW' }} ROLLS</div>
         <div>
             VALHOLL is an independent production by Slightly Reckless Games LTD and is not affiliated with Ockult Örtmästare Games
             or Stockholm Kartell. It is published under the MÖRK BORG Third Party License.
         </div>
         <div>MÖRK BORG is copyright Ockult Örtmästare Games and Stockholm Kartell.</div>
         <div>Web app by <a class="social-link" target="_blank" href="https://artliches.github.io/dungeons-coding/">{{'@codeLiches'}}</a></div>
-        <div>v0.31: <em>berserkrs coming through</em></div>
+        <div class="dark-font">v032: <em>valkries decend</em></div>
     </div>
 </span>

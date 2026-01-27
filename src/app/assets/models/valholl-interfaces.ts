@@ -15,7 +15,7 @@ export interface JobObj {
     startingEquipment: string[],
 };
 
-interface StatsObj {
+export interface StatsObj {
     fortitude: number,
     might: number,
     guile: number,

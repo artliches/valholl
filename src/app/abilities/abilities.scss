@@ -36,12 +36,14 @@
                     }
                     .descrip {
                         grid-area: descrip;
-                        font-size: 0.7rem;
                     }
                     .value {
                         grid-area: value;
                         font-size: 2.2rem;
                         place-self: center end;
+                    }
+                    .rolled-die, .descrip {
+                        font-size: 0.7rem;
                     }
                     &:nth-child(even) {
                         transform: rotate(0.5deg);

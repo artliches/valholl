@@ -1,7 +1,7 @@
 import { JsonPipe, UpperCasePipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { RandomNumber } from '../services/random-number';
-import { AbilityObj } from '../assets/models/valholl-interfaces';
+import { AbilityObj, JobObj, StatsObj } from '../assets/models/valholl-interfaces';
 
 @Component({
   selector: 'app-abilities',
@@ -9,10 +9,13 @@ import { AbilityObj } from '../assets/models/valholl-interfaces';
   templateUrl: './abilities.html',
   styleUrl: './abilities.scss',
 })
-export class Abilities implements OnInit {
+export class Abilities implements OnInit, OnChanges {
   constructor (
     private randomNumberService: RandomNumber
   ) {}
+
+  @Input() currentJob: JobObj = {} as JobObj;
+  @Input() showRolls: boolean = false;
 
   abilitiesArray: AbilityObj[] = [
     {
@@ -51,27 +54,43 @@ export class Abilities implements OnInit {
       modifier: 0,
     }
   ];
+  statsObj: StatsObj = {} as StatsObj;
 
   ngOnInit(): void {
-      this.rerollAllAbilities();
+      // this.rerollAllAbilities();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+      if (changes && changes['currentJob']) {
+        const currJob = changes['currentJob'];
+        this.statsObj = currJob.currentValue.stats;
+
+        this.rerollAllAbilities();
+      }
   }
 
   rerollAllAbilities() {
     this.abilitiesArray.forEach(ability => {
-      ability.modifier = 0;
-      ability.rolledDie = [];
-      ability.value = 0;
+      ability.modifier = this.statsObj[ability.name as keyof typeof this.statsObj];
 
-      for (let i = 0; i < 3; i++) {
-        ability.rolledDie.push(this.randomNumberService.getRandomNumber(1, 6));
-      }
-
-      let rawNumber = ability.rolledDie.reduce(
-        (accumulator, currentValue) => accumulator + currentValue, ability.modifier
-      );
-
-      this.convertRawNumberToAbilityMod(rawNumber, ability);
+      this.rerollAbility(ability);
     });
+  }
+
+  rerollAbility(ability: AbilityObj) {
+    ability.rolledDie = [];
+    ability.value = 0;
+
+    for (let i = 0; i < 3; i++) {
+      ability.rolledDie.push(this.randomNumberService.getRandomNumber(1, 6));
+    }
+
+    let rawNumber = ability.rolledDie.reduce(this.reducerFunction, 0) + ability.modifier;    
+    this.convertRawNumberToAbilityMod(rawNumber, ability);
+  }
+
+  private reducerFunction(partialSum: number, currValue: number) {
+    return partialSum + currValue;
   }
 
   private convertRawNumberToAbilityMod(rawNumber: number, ability: AbilityObj) {
