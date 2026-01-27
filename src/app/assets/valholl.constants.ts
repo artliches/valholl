@@ -318,6 +318,161 @@ export const JOBS = [
         ],
         trinkets: `3d6x10`,
     },
+    // Vanaheim’s Vanir Warden
+    {
+        name: `Vanaheim’s Vanir Warden`,
+        descrip: `The Vanir Wardens are the silent guardians of the natural world, hailing from <strong>Vanaheim</strong>, where the
+        verdant forests whisper ancient secrets. <strong>Masters of forgotten magic</strong>, their souls are deeply intertwined
+        with the earth, flora, and fauna.
+        <p>In battle, they command the strength of nature, wielding the <strong>elements as extensions of their will</strong>.</p>`,
+        stats: {
+            fortitude: 3,
+            might: 2,
+            guile: 5,
+            swift: 1,
+            wits: 4,
+            hp: 8,
+            fates: 3,
+        },
+        special: `<strong class="underline">NATURE’S LORE</strong>. When healing any amount, add an additional 1HP.`,
+        features: [
+            {
+                title: `Nature's Wrath`,
+                descrip: `You call upon the ancient forces lying dormant beneath the earth, coaxing roots, vines, or thorns
+                to rise and strike your foes. 
+                <p><strong class="underline">Once per day</strong>, Test <strong>Wits DR12</strong> to summon this primal force. </p>
+                
+                <p>
+                    <strong class="underline">On a success</strong>, <strong>d3 enemies</strong> you can see are ensnared for <strong class="underline">d3 rounds</strong>, the ground itself becoming their
+                    captor. They take <strong>d3 damage per round and cannot move</strong>.
+                </p>`
+            },
+            {
+                title: `Nature's Shield`,
+                descrip: `Your skin hardens, taking on the texture and resilience of ancient trees. 
+                <p><strong class="underline">Once per day</strong>, you can transform your skin into bark for <strong class="underline">d6 rounds</strong>, gaining <strong>+2 to armour negation</strong>.</p>`
+            },
+            {
+                title: `Healing Waters`,
+                descrip: `You summon the sacred waters of Vanaheim, feeling the cool, life-giving liquid swirl around your
+                hands before flowing over wounds, knitting flesh and restoring vitality. 
+                <p><strong class="underline">Once per day</strong>, you may heal yourself or an ally for <strong>d6+2HP</strong>.</p>
+                <p>These waters cleanse both body and soul, washing away <strong>negative conditions</strong> (<em>fever, fatigue, poison and blindness</em>).</p>`
+            },
+            {
+                title: `Beast Companion`,
+                descrip: `A loyal beast from Vanaheim walks beside you, its presence a reminder that you’re never truly
+                alone in the wild. This creature—whether a...
+                 <div class="table-layout">
+                    <strong class="underline">Roll d6</strong>:
+                    <ol class="compact-list">
+                        <li>1–2 <strong>Wolf</strong> (<em>6HP, Bite d6 damage</em>)</li>
+                        <li>3–4 <strong>Hawk</strong> (<em>4HP, Talon d4 damage</em>)</li>
+                        <li>5–6 <strong>Bear</strong> (<em>8HP, Claw d8 damage</em>)</li>
+                    </ol>
+                </div>
+                <p>
+                    ...fights by your side, sharing in your struggles and triumphs. In battle, the beast acts immediately
+                    after your turn. If it falls, you mourn it as part of yourself, but after a <strong class="underline">d4 days</strong>, you may summon a
+                    new companion, for the bond between you and the wild is never truly severed.
+                </p>
+                <p>(<em>When your companion makes a Test, roll d20 against the DR</em>)</p>`
+            },
+            {
+                title: `Vanir's Blessing`,
+                descrip: `The Vanir have touched your mind with the gift of foresight, a gentle nudge toward your destiny.
+                <p><strong class="underline">Once per session</strong>, you may reroll any <strong>failed Test</strong>, as the threads of fate realign in your favour.</p>
+                <p>Additionally, this feature allows you to sense the direction of the nearest source of water, food, or shelter when travelling.</p>`
+            },
+            {
+                title: `Verdant Rebirth`,
+                descrip: `<strong class="underline">Once per day</strong>, you may channel the primal energy of Vanaheim to restore life to the surrounding
+                environment. Plants sprout, bloom, and intertwine around you, creating a temporary sanctuary.
+                <p>
+                    <div>
+                        The flora grants the following benefits for <strong class="underline">d6 rounds</strong>:
+                        <ol class="compact-list x-style">
+                            <li>Allies gain <strong>+2 to defence</strong> as the vegetation shields them.</li>
+                            <li><strong>Any ally starting their turn within the sanctuary regains 1HP</strong>, as the land's vitality flows into them.</li>
+                        </ol>
+                    </div>
+                </p>`
+            },
+        ],
+        startingEquipment: [
+            `A robe of woven leaves and vines.`,
+            `Druidic Staff (d6 damage).`,
+            `Old pouch of Healing Herbs (d6 uses, each use heals d4HP).`,
+            `d4 food`,
+            `d4 water`
+        ],
+        trinkets: '1d6x10',
+    },
+    //Jötunheim’s Frost Jötunn
+    {
+        name: `Jötunheim’s Frost Jötunn`,
+        descrip: `Frost Giants are the ancient, towering behemoths of <strong>Jötunheim</strong>, beings of immense strength and
+        chilling power. As a Frost Giant―or Jötunn―you are the <strong>mountain unshackled</strong>. You’re both feared
+        and revered across the realms.
+        <p>Your power is an icy wrath flowing through your veins like a frozen river, <strong>relentless and unyielding</strong>.</p>`,
+        stats: {
+            fortitude: 4,
+            might: 5,
+            guile: 3,
+            swift: 2,
+            wits: 1,
+            hp: 12,
+            fates: 2,
+        },
+        special: `<strong class="underline">ICE RESISTANT</strong>. Frost Jötunns take only half damage from ice-based attacks.`,
+        features: [
+            {
+                title: `Titan's Might`,
+                descrip: `Your Might is legendary, capable of reshaping the world around you. 
+                <p><strong class="underline">Once per day</strong>, you can perform a feat of extraordinary power.</p> 
+                <p>This may involve lifting and hurling massive boulders, breaking through barriers that defy others, or delivering an additional <strong>d10 damage with a melee attack</strong>.</p>`
+            },
+            {
+                title: `Iced Aegis`,
+                descrip: `<strong class="underline">Once per session</strong>, you can summon an icy barrier that absorbs incoming harm. 
+                <p>For the next <strong class="underline">d4 rounds</strong>, any <strong>damage</strong> you take is <strong>reduced by half</strong> as shards of frost erupt on impact to deflect the blow. </p>
+                <p>Additionally, enemies striking you in <strong>melee combat</strong> during this time take <strong>1 damage</strong> from the freezing backlash.</p>
+                `
+            },
+            {
+                title: `Frostbound Grasp`,
+                descrip: `Your touch carries the chill of deep winter, freezing anything it contacts. 
+                <p><strong class="underline">Once per day</strong>, you can encase a foe or object in ice, <strong><em>stunning</em></strong> it for <strong class="underline">d2 rounds</strong>. </p>
+                <p>If the target is a <strong>living creature</strong>, it takes <strong>d6 damage</strong> at the <strong class="underline">start of every round</strong>.</p>`
+            },
+            {
+                title: `Winter's Fury`,
+                descrip: `With a deep breath, you summon the full wrath of winter, exhaling a biting wind that
+                creates a localised blizzard. 
+                <p><strong class="underline">Once per day</strong>, you can unleash this blizzard around you, dealing <strong>d8 damage</strong> to all enemies close to you.</p>`
+            },
+            {
+                title: `Glacial Empowerment`,
+                descrip: `The icy tundras of Jötunheim enhance your strength, grounding you in the elemental force of
+                your homeland. 
+                <p><strong class="underline">When standing on snow or ice</strong>, you gain <strong>+2 to all Tests</strong>. As you move, you leave behind icy patches.</p>`
+            },
+            {
+                title: `Ymir's Revival`,
+                descrip: `<strong class="underline">Once per lifetime</strong>, when reduced to <strong>0HP</strong>, you can call upon the ancient power of Jötunheim to
+                encase yourself in ice. 
+                <p>This icy shell absorbs all damage, delaying death and giving you a chance to recover. </p>
+                <p>While encased, you are immobile until the ice is thawed. <strong class="underline">Only the fires of Musphelheim can melt the ice</strong>.</p>`
+            },
+        ],
+        startingEquipment: [
+            `Thick fur coat.`,
+            `Giant Club (d12 damage).`,
+            `d4 food`,
+            `d4 water`,
+        ],
+        trinkets: '1d6x10',
+    },
 ];
 
     // {
@@ -338,6 +493,27 @@ export const JOBS = [
     //             title: ``,
     //             descrip:
     //         },
+    //         {
+    //             title: ``,
+    //             descrip: ``
+    //         },
+    //         {
+    //             title: ``,
+    //             descrip: ``
+    //         },
+    //         {
+    //             title: ``,
+    //             descrip: ``
+    //         },
+    //         {
+    //             title: ``,
+    //             descrip: ``
+    //         },
+    //         {
+    //             title: ``,
+    //             descrip: ``
+    //         },
     //     ],
     //     startingEquipment: [],
+    //     trinkets: '',
     // },
