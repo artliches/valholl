@@ -473,47 +473,432 @@ export const JOBS = [
         ],
         trinkets: '1d6x10',
     },
-];
 
-    // {
-    //     name: ``,
-    //     descrip: ``,
-    //     stats: {
-    //         fortitude: ,
-    //         might: ,
-    //         guile: ,
-    //         swift: ,
-    //         wits: ,
-    //         hp: ,
-    //         fates: ,
-    //     },
-    //     special: ``,
-    //     features: [
-    //         {
-    //             title: ``,
-    //             descrip:
-    //         },
-    //         {
-    //             title: ``,
-    //             descrip: ``
-    //         },
-    //         {
-    //             title: ``,
-    //             descrip: ``
-    //         },
-    //         {
-    //             title: ``,
-    //             descrip: ``
-    //         },
-    //         {
-    //             title: ``,
-    //             descrip: ``
-    //         },
-    //         {
-    //             title: ``,
-    //             descrip: ``
-    //         },
-    //     ],
-    //     startingEquipment: [],
-    //     trinkets: '',
-    // },
+    //Alfheim’s Light Elf
+    {
+        name: `Alfheim’s Light Elf`,
+        descrip: `
+        Hailing from the radiant realm of Alfheim, Light Elves are beings of <strong>celestial grace</strong> and <strong>ethereal power</strong>.
+        <p>
+            Their very presence illuminates the darkest corners of the world, a living bridge between the mortal
+            plane and the divine.
+        </p>
+        <p>
+            With an inherent connection to the light, they wield its power, not only to protect and heal, but also to
+            reveal hidden truths and drive back the encroaching darkness.
+        </p>`,
+        stats: {
+            fortitude: 4,
+            might: 1,
+            guile: 5,
+            swift: 3,
+            wits: 2,
+            hp: 8,
+            fates: 2,
+        },
+        special: `<strong class="underline">DARK VISION</strong>. You can see in the dark. Be sure to let the GM know often.`,
+        features: [
+            {
+                title: `Blinding Radiance`,
+                descrip: `<strong class="underline">Once per day</strong>, release a burst of intense light, <strong>blinding all enemies within your immediate area</strong> for <strong class="underline">d3 rounds</strong>.`
+            },
+            {
+                title: `Veil of Light`,
+                descrip: `<strong class="underline">Once per session</strong> you can envelop yourself or an ally in a glowing shield for <strong class="underline">d6 rounds</strong>. 
+                <p>This veil grants <strong>+2 to defence</strong> and <strong>heals d4HP</strong>, though simple enemies will be drawn to you like moth to a flame.</p>`
+            },
+            {
+                title: `Luminous Healing`,
+                descrip: `<strong class="underline">Once per day</strong>, <strong>heal yourself</strong> or <strong>an ally</strong> for <strong>d6+2HP</strong>.
+                <p>This healing light also <strong>removes negative conditions</strong> (<em>fever, fatigue, poison and blindness</em>).</p>`
+            },
+            {
+                title: `Sunbeam Strike`,
+                descrip: `Focus sunlight into a beam of pure energy. 
+                <p><strong class="underline">Once per battle</strong>, Test <strong>Guile DR12</strong> to target a single enemy within sight and deal <strong>d8 damage</strong>, <strong>ignoring armour and directly burning through any defences</strong>.</p>`
+            },
+            {
+                title: `Radiant Form`,
+                descrip: `<strong class="underline">Once per session</strong>, transform into a being of pure light for <strong class="underline">d3 rounds</strong>, gaining <strong>+4 to defence</strong>.
+                <p>You can move through solid objects, barriers and enemies.</p>
+                <p><span class="underline">If you move through an enemy this way</span>, you deal <strong>d4 damage ignoring armour and gain some of their memories</strong>.</p>`
+            },
+            {
+                title: `Beacon of Hope`,
+                descrip: `Summon a pillar of light <strong class="underline">Once per day</strong> that lasts for <strong class="underline">d6 rounds</strong>.
+                <p>Allies within this beacon gain <strong>+2 to attack</strong> and <strong>defence</strong> and are <strong>immune to fear and ability altering effects</strong>, their spirits bolstered by the unwavering light.</p>`
+            },
+        ],
+        startingEquipment: [
+            `Flowing white robes.`,
+            `Lightwood Staff (d6 damage).`,
+            `Set of Light Grenades (d4 grenades, d6 damage, causes blindness).`,
+            `d4 food`,
+            `d4 water`,
+        ],
+        trinkets: '2d6x10',
+    },
+    // Svartalfheim’s Master Smith
+        {
+        name: `Svartalfheim’s Master Smith`,
+        descrip: `
+        The Master Smiths of Svartalfheim are legendary artisans whose <strong>
+            skill in the forge transcends mere
+            craftsmanship
+        </strong>. 
+        <p>These alchemists of <strong>metal</strong> and <strong>magic</strong> are renowned not only for their creation of formidable weapons and armour but also for their <strong>unparalleled mastery of runic enchantments</strong>.</p>
+        <p>With hammers and tongs in hand, they infuse each piece with ancient runes, imbuing their creations with <strong>divine power</strong>.</p>`,
+        stats: {
+            fortitude: 3,
+            might: 4,
+            guile: 2,
+            swift: 1,
+            wits: 5,
+            hp: 10,
+            fates: 2,
+        },
+        special: `<strong class="underline">SMITH’S WILL</strong>. Smiths can discern the value and original craftsman of pretty much any weapon or armour.`,
+        features: [
+            {
+                title: `Runic Mastery`,
+                descrip: `
+                When you inscribe a Rune onto a weapon or armour, its effects are enhanced (<em>GM discretion</em>).
+                <div class="table-layout">
+                    <span class="underline">For example</span>:
+                    <ol class="compact-list">
+                        <li>
+                            1. <strong>Rune of Isa</strong> (<em>Weapon Inscribed</em>): “Activate to coat your weapon in frost for <strong class="underline">d4 rounds</strong>.
+                            Each strike deals an additional <strong>d4 cold damage</strong>.”
+                            <em>
+                                <p>This could become <strong class="underline">d6 rounds</strong> and an additional <strong>d6 cold damage</strong>.</p>
+                            </em>
+                        </li>
+                        <li>
+                            2. <strong>Rune of Berkano</strong> (<em>Armour Inscribed</em>): “Activate to create a healing aura. For the next
+                            <strong class="underline">d4 rounds</strong>, you and all allies close to you heal <strong>d4HP</strong> at the <strong class="underline">start of their turn</strong>.”
+                            <em>
+                                <p>This could become <strong class="underline">d6 rounds</strong> and <strong>d6HP</strong>.</p>
+                            </em>
+                        </li>
+                    </ol>
+                </div>`
+            },
+            {
+                title: `Runic Reforging`,
+                descrip: `You can reforge an item to hold <strong>two Runes simultaneously</strong>, allowing the effects to synergise for better or worse. 
+                <p>This process takes a <strong class="underline">long rest</strong>.</p> 
+                <p>When using combined effects, <span class="underline">if a fumble is rolled</span>, the user <strong>loses double the HP</strong> and cannot use runic magic until they take a <strong class="underline">long rest</strong>.</p>`
+            },
+            {
+                title: `Rune of Shattering`,
+                descrip: `
+                Inscribe a weapon with the Rune of Shattering to turn it into a <span class="underline">one-use</span>, <strong>devastating tool</strong>.
+                <p><strong class="underline">Upon striking</strong>, the weapon deals <strong>maximum damage and shatters</strong>, causing a shock wave that inflicts <strong>d6 damage to anyone nearby</strong>.</p>
+                <p><em>Only one weapon at a time can have the Rune of Shattering</em>.</p>`
+            },
+            {
+                title: `Smith's Resilience`,
+                descrip: `
+                Your experience in the forge has fortified your body and spirit.
+                <p>Gain <strong>+2 to Fortitude Tests</strong>, and <strong class="underline">once per session</strong>, negate a defence fumble, <strong>reducing its damage to 0</strong>.</p>`
+            },
+            {
+                title: `Anvil-Bound Will`,
+                descrip: `
+                <strong class="underline">Once per session</strong>, you can call upon the ancient bond between the Dwarves and their forges to imbue either a weapon or piece of armour with temporary strength.
+                <strong>Test Wits DR12</strong>. 
+                <div class="table-layout">
+                    <span class="underline">For the next battle</span>:
+                    <ol class="compact-list x-style">
+                        <li>A Weapon gains <strong>+2 damage</strong> and the ability to <strong>ignore armour</strong> for the next <strong class="underline">d6 attacks</strong>.</li>
+                        <li>Armour negates an additional <strong>2 damage</strong> for the next <strong class="underline">d6 rounds</strong> as molten runes briefly flare with protective power.</li>
+                    </ol>
+                </div>`
+            },
+            {
+                title: `Quicksmith`,
+                descrip: `Your speed and efficiency in the forge are unmatched. 
+                <p><strong class="underline">Once per session</strong>, upgrade or repair a weapon or piece of armour in rapid time, <strong>completing the task in just <span class="underline">1 hour</span></strong>.</p> 
+                <p>You can also change <strong>one inscribed Rune</strong> for one that you have <strong>seen or interacted with before</strong>.</p>`
+            },
+        ],
+        startingEquipment: [
+            `Smith’s Tools.`,
+            `Sturdy Chainmail (tier 3).`,
+            `Smith’s Hammer (d6 damage, can be used as a tool) .`,
+            `Choose or roll 3 random Runes (these Runes can only be inscribed into armour/weapons).`,
+            `d4 food`,
+            `d4 water`,
+        ],
+        trinkets: '4d6x10',
+    },
+    // Niflheim’s Wraith
+    {
+        name: `Niflheim’s Wraith`,
+        descrip: `
+        Niflheim’s Wraiths are beings <strong>forged from the cold, misty expanse of the underworld</strong>, their essence forever intertwined with the deathly realm of <strong>Niflheim</strong>.
+        <p>These harbingers of despair wield the eerie powers of <strong>mist</strong> and <strong>death</strong> with a quiet, <strong>unsettling grace</strong>.</p>
+        <p>As a Niflheim Wraith, <strong>you carry the chill of the afterlife with you</strong>, a constant reminder that the boundry between the <strong>living</strong> and the <strong>dead</strong> is <strong>thinner than most would dare to acknowledge</strong>.</p>
+        `,
+        stats: {
+            fortitude: 3,
+            might: 1,
+            guile: 4,
+            swift: 5,
+            wits: 2,
+            hp: 8,
+            fates: 2,
+        },
+        special: `<strong class="underline">STENCH OF DEATH</strong>. You stink. Which isn’t great, but you also can smell death from up to a mile away.`,
+        features: [
+            {
+                title: `Misty Apparition`,
+                descrip: `
+                You can dissolve into spectral mist, becoming nearly <em>invisible</em> and <em>incorporeal</em>, a whisper on the wind.
+                <p><strong class="underline">Once per day</strong>, transform into mist for <strong class="underline">d3 rounds</strong>.</p>
+                <p>In this form, you slip through solid objects, <strong>immune to physical attacks</strong>. </p>
+                <p>However, <strong>magic and supernatural forces can still harm you</strong>.</p>
+                `
+            },
+            {
+                title: `Wail of the Lost`,
+                descrip: `
+                The despair of countless lost souls echoes through you, a chilling wail that pierces reality. 
+                <p><strong class="underline">Once per day</strong>, unleash this scream, causing <strong>all enemies within earshot</strong> to be gripped by <em>fear</em>.</p> 
+                <p>Affected enemies are compelled to run away from you for <strong class="underline">d3 rounds</strong>.</p>`
+            },
+            {
+                title: `Ghostly Step`,
+                descrip: `
+                Your connection to the spectral realm allows you to move as silently and unseen as the mist.
+                <p><strong class="underline">Once per day</strong>, <strong>automatically succeed</strong> on any stealth-related action <em>regardless of difficulty</em>.</p>
+                `
+            },
+            {
+                title: `Soulbound Weapon`,
+                descrip: `
+                This weapon is more than just steel—it’s a vessel for a trapped spirit, its essence woven into the blade, which deals <strong>d8 damage</strong>. 
+                <p>This soulbound weapon <strong>strikes incorporeal enemies as if they were solid</strong> and deals an additional <strong>d4 damage to the living</strong>.</p> 
+                <p><strong class="underline">On a fumble</strong>, the weapon releases the enemy within...</p>`
+            },
+            {
+                title: `Mark of the Dead`,
+                descrip: `
+                You place a deathly mark on a target, a spectral sigil binding them to the inevitable approach of death. 
+                <p><strong class="underline">Once per battle</strong>, mark an enemy with this sign for <strong class="underline">d6 rounds</strong>.</p> 
+                <p><strong class="underline">Each round</strong>, the <strong>DR</strong> to hit the marked enemy is <strong>reduced by 1</strong>.</p>`
+            },
+            {
+                title: `Commune with the Lost`,
+                descrip: `
+                You reach beyond the veil, touching the minds of the dead and drawing forth their whispers.
+                <p><strong class="underline">Once per session</strong>, commune with a dead person, <strong>asking up to three questions</strong>.</p>
+                <p>Two answers are <strong>truthful</strong>. One will always be a <strong><em>lie</em></strong>.</p>`
+            },
+        ],
+        startingEquipment: [
+            `Ghostly robes.`,
+            `Spectral Dagger (d6 damage).`,
+            `d4 food`,
+            `d4 water`,
+        ],
+        trinkets: '1d6x10',
+    },
+    // Muspelheim’s Flame Construct
+    {
+        name: `Muspelheim’s Flame Construct`,
+        descrip: `
+        Forged in the unending fires of Muspelheim, the Flame Constructs are living embodiments of the realm’s molten fury. 
+        Their smouldering stone bodies drip with magma, every movement sending ripples of heat through the air, scorching the earth beneath them. 
+        As relentless sentinels, they leave molten scars in their wake, adminstering their volcanic power with terrifying precision.
+        `,
+        stats: {
+            fortitude: 5,
+            might: 4,
+            guile: 1,
+            swift: 3,
+            wits: 2,
+            hp: 10,
+            fates: 3,
+        },
+        special: `<strong class="underline">FIRE RESISTANT</strong>. Flame Constructs take only half damage from fire-based attacks.`,
+        features: [
+            {
+                title: `Immolation Aura`,
+                descrip: `
+                <strong class="underline">Once per day</strong>, you can engulf yourself in flames for <strong class="underline">d6 rounds</strong>. 
+                <p>Enemies that strike you in melee take <strong>d4 fire damage</strong>.</p> 
+                <p>The aura also <strong>ignites</strong> any flammable materials nearby.</p>`
+            },
+            {
+                title: `Molten Surge`,
+                descrip: `<strong class="underline">Once per day</strong>, you can channel the volcanic power of Muspelheim, surging forward in a burst of lava and flame. 
+                <p>Move through enemies and obstacles, dealing <strong>d6 fire damage</strong> to all in your path.</p>`
+            },
+            {
+                title: `Pyroclastic Fist`,
+                descrip: `Unleash a devastating punch fuelled by volcanic force. 
+                <p><strong class="underline">Once per battle</strong>, make an <strong>attack with +3</strong>.</p> 
+                <p><strong class="underline">If successful</strong>, the target takes <strong>d8 damage</strong> and is <em>knocked prone</em>.</p>`
+            },
+            {
+                title: `Living Flame`,
+                descrip: `<strong class="underline">Once per day</strong>, you can ignite your entire body in an inferno, <strong>doubling the damage you deal for <span class="underline">d4 rounds</span></strong>. 
+                <p>However, <strong class="underline">once this blaze dies down</strong>, you are left weakened, suffering a <strong>−2 penalty to all Tests for the <span class="underline">rest of the day</span></strong>.</p>`
+            },
+            {
+                title: `Eruption Call`,
+                descrip: `<strong class="underline">Once per day</strong>, summon a localised eruption of lava from the ground beneath your enemies.
+                <p>This eruption lasts <strong class="underline">d3 rounds</strong>, dealing <strong>d6 damage each round</strong> to those caught within it.</p>`
+            },
+            {
+                title: `Inferno Heart`,
+                descrip: `The hotter the battle, the stronger you become. 
+                <p>For every <strong>5 points of fire damage</strong> your enemies take, gain <strong>+1 to all Tests until the <span class="underline">end of battle</span></strong>.</p>`
+            },
+        ],
+        startingEquipment: [
+            `Searing Chain (d12 damage).`,
+            `Ember core (once per day, absorb heat from the surroundings to heal d6HP).`,
+            `d4 food`,
+            `d4 water`,
+        ],
+        trinkets: '1d6x10',
+    },
+    // Helheim’s Soul Shepherd
+    {
+        name: `Helheim’s Soul Shepherd`,
+        descrip: `Soul Shepherds are guides to lost souls, grim guardians who walk the shadowed paths of Helheim.
+        <p>Tasked by <strong>Hel</strong> herself, the Soul Shepherds move between realms, carrying out the will of the underworld. </p>
+        <p><strong>The cold touch of death lingers in every step</strong>, and the dead follow in their wake, bound to the Shepherds’ wills. </p>
+        <p>Their power lies not just in their <strong>mastery over death</strong>, but in their understanding of the delicate balance between <strong>life and the afterlife</strong>.</p>
+        `,
+        stats: {
+            fortitude: 4,
+            might: 3,
+            guile: 2,
+            swift: 5,
+            wits: 1,
+            hp: 8,
+            fates: 3,
+        },
+        special: `<strong class="underline">CHAT WITH A GONER</strong>. If a person has just died you can chat with them for up to one minute.`,
+        features: [
+            {
+                title: `Requiem of Rest`,
+                descrip: `
+                <strong class="underline">Once per day</strong>, you may sing a haunting melody that resonates with the spirits of the dead. 
+                <p>
+                    Test <strong>Swift DR12</strong> to lull nearby enemies into a trance-like state for <strong class="underline">d3 rounds</strong>.
+                    While entranced, enemies cannot attack or take aggressive actions <strong>unless directly harmed</strong>.
+                </p>`
+            },
+            {
+                title: `Soul Binding`,
+                descrip: `
+                You may bind the soul of a creature that has recently died. 
+                When a humanoid creature dies in your presence, you may attempt to bind its soul. <strong>Test Swift DR14</strong>. 
+                <p>
+                    <strong class="underline">Once bound</strong>, the soul can be commanded to perform simple tasks—<strong>scouting</strong> or <strong>attacking with d6 damage</strong> (<em>ignoring armour</em>).
+                    The soul remains bound for <strong class="underline">d6 hours</strong> before fading into Helheim’s mists.
+                </p>
+                <p><em>Only one soul may be bound at any time.</em></p>`
+            },
+            {
+                title: `Hel's Embrace`,
+                descrip: `<strong class="underline">Once per day</strong>, you may channel the chilling grasp of Helheim through your touch. 
+                <p><strong class="underline">On a successful attack</strong>, you <strong>drain d6HP</strong> from an enemy, healing yourself for the same amount.</p>`
+            },
+            {
+                title: `Veil of Death`,
+                descrip: `<strong class="underline">Once per session</strong>, you may blur the line between life and death, making an ally appear as an incorporeal ghost. 
+                <p>
+                    <strong class="underline">For d4 rounds</strong>, enemies will <strong>ignore</strong> the veiled target, perceiving it as though it has already passed into the afterlife.
+                </p>
+                <p><strong class="underline">While veiled</strong>, the <strong>target cannot attack</strong> or <strong>interact</strong> with the physical world but may move freely, even passing through barriers or enemies.</p>
+                `
+                
+            },
+            {
+                title: `The Spirit Path`,
+                descrip: `
+                You may summon a bridge of spirits over impassable terrain, whether a chasm, river, wall or otherwise. 
+                The spectral bridge lasts for <strong class="underline">d6 hours</strong> and can support you and your companions. 
+                <p>Those who cross must <strong>sacrifice something to the spirits</strong>—<strong>d4HP</strong>, a cherished tale from their Saga, or another form of essence.</p>`
+            },
+            {
+                title: `Hel's Bargain`,
+                descrip: `In moments of near death, you may strike a dark bargain with <strong>Hel</strong> herself. 
+                <strong class="underline">Once in your lifetime</strong>, when an ally dies, you may negotiate with the <strong>Lady of Helheim</strong>. 
+                <p>Hel will allow the ally to <strong>return to life</strong>, but at a grave cost—<strong>they must strike all but one tale from their Saga</strong>.</p>
+                <p>(<em>This cannot be used if Hel is dead</em>).</p>`
+            },
+        ],
+        startingEquipment: [
+            `Cloak of Forgotten Souls (can turn invisible in shadows once per day for d4 rounds).`,
+            `Death’s Crook (d8 damage).`,
+            `d4 food`,
+            `d4 water`,
+        ],
+        trinkets: '1d6x10',
+    },
+    // Realmbreaker
+    {
+        name: `Realmbreaker`,
+        descrip: `Realmbreakers move like a shadow through the <strong>Nine Realms</strong>, slipping between cracks in reality, bound by neither time nor place. 
+        <p>They command <strong>runic magic</strong>, ancient symbols that hold the weight of forgotten gods, bending them to shape the threads of existence.</p> 
+        <p>Every step they take <strong>alters the balance of fate</strong>, worlds shifting like ripples in still water.</p>`,
+        stats: {
+            fortitude: 2,
+            might: 3,
+            guile: 4,
+            swift: 1,
+            wits: 5,
+            hp: 8,
+            fates: 3,
+        },
+        special: `<strong class="underline">SOMEONE ELSE’S MEMORIES</strong>. You have all the memories of all previous characters played by the PC.`,
+        features: [
+            {
+                title: `Rune Storm`,
+                descrip: `You can unleash a chaotic burst of raw Rune magic. 
+                <p><strong class="underline">Once per session</strong>, Test <strong>Wits DR14</strong> to create a storm of random magical effects.</p> 
+                <p>The storm deals <strong>d6 damage</strong> to all creatures caught in it and causes a <strong>random magical effect to occur</strong> (<em>roll and combine two random Runes. GMs Discretion</em>).</p> 
+                <p><strong class="underline">On a failure</strong>, the storm erupts uncontrollably. (<em>GM picks and combines two Runes</em>).</p>`
+            },
+            {
+                title: `Rune Expertise`,
+                descrip: `You excel at casting Runes, gaining <strong>+2 to Wits Tests</strong> when casting them.`
+            },
+            {
+                title: `Temporary Inscription`,
+                descrip: `
+                <strong class="underline">Once per day</strong>, you may overcharge a Rune, casting it with amplified force. 
+                <p><strong>Test Wits DR14</strong>. <strong class="underline">On success</strong>, the Rune’s effect is <strong>doubled</strong> (<em>e.g., increased damage, extended duration</em>).</p> 
+                <p><strong class="underline">On failure</strong>, treat the Rune as if it had been fumbled.</p>`
+            },
+            {
+                title: `Realmstep`,
+                descrip: `
+                You can momentarily step into another realm to avoid danger. 
+                <p><strong class="underline">Once per day</strong>, after being targeted by an attack, you may Test <strong>Wits DR12</strong> to step into another realm for a brief moment, <strong>avoiding the attack entirely and reappearing in the same location</strong>.</p>`
+            },
+            {
+                title: `Walker of Worlds`,
+                descrip: `You are attuned to the cosmic forces of realm travel. <strong>All Tests for realm travel are made with +2 bonus</strong>.`
+            },
+            {
+                title: `Rift Walker`,
+                descrip: `
+                You can create small, temporary tears between realms to traverse short distances. 
+                <p><strong class="underline">Once per day</strong>, you may open a rift, <strong>instantly teleporting yourself and one ally</strong> to a visible location you can see.</p>`
+            },
+        ],
+        startingEquipment: [
+            `Choose or roll 3 random Runes (these Runes can only be cast as spells).`,
+            `d4 food`,
+            `d4 water`,
+        ],
+        trinkets: '3d6x10',
+    },
+];

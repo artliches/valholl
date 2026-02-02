@@ -107,6 +107,9 @@ body {
         padding: 0rem 0.8rem 0rem 0.8rem;
         list-style-position: inside;
         list-style: none;
+        li {
+            margin: 0.5rem;
+        }
         &.x-style {
             padding-left: 1.5rem;
             list-style-type: disc;
