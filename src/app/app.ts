@@ -3,10 +3,11 @@ import { Names } from "./names/names";
 import { Abilities } from "./abilities/abilities";
 import { Job } from "./job/job";
 import { JobObj } from './assets/models/valholl-interfaces';
+import { Equipment } from "./equipment/equipment";
 
 @Component({
   selector: 'app-root',
-  imports: [Names, Abilities, Job],
+  imports: [Names, Abilities, Job, Equipment],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

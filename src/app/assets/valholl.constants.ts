@@ -902,3 +902,116 @@ export const JOBS = [
         trinkets: '3d6x10',
     },
 ];
+
+export const PACKS = [
+    `You carry only what you can bear in your <strong class="clickable">hands or on your person</strong>, leaving you vulnerable but agile. <strong>A random Rune is incribed in your mind.</strong>`,
+    `A simple <strong class="clickable">leather pouch</strong>, decorated with knotwork or beads, capable of holding up to <strong>7 normal-sized items</strong>.`,
+    `A sturdy <strong class="clickable">sack woven from wool or flax</strong>, capable of holding up to <strong>10 normal-sized items</strong>.`,
+];
+
+export const ITEMS_1 = [
+    {
+        name: 'Dried Serpent Skin',
+        descrip: `A preserved snake skin that grants the wearer +2 to all Tests relating to serpentine/draconic creatures.`,
+    },
+        {
+        name: 'Chunk of Bog Iron',
+        descrip: `A heavy piece of iron ore that can be used as a makeshift weapon (d4 damage). Can also be used to halve the time of armour repair.`,
+    },
+        {
+        name: 'Carved Wooden Dice',
+        descrip: `A pair of crudely carved wooden dice. When rolled after a long rest, a result of a 6 on either die grants the player a +2 bonus to one Test of their choice that day.`,
+    },
+        {
+        name: 'Tarnished Bronze Mirror',
+        descrip: `A small, scratched mirror with a distorted reflection.`,
+    },
+        {
+        name: 'Raven’s Talon Necklace',
+        descrip: `A necklace strung with the talons of ravens. Grants the wearer the ability to ask the GM one yes-or-no question about their immediate surroundings once per session.`,
+    },
+        {
+        name: 'Worn Leather Pouch',
+        descrip: `A small pouch containing 3d10‡ Trinkets.`,
+    },
+        {
+        name: 'Bundle of Yarrow Stalks',
+        descrip: `A bundle of dried yarrow stalks that, when burned, releases a smoke that lures beasts or enemies.`,
+    },
+        {
+        name: 'Wooden Rune Staff',
+        descrip: `A simple wooden staff, etched with runic symbols. Grants +1 to defence against attacks from undead creatures (d4 damage).`,
+    },
+        {
+        name: 'Jar of Pickled Crowberries',
+        descrip: `A jar of d6 handfuls of preserved crowberries. Eating a handful restores d4HP.`,
+    },
+        {
+        name: 'Fragment of Ancient Pottery',
+        descrip: `A broken piece of pottery, decorated with faded patterns and symbols.`,
+    },
+        {
+        name: 'Tarnished Copper Ring',
+        descrip: `A simple ring of copper.`,
+    },
+        {
+        name: 'Bloodstained Feather',
+        descrip: `A single feather, stained crimson with dried blood. When held aloft, it can be used to determine the direction of the nearest source of fresh blood.`,
+    },
+];
+
+export const ITEMS_2 = [
+        {
+        name: 'Wyrd-Knotted Twine',
+        descrip: `A long rope made of simple twine, woven with protective knots.`,
+    },
+        {
+        name: 'Smouldering Hearth Embers',
+        descrip: `A pouch of embers taken from a sacred hearth fire. Provides warmth in cold environments and can be used to light torches or fires.`,
+    },
+        {
+        name: 'Carved Wooden Lantern',
+        descrip: `A lantern crafted from a single piece of wood (Guile+6 hours of light).`,
+    },
+        {
+        name: 'Wolf’s Fang Talisman',
+        descrip: `A carved wolf’s fang strung on a leather cord. Grants +2 to all Tests relating to wolves.`,
+    },
+        {
+        name: 'Random Rune Stone',
+        descrip: `A weathered stone bearing a single, partially legible rune. Roll one random Rune.`,
+    },
+        {
+        name: 'Chipped Stone Axe',
+        descrip: `A crude stone axe, chipped and worn from use. A simple but effective weapon (d6 damage).`,
+    },
+        {
+        name: 'Foraged Healing Poultice',
+        descrip: `A poultice of crushed herbs and roots, wrapped in a clean cloth. Heals d4HP and removes the fatigue condition (d4 uses).`,
+    },
+        {
+        name: 'Iron Fish Hook ',
+        descrip: `A simple iron fish hook, surprisingly strong and sharp. Can be used as a makeshift weapon (d4 damage) or for fishing.`,
+    },
+        {
+        name: 'Thornsnapper Vine',
+        descrip: `A length of thorny vine that can be used to create a makeshift snare or trap (Test Swift DR12 to set up, d6 damage).`,
+    },
+        {
+        name: 'Thunderstone Shard',
+        descrip: `A jagged shard of rock said to have been struck by lightning. When thrown, deals d6 damage to everyone near where it lands.`,
+    },
+        {
+        name: 'Poisoned Thorns',
+        descrip: `A handful of thorns coated in a venomous sap. On a successful attack, deals d4 damage and inflicts the poisoned condition (d4 doses).`,
+    },
+        {
+        name: 'Raven Skull',
+        descrip: `A small, bleached skull of a raven. Can be used to invent a tale for your Saga.`,
+    },
+];
+
+    // {
+    //     name: '',
+    //     descrip: ``,
+    // },

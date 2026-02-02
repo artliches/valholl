@@ -43,7 +43,8 @@
             grid-template-areas: 
                 "abilities"
                 "identity"
-                "job";
+                "job"
+                "equip";
             .abilities {
                 grid-area: abilities;
             }
@@ -52,6 +53,9 @@
             }
             .job {
                 grid-area: job;
+            }
+            .equipment {
+                grid-area: equip;
             }
             >div {
                 border-top: 2px solid colors.$section-border-color;
@@ -141,7 +145,8 @@
                     grid-template-columns: repeat(2, 1fr);
                     grid-template-areas:
                         "abilities      abilities"
-                        "identity       job";
+                        "identity       job"
+                        "equip          equip";
                     .identity {
                         border-right: 1px solid colors.$section-border-color;
                     }
