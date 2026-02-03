@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1770131838136,
+  "timestamp": 1770154265647,
   "index": "/valholl/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/valholl/favicon.ico",
         "/valholl/index.html",
-        "/valholl/main-XB5SRX23.js",
+        "/valholl/main-JBVFIF2U.js",
         "/valholl/manifest.webmanifest",
         "/valholl/styles-H2R73R2U.css"
       ],
@@ -27,6 +27,17 @@
         "ignoreVary": true
       },
       "urls": [
+        "/valholl/assets/fonts/Alegreya.ttf",
+        "/valholl/assets/fonts/AncientRunes.ttf",
+        "/valholl/assets/fonts/AsgardianWars.ttf",
+        "/valholl/assets/fonts/SQUEEG.ttf",
+        "/valholl/assets/fonts/Tagesschrift.ttf",
+        "/valholl/assets/fonts/Zamolxis.ttf",
+        "/valholl/assets/icons/armor.png",
+        "/valholl/assets/icons/melee.png",
+        "/valholl/assets/icons/ranged.png",
+        "/valholl/assets/icons/spell.png",
+        "/valholl/assets/icons/weapon.png",
         "/valholl/icons/android-chrome-192x192.png",
         "/valholl/icons/android-chrome-512x512.png",
         "/valholl/icons/apple-touch-icon.png",
@@ -44,14 +55,25 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "/valholl/assets/fonts/Alegreya.ttf": "92aba166a4ec4f651a40548bd9903e32f91e5d13",
+    "/valholl/assets/fonts/AncientRunes.ttf": "bf42dc98cce1d0f9d4ecd40747b95b99168891c5",
+    "/valholl/assets/fonts/AsgardianWars.ttf": "521c689628204eb7f11c32b49c39de0086e87afe",
+    "/valholl/assets/fonts/SQUEEG.ttf": "28d4ef0ed8829e5a2155f460605f307ea6ecfeb7",
+    "/valholl/assets/fonts/Tagesschrift.ttf": "aa160c977a0586cf93d84c2421ce6e0967632b2b",
+    "/valholl/assets/fonts/Zamolxis.ttf": "9ab539a9802ab7a76b10418f0c6786ff8588d193",
+    "/valholl/assets/icons/armor.png": "24092d15b72de20c5d5840ff276f021722d88b80",
+    "/valholl/assets/icons/melee.png": "d57755c58f766cbbba01b5d889fbb56ec23bbbac",
+    "/valholl/assets/icons/ranged.png": "8bf3ca79fb45b3d8d142c3f1cabb10e24debb917",
+    "/valholl/assets/icons/spell.png": "733ffd0ac135989fb12cdf7a96808c778bb292fd",
+    "/valholl/assets/icons/weapon.png": "5223e9f61a12d2da56348d418c88b7e6de0aaa82",
     "/valholl/favicon.ico": "285ba3ae62f8bb691426bfddb7b1662b900f1a39",
     "/valholl/icons/android-chrome-192x192.png": "0c22fefb9bc2e297d06bfac71f8391cd08fb47b2",
     "/valholl/icons/android-chrome-512x512.png": "bd453cdce72fd39eea806009d27e21b97901336f",
     "/valholl/icons/apple-touch-icon.png": "8efb43b4b4e94b2faabeb04087ecd183e888f46d",
     "/valholl/icons/favicon-16x16.png": "fe85aad5abae056ca0a3a8b0da73c9bb82707828",
     "/valholl/icons/favicon-32x32.png": "de1151d1ff28b1c27a69915c79a201dab796dcb8",
-    "/valholl/index.html": "6f4c351d6de90255b6156e317bf6fb1755613dc4",
-    "/valholl/main-XB5SRX23.js": "9a16be0bd3a871f651b79d2158e39157f1ffb12a",
+    "/valholl/index.html": "1cb1a31f3ef7ff9fd6c3b82a8810366adc5a957d",
+    "/valholl/main-JBVFIF2U.js": "5f70853a7d7200501ee942c1edb17135599cb0d5",
     "/valholl/manifest.webmanifest": "8c3486121c5f68a5d4c75a4f4d88309fefe8fd93",
     "/valholl/media/Alegreya-WU5UNYNR.ttf": "92aba166a4ec4f651a40548bd9903e32f91e5d13",
     "/valholl/media/AncientRunes-KBSVL2DR.ttf": "bf42dc98cce1d0f9d4ecd40747b95b99168891c5",
