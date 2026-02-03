@@ -1,8 +1,117 @@
+@use '../../../public/assets/colors';
+
+img {
+        width: 1.1rem;
+        height: 1.1rem;
+        filter: invert(100%);
+}
 .equipment-layout {
     padding: 0.5rem;
     .section-header {
         place-self: center;
         text-align: center;
         margin-bottom: 1rem;
+    }
+    .equip-body, .equip-section, .section-body {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .equip-body {
+        .equip-section:nth-child(odd) {
+            transform: rotate(0.5deg);
+        }
+        .equip-section:nth-child(even) {
+            transform: rotate(-0.5deg);
+        }
+    }
+    
+    .weapon-layout {
+        .clickable {
+            margin-right: 0.3rem;
+        }
+        em {
+            margin-left: 0.3rem;
+        }
+    }
+
+    .weapon-icons {
+        margin-right: 0.5rem;
+    }
+
+    .rune-section {
+        border: 2px solid colors.$section-border-color;
+        .title {
+            font-family: 'Tagesschrift';
+        }
+        .rune-rules {
+            font-size: 0.8rem;
+        }
+        .rune-layout {
+            border-top: 2px dotted colors.$section-border-color;
+            display: grid;
+            column-gap: 1rem;
+            grid-template-columns: 4rem 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas:
+                "title  table";
+            .rune-layout-title {
+                grid-area: title;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-areas:
+                    "symbol"
+                    "symbol"
+                    "name"
+                    "descrip";
+
+                .symbol {
+                    grid-area: symbol;
+                    place-self: center;
+                    font-size: 2rem;
+                }
+                .name {
+                    grid-area: name;
+                    place-self: center;
+                }
+                .descrip {
+                    grid-area: descrip;
+                    font-size: 0.8rem;
+                    place-self: center;
+                }
+            }
+            .rune-table {
+                grid-area: table;
+                place-self: center stretch;
+                .rune-table-layout {
+                    img {
+                        margin-right: 0.5rem;
+                    }
+                    &:first-of-type {
+                        border-bottom: 1px dotted white;
+                    }
+                }
+            }
+        }
+    }
+
+    .equip-section {
+        gap: 0rem;
+        .section-title {
+            text-align: left;
+            color: colors.$section-border-color;
+            border-bottom: 2px dotted colors.$section-border-color;
+            font-family: 'Tagesschrift';
+        }
+        .section-body {
+            gap: 0rem;
+            margin-left: 1rem;
+            .armor-layout {
+                .defense-section {
+                    margin: 0rem 0.3rem;
+                }
+            }
+        }
     }
 }

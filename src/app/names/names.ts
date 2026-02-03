@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BELIEFS, FIRST_NAME, HABITS, LAST_NAME, NICKNAME, PAST, QUIRKS } from '../assets/valholl.constants';
+import { BELIEFS, FIRST_NAME, HABITS, LAST_NAME, NICKNAME, PAST, QUIRKS } from '../../../public/assets/valholl.constants';
 import { RandomNumber } from '../services/random-number';
 import { UpperCasePipe } from '@angular/common';
 

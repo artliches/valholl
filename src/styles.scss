@@ -1,38 +1,38 @@
-@use './app/assets/colors';
+@use '../public/assets/colors';
 
 @font-face {
     font-family: "AncientRunes";
-    src: local("AncientRunes"), url(./app/assets/fonts/AncientRunes.ttf) format('truetype');
+    src: local("AncientRunes"), url(../public/assets/fonts/AncientRunes.ttf) format('truetype');
     font-weight: 100 1000;
 }
 
 @font-face {
     font-family: "AsgardianWars";
-    src: local("AsgardianWars"), url(./app/assets/fonts/AsgardianWars.ttf) format('truetype');
+    src: local("AsgardianWars"), url(../public/assets/fonts/AsgardianWars.ttf) format('truetype');
     font-weight: 100 1000;
 }
 
 @font-face {
     font-family: "SQUEEG";
-    src: local("SQUEEG"), url(./app/assets/fonts/SQUEEG.ttf) format('truetype');
+    src: local("SQUEEG"), url(../public/assets/fonts/SQUEEG.ttf) format('truetype');
     font-weight: 100 1000;
 }
 
 @font-face {
     font-family: "Tagesschrift";
-    src: local("Tagesschrift"), url(./app/assets/fonts/Tagesschrift.ttf) format('truetype');
+    src: local("Tagesschrift"), url(../public/assets/fonts/Tagesschrift.ttf) format('truetype');
     font-weight: 100 1000;
 }
 
 @font-face {
     font-family: "Zamolxis";
-    src: local("Zamolxis"), url(./app/assets/fonts/Zamolxis.ttf) format('truetype');
+    src: local("Zamolxis"), url(../public/assets/fonts/Zamolxis.ttf) format('truetype');
     font-weight: 100 1000;
 }
 
 @font-face {
     font-family: "Alegreya";
-    src: local("Alegreya"), url(./app/assets/fonts/Alegreya.ttf) format('truetype');
+    src: local("Alegreya"), url(../public/assets/fonts/Alegreya.ttf) format('truetype');
     font-weight: 100 1000;
 }
 

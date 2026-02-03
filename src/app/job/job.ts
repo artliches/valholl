@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FeaturesObj, JobObj } from '../assets/models/valholl-interfaces';
+import { FeaturesObj, JobObj } from '../../../public/assets/models/valholl-interfaces';
 import { RandomNumber } from '../services/random-number';
-import { JOBS } from '../assets/valholl.constants';
+import { JOBS } from '../../../public/assets/valholl.constants';
 import { UpperCasePipe } from '@angular/common';
 
 @Component({

@@ -184,10 +184,9 @@ export const JOBS = [
     {
         name: `Midgard's Berserkers`,
         descrip: `Berserkrs, hailing from the wild and untamed lands of Midgard, are <strong>legendary warriors</strong> feared across
-        the Nine Realms for their unmatched ferocity in battle. They fight with the <strong>strength of the gods</strong> and the
-        <strong>fury of wild beasts</strong>, driven by an inner rage that ignites in the heat of combat.
-        Berserkrs are known to <strong>charge headfirst into the thick of battle</strong>, their war cries echoing across the
-        battlefield, <strong>shrugging off wounds that would fell lesser men</strong>.`,
+        the Nine Realms for their unmatched ferocity in battle. 
+        <p>They fight with the <strong>strength of the gods</strong> and the <strong>fury of wild beasts</strong>, driven by an inner rage that ignites in the heat of combat.</p>
+        <p>Berserkrs are known to <strong>charge headfirst into the thick of battle</strong>, their war cries echoing across the battlefield, <strong>shrugging off wounds that would fell lesser men</strong>.</p>`,
         stats: {
             fortitude: 4,
             might: 5,
@@ -232,9 +231,21 @@ export const JOBS = [
             },
         ],
         startingEquipment: [
-            `<strong>Heavy War-Axe</strong> <em>(d8 damage)</em>`,
-            `1d4 food`,
-            `1d4 water`,
+            {
+                item: `<strong class="underline">Heavy War-Axe</strong> (<strong>d8 damage</strong>){melee}`,
+                type: `weapon`,
+                die: ``,
+            },
+            {
+                item: `[] <strong class="underline">food</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },            
+            {
+                item: `[] <strong class="underline">water</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },
         ],
         trinkets: `2d6x10`,
     },
@@ -310,11 +321,31 @@ export const JOBS = [
             },
         ],
         startingEquipment: [
-            `A suit of Divine Armour (tier 4).`,
-            `Spear of the Valkyrie (d10 damage).`,
-            `Sword of the Valkyrie (d8 damage).`,
-            `d4 food`,
-            `d4 water.`,
+            {
+                item: `Divine Armour.`,
+                type: `4`,
+                die: ``,
+            },            
+            {
+                item: `<strong class="underline">Spear of the Valkyrie</strong> (<strong>d10 damage</strong>){melee, ranged}`,
+                type: `weapon`,
+                die: ``,
+            },            
+            {
+                item: `<strong class="underline">Sword of the Valkyrie</strong> (<strong>d8 damage</strong>){melee}`,
+                type: `weapon`,
+                die: ``,
+            },                        
+            {
+                item: `[] <strong class="underline">food</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },            
+            {
+                item: `[] <strong class="underline">water</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },
         ],
         trinkets: `3d6x10`,
     },
@@ -400,11 +431,31 @@ export const JOBS = [
             },
         ],
         startingEquipment: [
-            `A robe of woven leaves and vines.`,
-            `Druidic Staff (d6 damage).`,
-            `Old pouch of Healing Herbs (d6 uses, each use heals d4HP).`,
-            `d4 food`,
-            `d4 water`
+            {
+                item: `<strong class="underline">A robe of woven leaves and vines.</strong>`,
+                type: `item`,
+                die: ``
+            },            
+            {
+                item: `<strong class="underline">Druidic Staff</strong> (<strong>d6 damage</strong>).{melee}`,
+                type: `weapon`,
+                die: ``
+            },            
+            {
+                item: `<strong class="underline">Old pouch of Healing Herbs</strong> (<em>[] uses, each use heals d4HP</em>).`,
+                type: `item`,
+                die: `d6`
+            },                        
+            {
+                item: `[] <strong class="underline">food</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },            
+            {
+                item: `[] <strong class="underline">water</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },
         ],
         trinkets: '1d6x10',
     },
@@ -466,10 +517,26 @@ export const JOBS = [
             },
         ],
         startingEquipment: [
-            `Thick fur coat.`,
-            `Giant Club (d12 damage).`,
-            `d4 food`,
-            `d4 water`,
+            {
+                item: `<strong class="underline">Thick fur coat.</strong>`,
+                type: `item`,
+                die: ``
+            },            
+            {
+                item: `<strong class="underline">Giant Club</strong> (<strong>d12 damage</strong>).{melee}`,
+                type: `weapon`,
+                die: ``
+            },
+            {
+                item: `[] <strong class="underline">food</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },            
+            {
+                item: `[] <strong class="underline">water</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },
         ],
         trinkets: '1d6x10',
     },
@@ -530,11 +597,31 @@ export const JOBS = [
             },
         ],
         startingEquipment: [
-            `Flowing white robes.`,
-            `Lightwood Staff (d6 damage).`,
-            `Set of Light Grenades (d4 grenades, d6 damage, causes blindness).`,
-            `d4 food`,
-            `d4 water`,
+            {
+                item: `<strong class="underline">Flowing white robes.</strong>`,
+                type: `item`,
+                die: ``
+            },            
+            {
+                item: `<strong class="underline">Lightwood Staff</strong> (<strong>d6 damage</strong>).{melee}`,
+                type: `weapon`,
+                die: ``
+            },            
+            {
+                item: `<strong class="underline">Set of Light Grenades</strong> (<strong>[] grenades, d6 damage, causes blindness</strong>).{ranged}`,
+                type: `weapon`,
+                die: `1d4`
+            },
+            {
+                item: `[] <strong class="underline">food</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },            
+            {
+                item: `[] <strong class="underline">water</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },
         ],
         trinkets: '2d6x10',
     },
@@ -623,12 +710,34 @@ export const JOBS = [
             },
         ],
         startingEquipment: [
-            `Smith’s Tools.`,
-            `Sturdy Chainmail (tier 3).`,
-            `Smith’s Hammer (d6 damage, can be used as a tool) .`,
-            `Choose or roll 3 random Runes (these Runes can only be inscribed into armour/weapons).`,
-            `d4 food`,
-            `d4 water`,
+            {
+                item: `<strong class="underline">Smith’s Tools.</strong>`,
+                type: `item`,
+                die: ``
+            },            {
+                item: `Sturdy Chainmail.`,
+                type: `3`,
+                die: ``
+            },            {
+                item: `<strong class="underline">Smith’s Hammer</strong> (<strong>d6 damage, can be used as a tool</strong>).{melee}`,
+                type: `weapon`,
+                die: ``
+            },            
+            {
+                item: `weapon/armor rune`,
+                type: `rune`,
+                die: `3`
+            },                                  
+            {
+                item: `[] <strong class="underline">food</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },            
+            {
+                item: `[] <strong class="underline">water</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },
         ],
         trinkets: '4d6x10',
     },
@@ -697,10 +806,26 @@ export const JOBS = [
             },
         ],
         startingEquipment: [
-            `Ghostly robes.`,
-            `Spectral Dagger (d6 damage).`,
-            `d4 food`,
-            `d4 water`,
+            {
+                item: `<strong class="underline">Ghostly robes.</strong>`,
+                type: `item`,
+                die: ``
+            },            
+            {
+                item: `<strong class="underline">Spectral Dagger</strong> (<strong>d6 damage</strong>).{melee}`,
+                type: `weapon`,
+                die: ``
+            },                        
+            {
+                item: `[] <strong class="underline">food</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },            
+            {
+                item: `[] <strong class="underline">water</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },
         ],
         trinkets: '1d6x10',
     },
@@ -758,10 +883,26 @@ export const JOBS = [
             },
         ],
         startingEquipment: [
-            `Searing Chain (d12 damage).`,
-            `Ember core (once per day, absorb heat from the surroundings to heal d6HP).`,
-            `d4 food`,
-            `d4 water`,
+            {
+                item: `<strong class="underline">Searing Chain</strong> (<strong>d12 damage</strong>).{melee, ranged}`,
+                type: `weapon`,
+                die: ``
+            },            
+            {
+                item: `<strong class="underline">Ember core</strong> (<em>once per day, absorb heat from the surroundings to heal <strong>d6HP</strong></em>).`,
+                type: `item`,
+                die: ``
+            },                        
+            {
+                item: `[] <strong class="underline">food</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },            
+            {
+                item: `[] <strong class="underline">water</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },
         ],
         trinkets: '1d6x10',
     },
@@ -835,10 +976,26 @@ export const JOBS = [
             },
         ],
         startingEquipment: [
-            `Cloak of Forgotten Souls (can turn invisible in shadows once per day for d4 rounds).`,
-            `Death’s Crook (d8 damage).`,
-            `d4 food`,
-            `d4 water`,
+            {
+                item: `<strong class="underline">Cloak of Forgotten Souls</strong> (<em>can turn invisible in shadows once per day for d4 rounds</em>).`,
+                type: `item`,
+                die: ``
+            },            
+            {
+                item: `<strong class="underline">Death’s Crook</strong> (<strong>d8 damage</strong>).{melee}`,
+                type: `weapon`,
+                die: ``
+            },                        
+            {
+                item: `[] <strong class="underline">food</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },            
+            {
+                item: `[] <strong class="underline">water</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },
         ],
         trinkets: '1d6x10',
     },
@@ -895,9 +1052,21 @@ export const JOBS = [
             },
         ],
         startingEquipment: [
-            `Choose or roll 3 random Runes (these Runes can only be cast as spells).`,
-            `d4 food`,
-            `d4 water`,
+            {
+                item: `spell rune`,
+                type: `rune`,
+                die: `3`
+            },                                  
+            {
+                item: `[] <strong class="underline">food</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },            
+            {
+                item: `[] <strong class="underline">water</strong>`,
+                type: `item`,
+                die: `1d4`,
+            },
         ],
         trinkets: '3d6x10',
     },
@@ -961,7 +1130,7 @@ export const ITEMS_1 = [
 ];
 
 export const ITEMS_2 = [
-        {
+    {
         name: 'Wyrd-Knotted Twine',
         descrip: `A long rope made of simple twine, woven with protective knots.`,
     },
@@ -1011,7 +1180,377 @@ export const ITEMS_2 = [
     },
 ];
 
+export const WEAPONS = [
+    {
+        name: `Blood-Forged Axe`,
+        damage: `d8`,
+        descrip: `A wicked axe stained crimson. <strong class="underline">On a critical hit</strong>, the wielder heals the amount of damage dealt.`,
+        range: ['melee'],
+    },
+    {
+        name: `Frostfang Spear`,
+        damage: `d8`,
+        descrip: ` A spear imbued with the chilling essence of Jötunheim. <strong class="underline">On a successful attack</strong>, the target suffers <strong>1 point of cold damage</strong> at the <strong class="underline">start of each round for the next <span class="underline">d4 rounds</span></strong>.`,
+        range: ['melee', 'ranged']
+    },
+    {
+        name: `Valkyrie’s Blade`,
+        damage: `d10`,
+        descrip: `A finely crafted sword said to have been wielded by a Valkyrie. <strong class="underline">On a successful hit</strong>, the sword ignores the first point of armour.`,
+        range: ['melee']
+    },
+    {
+        name: `Draugr-Claw Katar`,
+        damage: `d6`,
+        descrip: `A vicious weapon made from the claws of a Draugr. <strong class="underline">On a successful hit</strong>, the target is <strong>poisoned</strong>.`,
+        range: ['melee']
+    },
+    {
+        name: `Troll-Skull Mace`,
+        damage: `d10`,
+        descrip: ` A brutal mace fashioned from the skull of a troll. The wielder can reroll a failed attack <strong class="underline">once per session</strong>.`,
+        range: ['melee']
+    },
+    {
+        name: `Serpent-Spine Whip`,
+        damage: `d6`,
+        descrip: ` A whip woven from the spine of a giant serpent. Has a long reach and can be used to disarm or trip opponents, knocking them prone (<strong>Test Swift DR14</strong>).`,
+        range: ['ranged']
+    },
+    {
+        name: `Runic Bow`,
+        damage: `d6`,
+        descrip: ` A simple wooden bow etched with runes of power. <strong class="underline">If the wielder scores a critical hit</strong>, the arrow pierces through the target and can hit another target behind it.`,
+        range: ['ranged']
+    },
+    {
+        name: `Phel-Fire Brand`,
+        damage: `d8`,
+        descrip: `A sword forged in the fires of Musphelheim. <strong class="underline">On a successful hit</strong>, the target catches fire, taking <strong>d4 damage</strong> at the <strong class="underline">start of the next round</strong>.`,
+        range: ['melee']
+    },
+    {
+        name: `Kraken-Tentacle Flail`,
+        damage: `d8`,
+        descrip: `A grotesque flail made from the severed tentacles of a kraken. <strong class="underline">On a successful hit</strong>, the target is unable to move next round.`,
+        range: ['melee']
+    },
+    {
+        name: `Wolf-Bone Dagger`,
+        damage: `d4`,
+        descrip: `A small, sharp dagger carved from the bone of a dire wolf. <strong>Grants advantage on attacks made from stealth</strong>.`,
+        range: ['melee']
+    },
+    {
+        name: `Berserkr’s Cleaver`,
+        damage: `d10`,
+        descrip: `A massive two-handed axe. <strong class="underline">When the wielder takes damage</strong>, they can choose to enter a berserkr rage, gaining <strong>+2 to attacks and damage</strong> but suffering a <strong>DR+4 defence</strong> for <strong class="underline">d4 rounds</strong>.`,
+        range: ['melee']
+    },
+    {
+        name: `Giant’s Femur`,
+        damage: `d8`,
+        descrip: `The femur of a deceased giant. <strong>Those who know, know</strong>.`,
+        range: ['melee']
+    },
+    {
+        name: `Sea Serpent Shield`,
+        damage: `d4`,
+        descrip: `A shield fashioned from the scales of a sea serpent. <strong class="underline">If used to bash</strong> (<strong>d4 damage</strong>), the shield grants <strong>−2DR</strong> if the following action is a <strong>Parry</strong>.`,
+        range: ['melee']
+    },
+    {
+        name: `Dragonbone Spear`,
+        damage: `d10`,
+        descrip: `A spear crafted from the bone of a slain dragon. <strong class="underline">On a critical hit</strong>, the spear bursts into flames, dealing an additional <strong>d6 fire damage</strong>.`,
+        range: ['melee', 'ranged']
+    },
+    {
+        name: `Cursed Bear Claw Gauntlets`,
+        damage: `d6`,
+        descrip: `Gauntlets adorned with the claws of a cursed bear. <strong class="underline">When worn</strong>, gain <strong>+2 to Might Tests</strong> but suffer <strong>−2 to Wits Tests</strong>.`,
+        range: ['melee']
+    },
+    {
+        name: `Wight’s Hair Nettle Whip`,
+        damage: `d4`,
+        descrip: `A whip woven from the hair of a vengeful wight. <strong>On a successful hit</strong>, the target is <strong>poisoned</strong>.`,
+        range: ['ranged']
+    },
+    {
+        name: `Giant’s Toe Club`,
+        damage: `d8`,
+        descrip: `A crude club fashioned from the severed toe of a giant. <strong class="underline">When used to attack a defenceless creature or one begging for mercy</strong>, the attack deals <strong>double damage</strong>.`,
+        range: ['melee']
+    },
+    {
+        name: `Runic War Horn`,
+        damage: `d2`,
+        descrip: `A horn carved with runes of power. <strong class="underline">When blown</strong>, all allies that hear it gain <strong>+1 to their attacks</strong> for the <strong class="underline">next round</strong>. Can also be used as an improvised weapon.`,
+        range: ['melee']
+    },
+    {
+        name: `Flayed Skin Drum`,
+        damage: `d4`,
+        descrip: `A gruesome drum made of the flayed skin of a sacrificial victim. <strong class="underline">When played</strong>, it has a 50% chance of attracting a nearby wandering monster. <strong class="underline">If thrown</strong>, the drum deals <strong>d4 damage</strong> and makes a ‘bonk’ noise.`,
+        range: ['ranged']
+    },
+    {
+        name: `Skull-Tipped Staff`,
+        damage: `d6`,
+        descrip: `A staff topped with a human skull. Deals an additional <strong>d4 damage per skull added</strong>.`,
+        range: ['melee']
+    },
+];
+
+export const TIER1_ARMOR = [
+    {
+        name: `No Armor.`,
+        defense: ``,
+        descrip: `Flesh is the armour of a true berserkr.`,
+    }
+];
+
+export const TIER2_ARMOR = [
+    {
+        name: `Worn Leather Jerkin.`,
+        defense: `Reduces damage taken by d2`,
+        descrip: `A weathered leather garment, softened by countless battles and travels.`,
+
+    },
+        {
+        name: `Fur-Lined Cloak.`,
+        defense: `Reduces damage taken by d2`,
+        descrip: `A warm cloak lined with thick furs, providing comfort and protection against the elements.`,
+
+    },
+        {
+        name: `Padded Gambeson.`,
+        defense: `Reduces damage taken by d2`,
+        descrip: `A quilted jacket, worn beneath armour on its own, offering a layer of defense against blows.`,
+
+    },
+];
+
+export const TIER3_ARMOR = [
+    {
+        name: `Studded Leather Cuirass.`,
+        defense: `Reduces damage taken by d4 and imposes a +2DR penalty on Swift Tests. Defence is DR+2.`,
+        descrip: `A hardened leather vest reinforced with metal studs, offering decent protection while maintaining mobility.`,
+    },    
+    {
+        name: `Chainmail Hauberk.`,
+        defense: `Reduces damage taken by d4 and imposes a +2DR penalty on Swift Tests. Defence is DR+2.`,
+        descrip: `A shirt of interlocking metal rings, providing reliable defence against slashing attacks.`,
+
+    },    
+    {
+        name: `Scale Armour.`,
+        defense: `Reduces damage taken by d4 and imposes a +2DR penalty on Swift Tests. Defence is DR+2.`,
+        descrip: `A flexible armour of overlapping metal scales, offering a balance of protection and agility.`,
+    },
+];
+
+export const TIER4_ARMOR = [
+    {
+        name: `Lamellar Cuirass.`,
+        defense: `Reduces damage taken by d6, imposes a +4DR penalty on Swift Tests. Defence is DR+2.`,
+        descrip: `A segmented cuirass of lacquered metal plates, meticulously arranged like protective scales.`,
+    },    
+    {
+        name: `Plate Hauberk.`,
+        defense: `Reduces damage taken by d6, imposes a +4DR penalty on Swift Tests. Defence is DR+2.`,
+        descrip: `A coat of overlapping iron plates, forged into a rigid shell that encases the wearer in steel.`,
+    },
+];
+
+export const RUNES = [
+    {
+        symbol: `ᚠ`,
+        name: `Fehu`,
+        descrip: `wealth`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `For the next d4 hours, your ability to discern valuable objects, both hidden and in plain sight, is heightened. Gain +2 to any Test involving Trinkets or valuables.`
+            },
+            {
+                type: `weapon`,
+                descrip: `Invoke a shower of wealth. On your next successful hit, d100‡ Trinkets or valuable items rain from the sky onto your target (d4 damage per 10‡ Trinkets).
+`
+            }
+        ]
+    },    {
+        symbol: `ᚢ`,
+        name: `Uruz`,
+        descrip: `strength`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Channel the raw energy of Uruz, gaining or bestowing +2 to Might Tests for d6 rounds.`
+            },
+            {
+                type: `weapon`,
+                descrip: `Unleash a shock wave from your weapon, knocking all enemies close to you prone and dealing d4 damage to each.`
+            }
+        ]
+    },    {
+        symbol: `ᚦ`,
+        name: `Thurisaz`,
+        descrip: `giant`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Summon a destructive force, dealing d8 damage to all enemies you can see.`
+            },            
+            {
+                type: `weapon`,
+                descrip: `Enlarge your weapon to massive proportions for d4 rounds, dealing double damage. After the effect ends, you become fatigued.`
+            }
+        ]
+    },    {
+        symbol: `ᚫ`,
+        name: `Ansuz`,
+        descrip: `divine`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Invoke insight from the Norns to gain a truthful answer to a question or problem.
+`
+            },            {
+                type: `weapon`,
+                descrip: `Force an enemy to follow a simple command.
+`
+            }
+        ]
+    },    {
+        symbol: `ᚱ`,
+        name: `Raidho`,
+        descrip: `journey`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Know the most direct path to your destination or summon a gate, without the need for a ritual, a totem or Test.
+`
+            },            {
+                type: `armor`,
+                descrip: `Teleport to any visible location you can see, along with one ally if desired.
+`
+            }
+        ]
+    },    {
+        symbol: `ᚳ`,
+        name: `Kenaz`,
+        descrip: `knowledge`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Summon a radiant light, revealing hidden objects or creatures.
+`
+            },            {
+                type: `weapon`,
+                descrip: `Brand an enemy with Kenaz’s Rune, causing them blindness and also making them glow brightly, making them visible through walls, darkness, or magical concealment. Attacks against the branded enemy are made with advantage.
+`
+            }
+        ]
+    },    {
+        symbol: `ᚷ`,
+        name: `Gebo`,
+        descrip: `gift`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Exchange life force. Heal an ally for d6HP at the cost of your own HP.
+`
+            },            {
+                type: `weapon`,
+                descrip: `Deal maximum damage on your next hit, but sacrifice d6HP in exchange.
+`
+            }
+        ]
+    },    {
+        symbol: `ᚹ`,
+        name: `Wunjo`,
+        descrip: `joy`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Restore d4HP to yourself or a nearby ally, curing all conditions.`
+            },            {
+                type: `armor`,
+                descrip: `Emit a joyful song that heals all nearby allies for d4HP and grants +1 to their next Test.`
+            }
+        ]
+    },    {
+        symbol: `ᚻ`,
+        name: `Hagalaz`,
+        descrip: `hail`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Call down a hailstorm, dealing d6 damage to all creatures in the area for d4 rounds.`
+            },            {
+                type: `armor`,
+                descrip: `Surround yourself in raging hail for d4 rounds. Enemies that strike you take d4 damage from the freezing storm.`
+            }
+        ]
+    },    {
+        symbol: `ᚾ`,
+        name: `Nauthiz`,
+        descrip: `need`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Gain +2 to your next Test.`
+            },            {
+                type: `weapon`,
+                descrip: `Reroll a failed attack. However, you take d6 damage as payment for this favour from the Norns.`
+            }
+        ]
+    },    {
+        symbol: `ᛁ`,
+        name: `Isa`,
+        descrip: `ice`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Freeze your enemy in place. They are stunned for d2 rounds.`
+            },            {
+                type: `weapon`,
+                descrip: `Coat your weapon in frost for d4 rounds. Each strike deals an additional d4 cold damage.
+`
+            }
+        ]
+    },    
+    {
+        symbol: `ᛡ`,
+        name: `Jera`,
+        descrip: `harvest`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Double the amount of your current food and water.`
+            },            
+            {
+                type: `armor`,
+                descrip: `Summon a bountiful harvest—you and your allies find d6 food and water within your immediate vicinity.`
+            }
+        ]
+    },
+]
+
     // {
-    //     name: '',
+    //     symbol: ``,
+    //     name: ``,
     //     descrip: ``,
+    //     table: [
+    //         {
+    //             type: ``,
+    //             descrip: ``
+    //         },            
+    //         {
+    //             type: ``,
+    //             descrip: ``
+    //         }
+    //     ]
     // },

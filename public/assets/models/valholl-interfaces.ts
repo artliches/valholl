@@ -12,8 +12,39 @@ export interface JobObj {
     stats: StatsObj,
     special: string,
     features: FeaturesObj[],
-    startingEquipment: string[],
+    startingEquipment: StartingEquipmentObj[],
     trinkets: string,
+};
+
+export interface StartingEquipmentObj {
+    item: string,
+    type: string,
+    die: string,
+};
+
+export interface ArmorObj {
+    name: string,
+    defense: string,
+    descrip: string,
+};
+
+export interface WeaponObj {
+    name: string,
+    damage: string,
+    descrip: string,
+    range: string[],
+};
+
+export interface RuneObj {
+    symbol: string,
+    name: string,
+    descrip: string,
+    table: RuneTableObj[],
+};
+
+interface RuneTableObj {
+    type: string,
+    descrip: string,
 };
 
 export interface StatsObj {

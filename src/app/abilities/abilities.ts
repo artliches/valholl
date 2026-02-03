@@ -1,7 +1,7 @@
 import { JsonPipe, UpperCasePipe } from '@angular/common';
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { RandomNumber } from '../services/random-number';
-import { AbilityObj, JobObj, StatsObj } from '../assets/models/valholl-interfaces';
+import { AbilityObj, JobObj, StatsObj } from '../../../public/assets/models/valholl-interfaces';
 
 @Component({
   selector: 'app-abilities',

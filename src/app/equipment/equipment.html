@@ -2,7 +2,98 @@
     <div class="section-header">
         <h2 class="clickable">EQUIPMENT</h2>
     </div>
-    <div class="section-body">
-        body
+    <div class="equip-body">
+        <div class="equip-section">
+            <div class="section-title">
+                weapons
+            </div>
+            <span class="section-body">
+                @for (weapon of startingWeaponObjArray; track $index) {
+                    <div>
+                        <span class="weapon-icons">
+                            @for (range of weapon.range; track $index) {
+                                <img src="assets/icons/{{range.trim()}}.png" alt="">
+                            }
+                        </span>
+                        <span [innerHTML]="weapon.name"></span>
+                        <span [innerHTML]="weapon.damage"></span>
+                        <span [innerHTML]="weapon.descrip"></span>
+                    </div>
+                }
+
+                 @for (weapon of weaponObjArray; track $index) {
+                    <div class="weapon-layout">
+                        <span class="weapon-icons">
+                            @for (range of weapon.range; track $index) {
+                                <img src="assets/icons/{{range.trim()}}.png" alt="">
+                            }
+                        </span>
+                        <span class="clickable" [innerHTML]="weapon.name"></span>
+                        <span>(<strong>{{weapon.damage}} damage</strong>)</span>
+                        <span [innerHTML]="weapon.descrip"></span>
+                    </div>
+                }
+            </span>
+        </div>
+        <div class="equip-section">
+            <div class="section-title">
+                armor
+            </div>
+            <span class="section-body">
+                <div class="armor-layout">
+                    @if (armorObj.descrip) {
+                        <strong class="clickable">{{armorObj.name}}</strong>
+                    } @else {
+                        <strong class="underline">{{armorObj.name}}</strong>
+                    }
+                    @if (armorObj.defense) {
+                        <span class="defense-section">(<strong>{{ armorObj.defense }}</strong>)</span>
+                    }
+                    <em>{{ armorObj.descrip }}</em>
+                </div>
+            </span>
+        </div>
+        <div class="equip-section">
+            <div class="section-title">
+                items
+            </div>
+            <span class="section-body">
+                @for (item of itemArray; track $index) {
+                    <span [innerHTML]="item.item"></span>
+                }
+            </span>
+        </div>
+        @if (runeObjArray.length !== 0) {
+            <div class="rune-section">
+                <div class="rune-title">
+                    <span class="title clickable">RUNES</span>
+                    <em class="rune-rules">
+                        After a long rest, roll <strong>d4+Guile</strong> = Rune use that day. Spend to cast or activate inscribed Runes.
+                        Inscribe Rune on short rest. Must use food & water, cannot regain HP. <strong>Rune is destroyed and cannot be undone</strong>.
+                        To use a Rune, <strong>Test Wits DR12</strong>. <span class="underline">Success</span> = You cast the Rune’s effect, consuming one daily use. <span class="underline">Failure</span> = The spell fails. Lose 1HP, consume one daily use.
+                        A <strong>Fumble</strong> invokes <strong class="underline">Favour or Wrath of the God</strong>s.
+                    </em>
+                </div>
+                <div class="rune-body">
+                    @for (rune of runeObjArray; track $index) {
+                        <div class="rune-layout">
+                            <span class="rune-layout-title">
+                                <strong class="symbol clickable">{{ rune.symbol }}</strong>
+                                <strong class="name">{{ rune.name }}</strong>
+                                <em class="descrip">{{ rune.descrip }}</em>
+                            </span>
+                            <div class="rune-table">
+                                @for (table of rune.table; track $index) {
+                                    <div class="rune-table-layout">
+                                        <img src="assets/icons/{{table.type}}.png" alt="">
+                                        <span>{{ table.descrip }}</span>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
     </div>
 </div>
