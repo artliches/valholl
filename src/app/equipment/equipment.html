@@ -1,8 +1,10 @@
 <div class="equipment-layout">
     <div class="section-header">
-        <h2 class="clickable">EQUIPMENT</h2>
+        <h2 (click)="rerollAll()" class="clickable">EQUIPMENT</h2>
     </div>
     <div class="equip-body">
+        <div (click)="rerollPouch()" [innerHTML]="pouchObj.descrip">
+        </div>
         <div class="equip-section">
             <div class="section-title">
                 weapons
@@ -21,18 +23,16 @@
                     </div>
                 }
 
-                 @for (weapon of weaponObjArray; track $index) {
-                    <div class="weapon-layout">
-                        <span class="weapon-icons">
-                            @for (range of weapon.range; track $index) {
-                                <img src="assets/icons/{{range.trim()}}.png" alt="">
-                            }
-                        </span>
-                        <span class="clickable" [innerHTML]="weapon.name"></span>
-                        <span>(<strong>{{weapon.damage}} damage</strong>)</span>
-                        <span [innerHTML]="weapon.descrip"></span>
-                    </div>
-                }
+                <div class="weapon-layout">
+                    <span class="weapon-icons">
+                        @for (range of weaponObj.weapon.range; track $index) {
+                            <img src="assets/icons/{{range.trim()}}.png" alt="">
+                        }
+                    </span>
+                    <span (click)="rerollWeapon()" class="clickable" [innerHTML]="weaponObj.weapon.name"></span>
+                    <span>(<strong>{{weaponObj.weapon.damage}} damage</strong>)</span>
+                    <span [innerHTML]="weaponObj.weapon.descrip"></span>
+                </div>
             </span>
         </div>
         <div class="equip-section">
@@ -42,7 +42,7 @@
             <span class="section-body">
                 <div class="armor-layout">
                     @if (armorObj.descrip) {
-                        <strong class="clickable">{{armorObj.name}}</strong>
+                        <strong (click)="rerollArmor()" class="clickable">{{armorObj.name}}</strong>
                     } @else {
                         <strong class="underline">{{armorObj.name}}</strong>
                     }
@@ -58,15 +58,21 @@
                 items
             </div>
             <span class="section-body">
-                @for (item of itemArray; track $index) {
-                    <span [innerHTML]="item.item"></span>
+                @for (itemObj of itemsObjArray; track $index) {
+                    <div>
+                        <span (click)="itemsObjArray[$index] = rerollItem(itemsArray[$index], itemObj)" class="clickable">{{ itemObj.item.name }}.</span>
+                        <span [innerHTML]="itemObj.item.descrip"></span>
+                    </div>
+                }
+                @for (startItem of startingItemArray; track $index) {
+                    <span [innerHTML]="startItem.item"></span>
                 }
             </span>
         </div>
         @if (runeObjArray.length !== 0) {
             <div class="rune-section">
                 <div class="rune-title">
-                    <span class="title clickable">RUNES</span>
+                    <span (click)="rerollAllRunes()" class="title clickable">RUNES</span>
                     <em class="rune-rules">
                         After a long rest, roll <strong>d4+Guile</strong> = Rune use that day. Spend to cast or activate inscribed Runes.
                         Inscribe Rune on short rest. Must use food & water, cannot regain HP. <strong>Rune is destroyed and cannot be undone</strong>.
@@ -75,18 +81,31 @@
                     </em>
                 </div>
                 <div class="rune-body">
-                    @for (rune of runeObjArray; track $index) {
+                    @for (runeObj of runeObjArray; track $index) {
                         <div class="rune-layout">
-                            <span class="rune-layout-title">
-                                <strong class="symbol clickable">{{ rune.symbol }}</strong>
-                                <strong class="name">{{ rune.name }}</strong>
-                                <em class="descrip">{{ rune.descrip }}</em>
+                            @if (runeObj.source === 'pouch') {
+                                <em class="source-section underline">granted by the norns</em>
+                            } @else if (runeObj.source === 'stone') {
+                                <em class="source-section underline">picked up off the ground</em>
+                            } @else {
+                                <em class="source-section underline">
+                                    @if (jobTitle === 'Realmbreaker') {
+                                        can only be cast as spells
+                                    } @else if (jobTitle === 'Svartalfheim’s Master Smith') {
+                                        can only be inscribed into armour & weapons
+                                    }
+                                </em>
+                            }
+                            <span (click)="rerollRune($index)" class="rune-layout-title clickable">
+                                <strong class="symbol">{{ runeObj.rune.symbol }}</strong>
+                                <strong class="name">{{ runeObj.rune.name }}</strong>
+                                <em class="descrip">{{ runeObj.rune.descrip }}</em>
                             </span>
                             <div class="rune-table">
-                                @for (table of rune.table; track $index) {
+                                @for (table of runeObj.rune.table; track $index) {
                                     <div class="rune-table-layout">
                                         <img src="assets/icons/{{table.type}}.png" alt="">
-                                        <span>{{ table.descrip }}</span>
+                                        <span [innerHTML]="table.descrip"></span>
                                     </div>
                                 }
                             </div>

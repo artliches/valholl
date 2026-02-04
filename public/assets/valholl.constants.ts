@@ -1073,23 +1073,23 @@ export const JOBS = [
 ];
 
 export const PACKS = [
-    `You carry only what you can bear in your <strong class="clickable">hands or on your person</strong>, leaving you vulnerable but agile. <strong>A random Rune is incribed in your mind.</strong>`,
-    `A simple <strong class="clickable">leather pouch</strong>, decorated with knotwork or beads, capable of holding up to <strong>7 normal-sized items</strong>.`,
-    `A sturdy <strong class="clickable">sack woven from wool or flax</strong>, capable of holding up to <strong>10 normal-sized items</strong>.`,
+    `You carry only what you can bear in your <strong class="clickable">hands or on your person</strong>, leaving you vulnerable but agile. <strong>A random Rune is granted to you by the Norns.</strong>`,
+    `You start with a simple <strong class="clickable">leather pouch</strong>, decorated with knotwork or beads, capable of holding up to <strong>7 normal-sized items</strong>.`,
+    `You start with a sturdy <strong class="clickable">sack woven from wool or flax</strong>, capable of holding up to <strong>10 normal-sized items</strong>.`,
 ];
 
 export const ITEMS_1 = [
     {
         name: 'Dried Serpent Skin',
-        descrip: `A preserved snake skin that grants the wearer +2 to all Tests relating to serpentine/draconic creatures.`,
+        descrip: `A preserved snake skin that grants the wearer <strong>+2 to all Tests relating to serpentine/draconic creatures</strong>.`,
     },
         {
         name: 'Chunk of Bog Iron',
-        descrip: `A heavy piece of iron ore that can be used as a makeshift weapon (d4 damage). Can also be used to halve the time of armour repair.`,
+        descrip: `A heavy piece of iron ore that can be used as a makeshift weapon (<strong>d4 damage</strong>). Can also be used to halve the time of armour repair.`,
     },
         {
         name: 'Carved Wooden Dice',
-        descrip: `A pair of crudely carved wooden dice. When rolled after a long rest, a result of a 6 on either die grants the player a +2 bonus to one Test of their choice that day.`,
+        descrip: `A pair of crudely carved wooden dice. <strong class="underline">When rolled after a long rest</strong>, a result of a 6 on either die grants the player a <strong>+2 bonus to one Test of their choice that day</strong>.`,
     },
         {
         name: 'Tarnished Bronze Mirror',
@@ -1097,11 +1097,11 @@ export const ITEMS_1 = [
     },
         {
         name: 'Raven’s Talon Necklace',
-        descrip: `A necklace strung with the talons of ravens. Grants the wearer the ability to ask the GM one yes-or-no question about their immediate surroundings once per session.`,
+        descrip: `A necklace strung with the talons of ravens. Grants the wearer the ability to ask the GM <strong>one yes-or-no question</strong> about their immediate surroundings <strong class="underline">once per session</strong>.`,
     },
         {
         name: 'Worn Leather Pouch',
-        descrip: `A small pouch containing 3d10‡ Trinkets.`,
+        descrip: `A small pouch containing <strong>3d10‡ Trinkets</strong>.`,
     },
         {
         name: 'Bundle of Yarrow Stalks',
@@ -1109,11 +1109,11 @@ export const ITEMS_1 = [
     },
         {
         name: 'Wooden Rune Staff',
-        descrip: `A simple wooden staff, etched with runic symbols. Grants +1 to defence against attacks from undead creatures (d4 damage).`,
+        descrip: `A simple wooden staff, etched with runic symbols. Grants <strong>+1 to defence</strong> against attacks from undead creatures (<strong>d4 damage</strong>).`,
     },
         {
         name: 'Jar of Pickled Crowberries',
-        descrip: `A jar of d6 handfuls of preserved crowberries. Eating a handful restores d4HP.`,
+        descrip: `A jar of d6 handfuls of preserved crowberries. Eating a handful restores <strong>d4HP</strong>.`,
     },
         {
         name: 'Fragment of Ancient Pottery',
@@ -1125,7 +1125,7 @@ export const ITEMS_1 = [
     },
         {
         name: 'Bloodstained Feather',
-        descrip: `A single feather, stained crimson with dried blood. When held aloft, it can be used to determine the direction of the nearest source of fresh blood.`,
+        descrip: `A single feather, stained crimson with dried blood. <strong class="underline">When held aloft</strong>, it can be used to determine the direction of the nearest source of fresh blood.`,
     },
 ];
 
@@ -1140,43 +1140,43 @@ export const ITEMS_2 = [
     },
         {
         name: 'Carved Wooden Lantern',
-        descrip: `A lantern crafted from a single piece of wood (Guile+6 hours of light).`,
+        descrip: `A lantern crafted from a single piece of wood (<strong>Guile+6 hours of light</strong>).`,
     },
         {
         name: 'Wolf’s Fang Talisman',
-        descrip: `A carved wolf’s fang strung on a leather cord. Grants +2 to all Tests relating to wolves.`,
+        descrip: `A carved wolf’s fang strung on a leather cord. Grants <strong>+2 to all Tests relating to wolves</strong>.`,
     },
         {
         name: 'Random Rune Stone',
-        descrip: `A weathered stone bearing a single, partially legible rune. Roll one random Rune.`,
+        descrip: `A weathered stone bearing a single, partially legible rune. <strong>Roll one random Rune</strong>.`,
     },
         {
         name: 'Chipped Stone Axe',
-        descrip: `A crude stone axe, chipped and worn from use. A simple but effective weapon (d6 damage).`,
+        descrip: `A crude stone axe, chipped and worn from use. A simple but effective weapon (<strong>d6 damage</strong>).`,
     },
         {
         name: 'Foraged Healing Poultice',
-        descrip: `A poultice of crushed herbs and roots, wrapped in a clean cloth. Heals d4HP and removes the fatigue condition (d4 uses).`,
+        descrip: `A poultice of crushed herbs and roots, wrapped in a clean cloth. Heals <strong>d4HP</strong> and removes the <em>fatigue</em> condition (<strong>d4 uses</strong>).`,
     },
         {
         name: 'Iron Fish Hook ',
-        descrip: `A simple iron fish hook, surprisingly strong and sharp. Can be used as a makeshift weapon (d4 damage) or for fishing.`,
+        descrip: `A simple iron fish hook, surprisingly strong and sharp. Can be used as a makeshift weapon (<strong>d4 damage</strong>) or for fishing.`,
     },
         {
         name: 'Thornsnapper Vine',
-        descrip: `A length of thorny vine that can be used to create a makeshift snare or trap (Test Swift DR12 to set up, d6 damage).`,
+        descrip: `A length of thorny vine that can be used to create a makeshift snare or trap (<strong>Test Swift DR12 to set up, d6 damage</strong>).`,
     },
         {
         name: 'Thunderstone Shard',
-        descrip: `A jagged shard of rock said to have been struck by lightning. When thrown, deals d6 damage to everyone near where it lands.`,
+        descrip: `A jagged shard of rock said to have been struck by lightning. <strong class="underline">When thrown</strong>, deals <strong>d6 damage</strong> to everyone near where it lands.`,
     },
         {
         name: 'Poisoned Thorns',
-        descrip: `A handful of thorns coated in a venomous sap. On a successful attack, deals d4 damage and inflicts the poisoned condition (d4 doses).`,
+        descrip: `A handful of thorns coated in a venomous sap. <strong class="underline">On a successful attack</strong>, deals <strong>d4 damage</strong> and inflicts the <em>poisoned</em> condition (<strong>d4 doses</strong>).`,
     },
         {
         name: 'Raven Skull',
-        descrip: `A small, bleached skull of a raven. Can be used to invent a tale for your Saga.`,
+        descrip: `A small, bleached skull of a raven. Can be used to invent a tale for your <strong>Saga</strong>.`,
     },
 ];
 
@@ -1372,11 +1372,11 @@ export const RUNES = [
         table: [
             {
                 type: `spell`,
-                descrip: `For the next d4 hours, your ability to discern valuable objects, both hidden and in plain sight, is heightened. Gain +2 to any Test involving Trinkets or valuables.`
+                descrip: `<strong class="underline">For the next d4 hours</strong>, your ability to discern valuable objects, both hidden and in plain sight, is heightened. <strong>Gain +2 to any Test involving Trinkets or valuables</strong>.`
             },
             {
                 type: `weapon`,
-                descrip: `Invoke a shower of wealth. On your next successful hit, d100‡ Trinkets or valuable items rain from the sky onto your target (d4 damage per 10‡ Trinkets).
+                descrip: `Invoke a shower of wealth. <strong class="underline">On your next successful hit</strong>, d100‡ Trinkets or valuable items rain from the sky onto your target (<strong>d4 damage per 10‡ Trinkets</strong>).
 `
             }
         ]
@@ -1387,11 +1387,11 @@ export const RUNES = [
         table: [
             {
                 type: `spell`,
-                descrip: `Channel the raw energy of Uruz, gaining or bestowing +2 to Might Tests for d6 rounds.`
+                descrip: `Channel the raw energy of Uruz, gaining or bestowing <strong>+2 to Might Tests for <span class="underline">d6 rounds</span></strong>.`
             },
             {
                 type: `weapon`,
-                descrip: `Unleash a shock wave from your weapon, knocking all enemies close to you prone and dealing d4 damage to each.`
+                descrip: `Unleash a shock wave from your weapon, knocking all enemies close to you <em>prone</em> and dealing <strong>d4 damage to each</strong>.`
             }
         ]
     },    {
@@ -1401,11 +1401,11 @@ export const RUNES = [
         table: [
             {
                 type: `spell`,
-                descrip: `Summon a destructive force, dealing d8 damage to all enemies you can see.`
+                descrip: `Summon a destructive force, dealing <strong>d8 damage to all enemies you can see</strong>.`
             },            
             {
                 type: `weapon`,
-                descrip: `Enlarge your weapon to massive proportions for d4 rounds, dealing double damage. After the effect ends, you become fatigued.`
+                descrip: `Enlarge your weapon to massive proportions for <strong class="underline">d4 rounds</strong>, dealing <strong>double damage</strong>. <strong class="underline">After the effect ends</strong>, you become <em>fatigued</em>.`
             }
         ]
     },    {
@@ -1415,11 +1415,11 @@ export const RUNES = [
         table: [
             {
                 type: `spell`,
-                descrip: `Invoke insight from the Norns to gain a truthful answer to a question or problem.
+                descrip: `Invoke insight from the <strong>Norns</strong> to gain a truthful answer to a question or problem.
 `
             },            {
                 type: `weapon`,
-                descrip: `Force an enemy to follow a simple command.
+                descrip: `Force an enemy to follow a <strong>simple command</strong>.
 `
             }
         ]
@@ -1434,7 +1434,7 @@ export const RUNES = [
 `
             },            {
                 type: `armor`,
-                descrip: `Teleport to any visible location you can see, along with one ally if desired.
+                descrip: `<strong>Teleport</strong> to any visible location you can see, along with one ally if desired.
 `
             }
         ]
@@ -1445,11 +1445,11 @@ export const RUNES = [
         table: [
             {
                 type: `spell`,
-                descrip: `Summon a radiant light, revealing hidden objects or creatures.
+                descrip: `Summon a radiant light, revealing <strong>hidden objects or creatures</strong>.
 `
             },            {
                 type: `weapon`,
-                descrip: `Brand an enemy with Kenaz’s Rune, causing them blindness and also making them glow brightly, making them visible through walls, darkness, or magical concealment. Attacks against the branded enemy are made with advantage.
+                descrip: `Brand an enemy with Kenaz’s Rune, causing them <em>blindness</em> and also making them glow brightly, making them visible through walls, darkness, or magical concealment. <strong>Attacks against the branded enemy are made with advantage</strong>.
 `
             }
         ]
@@ -1460,11 +1460,11 @@ export const RUNES = [
         table: [
             {
                 type: `spell`,
-                descrip: `Exchange life force. Heal an ally for d6HP at the cost of your own HP.
+                descrip: `Exchange life force. Heal an ally for <strong>d6HP</strong> at the cost of your <strong>own HP</strong>.
 `
             },            {
                 type: `weapon`,
-                descrip: `Deal maximum damage on your next hit, but sacrifice d6HP in exchange.
+                descrip: `Deal maximum damage on your <strong class="underline">next hit</strong>, but sacrifice <strong>d6HP</strong> in exchange.
 `
             }
         ]
@@ -1475,10 +1475,10 @@ export const RUNES = [
         table: [
             {
                 type: `spell`,
-                descrip: `Restore d4HP to yourself or a nearby ally, curing all conditions.`
+                descrip: `Restore <strong>d4HP</strong> to yourself or a nearby ally, curing all <em>conditions</em>.`
             },            {
                 type: `armor`,
-                descrip: `Emit a joyful song that heals all nearby allies for d4HP and grants +1 to their next Test.`
+                descrip: `Emit a joyful song that <strong>heals all nearby allies</strong> for <strong>d4HP</strong> and grants <strong>+1 to their next Test</strong>.`
             }
         ]
     },    {
@@ -1488,10 +1488,10 @@ export const RUNES = [
         table: [
             {
                 type: `spell`,
-                descrip: `Call down a hailstorm, dealing d6 damage to all creatures in the area for d4 rounds.`
+                descrip: `Call down a hailstorm, dealing <strong>d6 damage to all creatures</strong> in the area for <strong class="underline">d4 rounds</strong>.`
             },            {
                 type: `armor`,
-                descrip: `Surround yourself in raging hail for d4 rounds. Enemies that strike you take d4 damage from the freezing storm.`
+                descrip: `Surround yourself in raging hail for <strong class="underline">d4 rounds</strong>. Enemies that strike you take <strong>d4 damage</strong> from the freezing storm.`
             }
         ]
     },    {
@@ -1501,10 +1501,10 @@ export const RUNES = [
         table: [
             {
                 type: `spell`,
-                descrip: `Gain +2 to your next Test.`
+                descrip: `Gain <strong>+2</strong> to your next Test.`
             },            {
                 type: `weapon`,
-                descrip: `Reroll a failed attack. However, you take d6 damage as payment for this favour from the Norns.`
+                descrip: `Reroll a failed attack. However, you take <strong>d6 damage</strong> as payment for this favour from the <strong>Norns</strong>.`
             }
         ]
     },    {
@@ -1514,10 +1514,10 @@ export const RUNES = [
         table: [
             {
                 type: `spell`,
-                descrip: `Freeze your enemy in place. They are stunned for d2 rounds.`
+                descrip: `Freeze your enemy in place. They are <em>stunned</em> for <strong class="underline">d2 rounds</strong>.`
             },            {
                 type: `weapon`,
-                descrip: `Coat your weapon in frost for d4 rounds. Each strike deals an additional d4 cold damage.
+                descrip: `Coat your weapon in frost for <strong class="underline">d4 rounds</strong>. Each strike deals an additional <strong>d4 cold damage</strong>.
 `
             }
         ]
@@ -1529,28 +1529,202 @@ export const RUNES = [
         table: [
             {
                 type: `spell`,
-                descrip: `Double the amount of your current food and water.`
+                descrip: `<strong>Double</strong> the amount of your current food and water.`
             },            
             {
                 type: `armor`,
-                descrip: `Summon a bountiful harvest—you and your allies find d6 food and water within your immediate vicinity.`
+                descrip: `Summon a bountiful harvest—you and your allies find <strong>d6 food</strong> and <strong>water</strong> within your immediate vicinity.`
+            }
+        ]
+    },
+        {
+        symbol: `ᛇ`,
+        name: `Eihwaz`,
+        descrip: `reliability`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Reduce all incoming damage to you or an ally by <strong>−2 for <span class="underline">d4 rounds</span></strong>.`
+            },            
+            {
+                type: `armor`,
+                descrip: `Become immovable for <strong class="underline">d4 rounds</strong>, reducing all damage taken by <strong>half</strong>. <em>You cannot move during this time</em>, but you can still act.
+`
+            }
+        ]
+    },    {
+        symbol: `ᛈ`,
+        name: `Pertho`,
+        descrip: `fate`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Reroll one failed Test within the <strong class="underline">next hour</strong>.`
+            },            
+            {
+                type: `weapon`,
+                descrip: `
+                <div class="table-layout">
+                    Activate to twist fate in your favour. After hitting an enemy, roll <strong>d6</strong>:
+                    <ol class="compact-list">
+                        <li>1–3 = add that number to the <strong>damage dealt</strong>.</li>
+                        <li>4–6 = subtract that number from <strong>damage taken</strong> on the next attack targeting you.</li>
+                    </ol>
+                </div>
+                `
+            }
+        ]
+    },    
+    {
+        symbol: `ᛉ`,
+        name: `Algiz`,
+        descrip: `protection`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `<strong>Halve</strong> all incoming damage for<strong class="underline"> d4 rounds</strong>.`
+            },            
+            {
+                type: `armor`,
+                descrip: `Create a magical shield around yourself for <strong class="underline">d4 rounds</strong>. This shield blocks the next successful attack entirely.`
+            }
+        ]
+    },    
+    {
+        symbol: ``,
+        name: `Sowilo`,
+        descrip: `sun`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `The power of the sun in the palm of your hand. <strong class="underline">When you touch an enemy</strong>, they take <strong>d10 damage</strong> and <strong>their armour is reduced by 1 tier</strong>.`
+            },            
+            {
+                type: `weapon`,
+                descrip: `Unleash radiant energy in a burning wave. All enemies that can see you take <strong>d6 damage</strong> and have <em>blindness</em> for <strong class="underline">d4 rounds</strong>.`
+            }
+        ]
+    },    
+    {
+        symbol: `ᛏ`,
+        name: `Tiwaz`,
+        descrip: `sacrifice`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Grant an <strong>automatic success</strong> on the <strong class="underline">next attack</strong>, but you suffer <strong>d4 damage</strong> as the strain takes its toll.`
+            },            
+            {
+                type: `weapon`,
+                descrip: `Guarantee a hit on your <strong class="underline">next attack</strong>, but after the blow, take <strong>double damage</strong> the <strong class="underline">next time you are hit</strong>.`
+            }
+        ]
+    },    
+    {
+        symbol: `ᛒ`,
+        name: `Berkano`,
+        descrip: `growth`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Restore <strong>d6HP</strong> immediately.`
+            },            
+            {
+                type: `armor`,
+                descrip: `Create a healing aura. <strong class="underline">At the start of the next round</strong>, you and all allies close to you heal <strong>d4HP</strong>.`
+            }
+        ]
+    },    
+    {
+        symbol: `ᛖ`,
+        name: `Ehwaz`,
+        descrip: `partnership`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Form a bond with one ally for <strong class="underline">d6 rounds</strong>. Any damage the ally takes is <strong>halved</strong>, and <strong>you take the other half</strong>.`
+            },            
+            {
+                type: `armor`,
+                descrip: `Summon a <strong>mystical horse</strong> beneath you. Your movement while on the horse is increased and defence is made with advantage. <strong class="underline">If you take 4 damage</strong>, the horse disappears and you are knocked <em>prone</em>.`
+            }
+        ]
+    },    
+    {
+        symbol: `ᛗ`,
+        name: `Mannaz`,
+        descrip: `cooperation`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Allow party members to share bonuses from features, abilities, and equipment for <strong class="underline">d4 rounds</strong>.`
+            },            
+            {
+                type: `armor`,
+                descrip: `Share a bonus <strong class="underline">once per day</strong>. You can transfer one of your active bonuses (<em>e.g., from equipment or abilities</em>) to an ally for their next Test.`
+            }
+        ]
+    },    
+    {
+        symbol: `ᛚ`,
+        name: `Laguz`,
+        descrip: `water`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Summon a powerful water wave, dealing <strong>d8 damage</strong> to all in its path and knocking them <em>prone</em>. This also deals <strong>double damage</strong> to any fire-based enemy.`
+            },            
+            {
+                type: `weapon`,
+                descrip: `A calming aura surrounds you. Heal yourself for <strong>d4HP</strong> each round for <strong class="underline">d4 rounds</strong>. This also heals all <em>conditions</em>.`
+            }
+        ]
+    },    
+    {
+        symbol: `ᛝ`,
+        name: `Ingwaz`,
+        descrip: `fertility`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `Make any creature you can see <strong><em>pregnant</em></strong>.`
+            },            
+            {
+                type: `armor`,
+                descrip: `Add a <strong>+4</strong> to your next <strong>non-battle Test</strong>.`
+            }
+        ]
+    },    
+    {
+        symbol: `ᛞ`,
+        name: `Dagaz`,
+        descrip: `day`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `The target creature may not <em>sleep</em> for <strong class="underline">d4 days</strong>.`
+            },            
+            {
+                type: `weapon`,
+                descrip: `Awaken the weapon’s potential. <strong class="underline">For the next round</strong>, the weapon deals an additional <strong>2d6 damage</strong>.`
+            }
+        ]
+    },    
+    {
+        symbol: `ᛟ`,
+        name: `Othala`,
+        descrip: `inheritance`,
+        table: [
+            {
+                type: `spell`,
+                descrip: `The target creature grows a beard made of <strong>d20‡ Trinkets</strong>, the beard cannot be trimmed or removed but can be <em>styled</em>.`
+            },            
+            {
+                type: `armor`,
+                descrip: `Invoke the power of your ancestors. <strong class="underline">Once per day</strong>, an ancestral spirit guides your hand, ensuring <strong>advantage</strong> on your next defence.`
             }
         ]
     },
 ]
 
-    // {
-    //     symbol: ``,
-    //     name: ``,
-    //     descrip: ``,
-    //     table: [
-    //         {
-    //             type: ``,
-    //             descrip: ``
-    //         },            
-    //         {
-    //             type: ``,
-    //             descrip: ``
-    //         }
-    //     ]
-    // },
+

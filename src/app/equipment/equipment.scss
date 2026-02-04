@@ -51,11 +51,21 @@ img {
             border-top: 2px dotted colors.$section-border-color;
             display: grid;
             column-gap: 1rem;
-            grid-template-columns: 4rem 1fr;
-            grid-template-rows: 1fr;
+            grid-template-columns: 4.5rem 1fr;
+            grid-template-rows: max-content 1fr;
             grid-template-areas:
+                "source source"
                 "title  table";
+            .source-section {
+                grid-area: source;
+                font-size: 0.8rem;
+                color: colors.$section-border-color;
+                margin-left: 0.3rem;
+                margin-bottom: 0.1rem;
+            }
             .rune-layout-title {
+                place-self: stretch center;
+                width: 4.5rem;
                 grid-area: title;
                 display: grid;
                 grid-template-columns: 1fr;
