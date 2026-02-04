@@ -77,6 +77,7 @@ export class Equipment implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
       if (changes && changes['jobEquipTable']) {
+        this.jobHasStartingArmor = false;
         this.runeTable = this.randomNumberService.shuffle(RUNES);
         this.armorObj = {} as ArmorObj;
         this.weaponObj = {
@@ -127,7 +128,6 @@ export class Equipment implements OnInit, OnChanges {
             // should only be armor
             const armorTier = Number(obj.type) - 1;
             const defense = this.armorTierDefenses[armorTier];
-            
             this.armorObj = {
               name: obj.item,
               defense: defense,
@@ -155,7 +155,9 @@ export class Equipment implements OnInit, OnChanges {
       this.itemsObjArray[i] = this.rerollItem(this.itemsArray[i], this.itemsObjArray[i]);
     }
 
-    if (!this.jobHasStartingArmor) this.rerollArmor();
+    if (!this.jobHasStartingArmor) {
+      this.rerollArmor();
+    }
 
     if (this.runeObjArray.length !== 0) {
       this.rerollAllRunes();
@@ -247,20 +249,34 @@ export class Equipment implements OnInit, OnChanges {
     } while (tempArmor.name === this.armorObj.name);
 
     this.armorObj = tempArmor;
+
+    const shouldAddArmorRune: boolean = this.armorObj.descrip.includes('Rune');
+    if (shouldAddArmorRune) {
+      this.addNewRune('armour');
+    } else {
+      const armorRuneIndex = this.getRuneIndex('armour');
+      if (armorRuneIndex >= 0) {
+        //we have an armor rune to remove
+        this.runeObjArray.splice(armorRuneIndex, 1);
+      }
+    }
   }
 
   rerollItem(itemArray: ItemObj[], itemArrayObj: {item: ItemObj, currValue: number}): any {
-    const previouslyHadStoneRune: boolean = itemArrayObj.item.name.includes('Rune');
     const isEndOfArray = itemArray.length === itemArrayObj.currValue + 1;
 
     if (isEndOfArray) itemArray = this.randomNumberService.shuffle(itemArray);
 
     const newValue = isEndOfArray ? 0 : itemArrayObj.currValue + 1;
 
-    if (itemArray[newValue].name.includes('Rune')) {
+    const shouldAddItemRune: boolean = itemArray[newValue].name.includes('Rune');
+    if (shouldAddItemRune) {
       this.addNewRune('stone');
-    } else if (previouslyHadStoneRune) {
-      this.runeObjArray.splice(this.runeObjArray.findIndex(runeObj => runeObj.source === 'stone'));
+    } else {
+      const itemRuneIndex = this.getRuneIndex('stone');
+      if (itemRuneIndex >= 0) {
+        this.runeObjArray.splice(itemRuneIndex, 1);
+      }
     }
     return {
       item: itemArray[newValue],
@@ -269,7 +285,6 @@ export class Equipment implements OnInit, OnChanges {
   }
 
   rerollPouch() {
-    const previouslyHadPouchRune: boolean = this.pouchObj.descrip.includes('Rune');
     const isEndOfArray = this.pouchArray.length === this.pouchObj.currValue + 1;
 
     const newValue = isEndOfArray ? 0 : this.pouchObj.currValue + 1;
@@ -278,12 +293,14 @@ export class Equipment implements OnInit, OnChanges {
       currValue: newValue
     };
 
-    if (this.pouchObj.descrip.includes('Rune')) {
-      //add new rune
+    const shouldAddPouchRune: boolean = this.pouchObj.descrip.includes('Rune');
+    if (shouldAddPouchRune) {
       this.addNewRune('pouch');
-    } else if (previouslyHadPouchRune) {
-      //remove pouch rune
-      this.runeObjArray.splice(this.runeObjArray.findIndex(runeObj => runeObj.source === 'pouch'));
+    } else {
+      const pouchRuneIndex = this.getRuneIndex('pouch');
+      if (pouchRuneIndex >= 0) {
+        this.runeObjArray.splice(pouchRuneIndex, 1);
+      }
     }
   }
 
@@ -309,5 +326,9 @@ export class Equipment implements OnInit, OnChanges {
     const rolledNum = this.randomNumberService.rollMultipleDie(numDie, dieSize);
 
     obj.item = obj.item.replace('[]', rolledNum.toString());
+  }
+
+  private getRuneIndex(source: string): number {
+    return this.runeObjArray.findIndex(runeObj => runeObj.source === source);
   }
 }

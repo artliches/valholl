@@ -49,7 +49,7 @@
                     @if (armorObj.defense) {
                         <span class="defense-section">(<strong>{{ armorObj.defense }}</strong>)</span>
                     }
-                    <em>{{ armorObj.descrip }}</em>
+                    <span [innerHTML]="armorObj.descrip"></span>
                 </div>
             </span>
         </div>
@@ -87,6 +87,8 @@
                                 <em class="source-section underline">granted by the norns</em>
                             } @else if (runeObj.source === 'stone') {
                                 <em class="source-section underline">picked up off the ground</em>
+                            } @else if (runeObj.source === 'armour') {
+                                <em class="source-section underline">inked upon your skin</em>
                             } @else {
                                 <em class="source-section underline">
                                     @if (jobTitle === 'Realmbreaker') {
