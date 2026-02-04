@@ -61,3 +61,8 @@ export interface FeaturesObj {
     title: string,
     descrip: string,
 };
+
+export interface ItemObj {
+    name: string,
+    descrip: string,
+};
