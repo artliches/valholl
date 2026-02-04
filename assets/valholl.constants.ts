@@ -1305,9 +1305,9 @@ export const WEAPONS = [
 
 export const TIER1_ARMOR = [
     {
-        name: `No Armor.`,
+        name: `No Armour.`,
         defense: ``,
-        descrip: `Flesh is the armour of a true berserkr.`,
+        descrip: `<em>Flesh is the armour of a true berserkr. <strong>You find a random Rune inked upon your skin.</strong></em>`,
     }
 ];
 
@@ -1315,19 +1315,19 @@ export const TIER2_ARMOR = [
     {
         name: `Worn Leather Jerkin.`,
         defense: `Reduces damage taken by d2`,
-        descrip: `A weathered leather garment, softened by countless battles and travels.`,
+        descrip: `<em>A weathered leather garment, softened by countless battles and travels.</em>`,
 
     },
         {
         name: `Fur-Lined Cloak.`,
         defense: `Reduces damage taken by d2`,
-        descrip: `A warm cloak lined with thick furs, providing comfort and protection against the elements.`,
+        descrip: `<em>A warm cloak lined with thick furs, providing comfort and protection against the elements.</em>`,
 
     },
         {
         name: `Padded Gambeson.`,
         defense: `Reduces damage taken by d2`,
-        descrip: `A quilted jacket, worn beneath armour on its own, offering a layer of defense against blows.`,
+        descrip: `<em>A quilted jacket, worn beneath armour on its own, offering a layer of defense against blows.</em>`,
 
     },
 ];
@@ -1336,18 +1336,18 @@ export const TIER3_ARMOR = [
     {
         name: `Studded Leather Cuirass.`,
         defense: `Reduces damage taken by d4 and imposes a +2DR penalty on Swift Tests. Defence is DR+2.`,
-        descrip: `A hardened leather vest reinforced with metal studs, offering decent protection while maintaining mobility.`,
+        descrip: `<em>A hardened leather vest reinforced with metal studs, offering decent protection while maintaining mobility.</em>`,
     },    
     {
         name: `Chainmail Hauberk.`,
         defense: `Reduces damage taken by d4 and imposes a +2DR penalty on Swift Tests. Defence is DR+2.`,
-        descrip: `A shirt of interlocking metal rings, providing reliable defence against slashing attacks.`,
+        descrip: `<em>A shirt of interlocking metal rings, providing reliable defence against slashing attacks.</em>`,
 
     },    
     {
         name: `Scale Armour.`,
         defense: `Reduces damage taken by d4 and imposes a +2DR penalty on Swift Tests. Defence is DR+2.`,
-        descrip: `A flexible armour of overlapping metal scales, offering a balance of protection and agility.`,
+        descrip: `<em>A flexible armour of overlapping metal scales, offering a balance of protection and agility.</em>`,
     },
 ];
 
@@ -1355,12 +1355,12 @@ export const TIER4_ARMOR = [
     {
         name: `Lamellar Cuirass.`,
         defense: `Reduces damage taken by d6, imposes a +4DR penalty on Swift Tests. Defence is DR+2.`,
-        descrip: `A segmented cuirass of lacquered metal plates, meticulously arranged like protective scales.`,
+        descrip: `<em>A segmented cuirass of lacquered metal plates, meticulously arranged like protective scales.</em>`,
     },    
     {
         name: `Plate Hauberk.`,
         defense: `Reduces damage taken by d6, imposes a +4DR penalty on Swift Tests. Defence is DR+2.`,
-        descrip: `A coat of overlapping iron plates, forged into a rigid shell that encases the wearer in steel.`,
+        descrip: `<em>A coat of overlapping iron plates, forged into a rigid shell that encases the wearer in steel.</em>`,
     },
 ];
 
@@ -1564,13 +1564,13 @@ export const RUNES = [
             {
                 type: `weapon`,
                 descrip: `
-                <div class="table-layout">
+                <span class="table-layout">
                     Activate to twist fate in your favour. After hitting an enemy, roll <strong>d6</strong>:
-                    <ol class="compact-list">
-                        <li>1–3 = add that number to the <strong>damage dealt</strong>.</li>
-                        <li>4–6 = subtract that number from <strong>damage taken</strong> on the next attack targeting you.</li>
-                    </ol>
-                </div>
+                    <div class="margin-left">
+                        <div><strong>1–3</strong> = add that number to the <strong>damage dealt</strong>.</div>
+                        <div><strong>4–6</strong> = subtract that number from <strong>damage taken</strong> on the next attack targeting you.</div>
+                    </div>
+                </span>
                 `
             }
         ]
