@@ -1,5 +1,14 @@
 @use '../../public/assets/colors';
 
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .zerk-layout {
     display: grid;
     height: 100vh;
@@ -26,6 +35,30 @@
             text-align: center;
             font-size: 0.9rem;
             color: colors.$section-border-color;
+        }
+    }
+    .zerk-reroll-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        place-items: center;
+        div {
+            grid-area: 1 / 1;
+            z-index: 2;
+            &:hover + img {
+                filter: brightness(0) saturate(100%) invert(82%) sepia(75%) saturate(1175%) hue-rotate(343deg) brightness(96%) contrast(93%);
+                transform: rotate(360deg);
+            }
+            &:active + img {
+                filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(7500%) hue-rotate(279deg) brightness(91%) contrast(109%);
+            }
+        }
+        img {
+            grid-area: 1 / 1;
+            height: 6rem;
+            width: 6rem;
+            transition: transform 1s ease-in-out;
+            transform: rotate(0deg);
         }
     }
     .zerk-body-layout {

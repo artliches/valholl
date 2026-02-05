@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FeaturesObj, JobObj } from '../../../public/assets/models/valholl-interfaces';
 import { RandomNumber } from '../services/random-number';
 import { JOBS } from '../../../public/assets/valholl.constants';
@@ -10,11 +10,11 @@ import { UpperCasePipe } from '@angular/common';
   templateUrl: './job.html',
   styleUrl: './job.scss',
 })
-export class Job implements OnInit {
+export class Job implements OnInit, OnChanges {
   constructor (
     private randomNumberService: RandomNumber
   ) {}
-
+  @Input() triggerReroll: boolean = false;
   @Output() jobEmitter: EventEmitter<JobObj> = new EventEmitter();
 
   jobsArray: JobObj[] = [];
@@ -29,6 +29,12 @@ export class Job implements OnInit {
 
       this.chosenFeature = this.jobObj.features[0];
       this.jobEmitter.emit(this.jobObj);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+      if (changes && changes['triggerReroll'] && changes['triggerReroll'].previousValue !== undefined) {
+        this.rerollJob();
+      }
   }
 
   rerollJob() {

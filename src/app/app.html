@@ -6,11 +6,17 @@
         <em class="subtitle">a random viking generator for <strong>BERSERKR</strong></em>
     </span>
 
+    <div class="zerk-reroll-section">
+        <div (click)="rerollAll()" class="clickable">{{ rerollText }}</div>
+        <img src="assets/icons/berserkr_icon.png" alt="">
+    </div>
+
     <div class="zerk-body-layout">
         <div class="zerk-body">
             <div class="job">
                 <app-job
-                    (jobEmitter)="getNewJob($event)" 
+                    (jobEmitter)="getNewJob($event)"
+                    [triggerReroll]="triggerReroll" 
                 ></app-job>
             </div>
             <div class="abilities">
@@ -20,12 +26,16 @@
                 ></app-abilities>
             </div>
             <div class="identity">
-                <app-names></app-names>
+                <app-names
+                    [triggerReroll]="triggerReroll" 
+                >
+                </app-names>
             </div>
             <div class="equipment">
                 <app-equipment
                     [jobEquipTable]="currJobStartEquip"
                     [jobTitle]="currentJob.name"
+                    [triggerReroll]="triggerReroll" 
                 ></app-equipment>
             </div>
 
@@ -40,6 +50,6 @@
         </div>
         <div>MÖRK BORG is copyright Ockult Örtmästare Games and Stockholm Kartell.</div>
         <div>Web app by <a class="social-link" target="_blank" href="https://artliches.github.io/dungeons-coding/">{{'@codeLiches'}}</a></div>
-        <div class="dark-font">v0.54: <em>ready for the journey ahead</em></div>
+        <div class="dark-font">v0.6: <em>death & rebirth</em></div>
     </div>
 </span>

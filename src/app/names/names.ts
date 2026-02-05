@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { BELIEFS, FIRST_NAME, HABITS, LAST_NAME, NICKNAME, PAST, QUIRKS } from '../../../public/assets/valholl.constants';
 import { RandomNumber } from '../services/random-number';
 import { UpperCasePipe } from '@angular/common';
@@ -9,10 +9,12 @@ import { UpperCasePipe } from '@angular/common';
   templateUrl: './names.html',
   styleUrl: './names.scss',
 })
-export class Names implements OnInit {
+export class Names implements OnInit, OnChanges {
   constructor(
     private randomNumberService: RandomNumber,
   ) {}
+
+  @Input() triggerReroll: boolean = false;
 
   firstNameArray: string[] = [];
   firstNameObj = {
@@ -59,6 +61,13 @@ export class Names implements OnInit {
   ngOnInit(): void {
       this.shuffleArrays();
       this.rerollAllObjects();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes && changes['triggerReroll'] && changes['triggerReroll'].previousValue !== undefined) {
+        this.shuffleArrays();
+        this.rerollAllObjects();
+    }
   }
 
   rerollAllObjects() {

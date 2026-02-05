@@ -15,6 +15,7 @@ export class Equipment implements OnInit, OnChanges {
 
   @Input() jobEquipTable: StartingEquipmentObj[] = [];
   @Input() jobTitle: string = '';
+  @Input() triggerReroll: boolean = false;
 
   jobHasStartingArmor: boolean = false;
   armorObj: ArmorObj = {} as ArmorObj;
@@ -144,6 +145,15 @@ export class Equipment implements OnInit, OnChanges {
           this.rerollArmor();
         } else {
           this.jobHasStartingArmor = true;
+        }
+      }
+
+      if (changes && changes['triggerReroll'] && changes['triggerReroll'].previousValue !== undefined) {
+        // reroll only pouch and items
+        this.rerollPouch();
+
+        for (let i = 0; i < 2; i++) {
+          this.itemsObjArray[i] = this.rerollItem(this.itemsArray[i], this.itemsObjArray[i]);
         }
       }
   }
