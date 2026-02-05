@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1770253475543,
+  "timestamp": 1770305226094,
   "index": "/valholl/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/valholl/favicon.ico",
         "/valholl/index.html",
-        "/valholl/main-IWRFE7ZK.js",
+        "/valholl/main-4L6TZIWM.js",
         "/valholl/manifest.webmanifest",
         "/valholl/styles-YB4BLETO.css"
       ],
@@ -34,6 +34,7 @@
         "/valholl/assets/fonts/Tagesschrift.ttf",
         "/valholl/assets/fonts/Zamolxis.ttf",
         "/valholl/assets/icons/armor.png",
+        "/valholl/assets/icons/berserkr_icon.png",
         "/valholl/assets/icons/melee.png",
         "/valholl/assets/icons/ranged.png",
         "/valholl/assets/icons/spell.png",
@@ -62,6 +63,7 @@
     "/valholl/assets/fonts/Tagesschrift.ttf": "aa160c977a0586cf93d84c2421ce6e0967632b2b",
     "/valholl/assets/fonts/Zamolxis.ttf": "9ab539a9802ab7a76b10418f0c6786ff8588d193",
     "/valholl/assets/icons/armor.png": "24092d15b72de20c5d5840ff276f021722d88b80",
+    "/valholl/assets/icons/berserkr_icon.png": "ae6df7ecbaab25f53c0f4cf190fc3f022e12450d",
     "/valholl/assets/icons/melee.png": "d57755c58f766cbbba01b5d889fbb56ec23bbbac",
     "/valholl/assets/icons/ranged.png": "8bf3ca79fb45b3d8d142c3f1cabb10e24debb917",
     "/valholl/assets/icons/spell.png": "733ffd0ac135989fb12cdf7a96808c778bb292fd",
@@ -72,8 +74,8 @@
     "/valholl/icons/apple-touch-icon.png": "8efb43b4b4e94b2faabeb04087ecd183e888f46d",
     "/valholl/icons/favicon-16x16.png": "fe85aad5abae056ca0a3a8b0da73c9bb82707828",
     "/valholl/icons/favicon-32x32.png": "de1151d1ff28b1c27a69915c79a201dab796dcb8",
-    "/valholl/index.html": "a67e0d965f1c02379138d6071bca6ba575a7df30",
-    "/valholl/main-IWRFE7ZK.js": "4ca50bd1f023383e05021c0eba0106798930c504",
+    "/valholl/index.html": "18c2458f6454ff11534743d94b685a7d7f154d24",
+    "/valholl/main-4L6TZIWM.js": "56b0f334d675d8470a16c25bc93ad89fc4d1e5e8",
     "/valholl/manifest.webmanifest": "8c3486121c5f68a5d4c75a4f4d88309fefe8fd93",
     "/valholl/media/Alegreya-WU5UNYNR.ttf": "92aba166a4ec4f651a40548bd9903e32f91e5d13",
     "/valholl/media/AncientRunes-KBSVL2DR.ttf": "bf42dc98cce1d0f9d4ecd40747b95b99168891c5",
