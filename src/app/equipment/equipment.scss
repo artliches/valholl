@@ -64,8 +64,9 @@ img {
                 margin-bottom: 0.1rem;
             }
             .rune-layout-title {
-                place-self: stretch center;
+                place-self: center;
                 width: 4.5rem;
+                height: 4.5rem;
                 grid-area: title;
                 display: grid;
                 grid-template-columns: 1fr;
