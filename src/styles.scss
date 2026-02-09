@@ -1,3 +1,4 @@
+
 @use '../public/assets/colors';
 
 @font-face {
@@ -161,6 +162,9 @@ body {
         color: black !important;
         border-color: black !important;
         background-color: white !important;
+
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
     .no-print {
         display: none !important;
