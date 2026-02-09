@@ -149,17 +149,22 @@ body {
     .zerk-layout {
         grid-gap: 1.5rem;
     }
+    h2.clickable, h2>span {
+        background-color: black !important;
+        color: white !important;
+    }
 
     .abilities-layout {
-        .section-border {
-            padding: 0.5rem;
-            .section-body {
-                .abilities-layout {
-                    .stats-layout {
-                        flex-direction: unset;
-                        flex-flow: wrap;
-                        justify-content: space-evenly;
+        .section-body {
+            .abilities-layout {
+                .stats-layout {
+                    .clickable {
+                        font-size: 1.3rem;
+                        text-decoration: underline;
                     }
+                    flex-direction: unset !important;
+                    flex-flow: wrap !important;
+                    justify-content: space-evenly !important;
                 }
             }
         }
