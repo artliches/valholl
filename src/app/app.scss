@@ -39,14 +39,16 @@
         h1, .runes, .subtitle {
             z-index: 2;
         }
-        img {
-            height: auto;
-            width: 100vw;
-            position:absolute;
-            animation: spin 120s infinite;
-            filter: brightness(0) saturate(100%) invert(28%) sepia(42%) saturate(1100%) hue-rotate(138deg) brightness(94%) contrast(101%);
-            top: -26%;
-        }
+        // img {
+        //     //min: 20rem
+        //     height: auto;
+        //     width: 65vw;
+        //     position:absolute;
+        //     animation: spin 120s infinite;
+        //     filter: brightness(0) saturate(100%) invert(28%) sepia(42%) saturate(1100%) hue-rotate(138deg) brightness(94%) contrast(101%);
+        //     // top: -26%;
+        //     top: 0;
+        // }
     }
     .zerk-reroll-section {
         display: grid;

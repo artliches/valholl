@@ -41,6 +41,23 @@
     color: white;
 }
 
+@keyframes shake {
+    0% {
+        transform: translateX(0rem) rotate(0deg);
+    }
+    25% {
+        transform: translateX(1rem) rotate(1deg);
+    }
+    50% {
+        transform: translateX(-1rem) rotate(-1deg);
+    }
+    75% {
+        transform: translate(-1rem) rotate(-1deg);
+    }
+    100% {
+        transform: translate(1rem) rotate(1deg);
+    }
+}
 
 html, body {
     height: 100%;
@@ -63,6 +80,12 @@ body {
         margin: 0;
         padding: 0;
         font-family: 'Tagesschrift';
+    }
+
+    .shake {
+        &:active {
+            animation: shake 0.1s ease-in-out;
+        }
     }
 
     .runes {
@@ -120,7 +143,7 @@ body {
 .social-link {
     text-decoration: none;
     background-color: black;
-    color: white;
+    color: colors.$valholl;
     font-weight: bold;
     &:hover {
         background-color: colors.$slightly-yellow;
@@ -147,9 +170,13 @@ body {
         filter: unset !important;        
     }
     .zerk-layout {
-        grid-gap: 1.5rem;
+        .zerk-body-layout {
+            .zerk-body {
+                row-gap: 1rem;
+            }
+        }
     }
-    h2.clickable, h2>span {
+    h2.clickable, h2>div {
         background-color: black !important;
         color: white !important;
     }
