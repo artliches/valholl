@@ -64,6 +64,7 @@ img {
                 margin-bottom: 0.1rem;
             }
             .rune-layout-title {
+                margin-left: 0.2rem;
                 place-self: center;
                 width: 4.5rem;
                 height: 4.5rem;
@@ -77,6 +78,20 @@ img {
                     "name"
                     "descrip";
 
+                &:hover {
+                    img {
+                        filter: brightness(0) saturate(100%) invert(0%) sepia(4%) saturate(0%) hue-rotate(323deg) brightness(98%) contrast(100%);
+                    }
+                }
+                &:active {
+                    img {
+                        filter: brightness(0) saturate(100%) invert(95%) sepia(13%) saturate(3666%) hue-rotate(350deg) brightness(99%) contrast(87%);
+                    }
+                }
+
+                img {
+                    filter: brightness(0) saturate(100%) invert(43%) sepia(68%) saturate(1038%) hue-rotate(145deg) brightness(103%) contrast(103%);
+                }
                 .symbol {
                     grid-area: symbol;
                     place-self: center;

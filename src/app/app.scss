@@ -36,6 +36,17 @@
             font-size: 0.9rem;
             color: colors.$section-border-color;
         }
+        h1, .runes, .subtitle {
+            z-index: 2;
+        }
+        img {
+            height: auto;
+            width: 100vw;
+            position:absolute;
+            animation: spin 120s infinite;
+            filter: brightness(0) saturate(100%) invert(28%) sepia(42%) saturate(1100%) hue-rotate(138deg) brightness(94%) contrast(101%);
+            top: -26%;
+        }
     }
     .zerk-reroll-section {
         display: grid;
@@ -112,6 +123,10 @@
         flex-direction: column;
         gap: 0.5rem;
         align-items: center;
+        .button-section {
+            display: flex;
+            gap: 1rem;
+        }
         .clickable {
             font-size: 1rem;
         }
@@ -128,6 +143,9 @@
             .runes {
                 font-size: 1rem;
             }
+            img {
+                top: -31%;
+            }
         }
     }
 }
@@ -141,6 +159,9 @@
             }
             .runes {
                 font-size: 1.2rem;
+            }
+            img {
+                top: -35%;
             }
         }
     }
@@ -157,6 +178,9 @@
             .runes {
                 font-size: 2rem;
             }
+            img {
+                top: -66%;
+            }
         }
     }
 }
@@ -171,6 +195,9 @@
                 }
                 .runes {
                     font-size: 2.5rem;
+                }
+                img {
+                    top: -89%;
                 }
             }
             .zerk-body-layout {
@@ -194,10 +221,36 @@
 //LARGE DESKTOP
 @media only screen and (min-width: 1440px) {
     .zerk-layout {
+        .zerk-header {
+            img {
+                top: -107%;
+                // top: -146%;
+            }
+        }
         .zerk-body-layout {
             grid-template-columns: 1fr 65% 1fr;
             grid-template-areas:
                 ".  body    .";
         }        
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .zerk-layout {
+        .zerk-header {
+            img {
+                top: -146%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1681px) {
+    .zerk-layout {
+        .zerk-header {
+            img {
+                display: none;
+            }
+        }
     }
 }

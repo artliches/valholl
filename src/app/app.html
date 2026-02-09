@@ -4,9 +4,10 @@
         <h1>V A L H O L L</h1>
         <span class="runes">baldr is dead ragnarok looms the only glory you'll find is in death</span>
         <em class="subtitle">a random viking generator for <strong>BERSERKR</strong></em>
+        <img class="no-print" src="assets/icons/berserkr_icon.png" alt="">
     </span>
 
-    <div class="zerk-reroll-section">
+    <div class="zerk-reroll-section no-print">
         <div (click)="rerollAll()" class="clickable">{{ rerollText }}</div>
         <img src="assets/icons/berserkr_icon.png" alt="">
     </div>
@@ -43,13 +44,16 @@
     </div>
 
     <div class="zerk-footer">
-        <div (click)="showRolls = !showRolls" class="clickable">{{ showRolls ? 'HIDE' : 'SHOW' }} ROLLS</div>
+        <div class="button-section no-print">
+            <div (click)="showRolls = !showRolls" class="clickable">{{ showRolls ? 'HIDE' : 'SHOW' }} ROLLS</div>
+            <div (click)="print()" class="clickable">PRINT</div>
+        </div>
         <div>
             VALHOLL is an independent production by Slightly Reckless Games LTD and is not affiliated with Ockult Örtmästare Games
             or Stockholm Kartell. It is published under the MÖRK BORG Third Party License.
         </div>
         <div>MÖRK BORG is copyright Ockult Örtmästare Games and Stockholm Kartell.</div>
         <div>Web app by <a class="social-link" target="_blank" href="https://artliches.github.io/dungeons-coding/">{{'@codeLiches'}}</a></div>
-        <div class="dark-font">v0.6: <em>death & rebirth</em></div>
+        <div class="dark-font">v0.7: <em>inscription</em></div>
     </div>
 </span>

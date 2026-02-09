@@ -131,3 +131,37 @@ body {
 .margin-left {
     margin-left: 1.1rem;
 }
+
+@media print {
+    * {
+        overflow: visible !important;
+        color: black !important;
+        border-color: black !important;
+        background-color: white !important;
+    }
+    .no-print {
+        display: none !important;
+    }
+    img {
+        background-color: white !important;
+        filter: unset !important;        
+    }
+    .zerk-layout {
+        grid-gap: 1.5rem;
+    }
+
+    .abilities-layout {
+        .section-border {
+            padding: 0.5rem;
+            .section-body {
+                .abilities-layout {
+                    .stats-layout {
+                        flex-direction: unset;
+                        flex-flow: wrap;
+                        justify-content: space-evenly;
+                    }
+                }
+            }
+        }
+    }
+}

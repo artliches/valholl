@@ -93,7 +93,7 @@ export class Equipment implements OnInit, OnChanges {
         this.startingWeaponObjArray = [];
         this.startingItemArray = [];
 
-        this.runeObjArray = this.runeObjArray.filter(runeObj => runeObj.source !== 'start');
+        this.runeObjArray = this.runeObjArray.filter(runeObj => runeObj.source !== 'start' && runeObj.source !== 'armour');
 
         // get job equipment
         this.jobEquipTable.forEach(obj => {

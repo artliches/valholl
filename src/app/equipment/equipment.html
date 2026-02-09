@@ -99,7 +99,11 @@
                                 </em>
                             }
                             <span (click)="rerollRune($index)" class="rune-layout-title clickable">
-                                <strong class="symbol">{{ runeObj.rune.symbol }}</strong>
+                                @if (runeObj.rune.name === 'Sowilo') {
+                                    <img src="assets/icons/Sowilo.svg" alt="" class="symbol">
+                                } @else {
+                                    <strong class="symbol">{{ runeObj.rune.symbol }}</strong>
+                                }
                                 <strong class="name">{{ runeObj.rune.name }}</strong>
                                 <em class="descrip">{{ runeObj.rune.descrip }}</em>
                             </span>

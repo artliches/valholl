@@ -46,4 +46,8 @@ export class App implements OnInit {
     this.rerollText = currIndex + 1 === this.rerollTexts.length ? this.rerollTexts[0] : this.rerollTexts[currIndex + 1];
     this.triggerReroll = !this.triggerReroll;
   }
+
+  print() {
+    window.print();
+  }
 }
