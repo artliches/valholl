@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1770748516062,
+  "timestamp": 1770755355732,
   "index": "/valholl/index.html",
   "assetGroups": [
     {
@@ -13,9 +13,9 @@
       "urls": [
         "/valholl/favicon.ico",
         "/valholl/index.html",
-        "/valholl/main-S2Y4YVDP.js",
+        "/valholl/main-XP7UAHX7.js",
         "/valholl/manifest.webmanifest",
-        "/valholl/styles-BIYDKINS.css"
+        "/valholl/styles-TFYTDGLJ.css"
       ],
       "patterns": []
     },
@@ -30,10 +30,14 @@
         "/valholl/assets/fonts/Alegreya.ttf",
         "/valholl/assets/fonts/AncientRunes.ttf",
         "/valholl/assets/fonts/AsgardianWars.ttf",
+        "/valholl/assets/fonts/Poppins-Bold.ttf",
+        "/valholl/assets/fonts/Poppins-Regular.ttf",
         "/valholl/assets/fonts/SQUEEG.ttf",
         "/valholl/assets/fonts/Tagesschrift.ttf",
         "/valholl/assets/fonts/Zamolxis.ttf",
+        "/valholl/assets/icons/Raven.svg",
         "/valholl/assets/icons/Sowilo.svg",
+        "/valholl/assets/icons/Valholl.svg",
         "/valholl/assets/icons/armor.png",
         "/valholl/assets/icons/berserkr_icon.png",
         "/valholl/assets/icons/melee.png",
@@ -48,6 +52,8 @@
         "/valholl/media/Alegreya-WU5UNYNR.ttf",
         "/valholl/media/AncientRunes-KBSVL2DR.ttf",
         "/valholl/media/AsgardianWars-FGDKQTCT.ttf",
+        "/valholl/media/Poppins-Bold-QAA2AGZS.ttf",
+        "/valholl/media/Poppins-Regular-JNHL4IDV.ttf",
         "/valholl/media/SQUEEG-7TKGBRGY.ttf",
         "/valholl/media/Tagesschrift-BJ6BEKAC.ttf",
         "/valholl/media/Zamolxis-SJZGQOHX.ttf"
@@ -60,10 +66,14 @@
     "/valholl/assets/fonts/Alegreya.ttf": "92aba166a4ec4f651a40548bd9903e32f91e5d13",
     "/valholl/assets/fonts/AncientRunes.ttf": "bf42dc98cce1d0f9d4ecd40747b95b99168891c5",
     "/valholl/assets/fonts/AsgardianWars.ttf": "521c689628204eb7f11c32b49c39de0086e87afe",
+    "/valholl/assets/fonts/Poppins-Bold.ttf": "875cf0cecd647bcf22e79d633d868c1b1ec98dfa",
+    "/valholl/assets/fonts/Poppins-Regular.ttf": "fdd3002e7d814ee47c1c1b8487c72c6bbb3a2d00",
     "/valholl/assets/fonts/SQUEEG.ttf": "28d4ef0ed8829e5a2155f460605f307ea6ecfeb7",
     "/valholl/assets/fonts/Tagesschrift.ttf": "aa160c977a0586cf93d84c2421ce6e0967632b2b",
     "/valholl/assets/fonts/Zamolxis.ttf": "9ab539a9802ab7a76b10418f0c6786ff8588d193",
+    "/valholl/assets/icons/Raven.svg": "3784a251e844248b2388a109ec4a1816b28253e1",
     "/valholl/assets/icons/Sowilo.svg": "3db139a1a9681b017dc483979f00743ab2183625",
+    "/valholl/assets/icons/Valholl.svg": "ac4d599b775fd47499509266b2c1cdbf35d4cfcc",
     "/valholl/assets/icons/armor.png": "24092d15b72de20c5d5840ff276f021722d88b80",
     "/valholl/assets/icons/berserkr_icon.png": "ae6df7ecbaab25f53c0f4cf190fc3f022e12450d",
     "/valholl/assets/icons/melee.png": "d57755c58f766cbbba01b5d889fbb56ec23bbbac",
@@ -76,16 +86,18 @@
     "/valholl/icons/apple-touch-icon.png": "8efb43b4b4e94b2faabeb04087ecd183e888f46d",
     "/valholl/icons/favicon-16x16.png": "fe85aad5abae056ca0a3a8b0da73c9bb82707828",
     "/valholl/icons/favicon-32x32.png": "de1151d1ff28b1c27a69915c79a201dab796dcb8",
-    "/valholl/index.html": "7eb0a4bf932dd6971e1142860e0a256461151040",
-    "/valholl/main-S2Y4YVDP.js": "3dcf3ac1bb66fdb889a28b658f42f126398fe926",
+    "/valholl/index.html": "e26e2e4e1c352ba0d53aaad2021917754c585746",
+    "/valholl/main-XP7UAHX7.js": "5959148ec14ad3cb54f577535336571ad23b5efd",
     "/valholl/manifest.webmanifest": "8c3486121c5f68a5d4c75a4f4d88309fefe8fd93",
     "/valholl/media/Alegreya-WU5UNYNR.ttf": "92aba166a4ec4f651a40548bd9903e32f91e5d13",
     "/valholl/media/AncientRunes-KBSVL2DR.ttf": "bf42dc98cce1d0f9d4ecd40747b95b99168891c5",
     "/valholl/media/AsgardianWars-FGDKQTCT.ttf": "521c689628204eb7f11c32b49c39de0086e87afe",
+    "/valholl/media/Poppins-Bold-QAA2AGZS.ttf": "875cf0cecd647bcf22e79d633d868c1b1ec98dfa",
+    "/valholl/media/Poppins-Regular-JNHL4IDV.ttf": "fdd3002e7d814ee47c1c1b8487c72c6bbb3a2d00",
     "/valholl/media/SQUEEG-7TKGBRGY.ttf": "28d4ef0ed8829e5a2155f460605f307ea6ecfeb7",
     "/valholl/media/Tagesschrift-BJ6BEKAC.ttf": "aa160c977a0586cf93d84c2421ce6e0967632b2b",
     "/valholl/media/Zamolxis-SJZGQOHX.ttf": "9ab539a9802ab7a76b10418f0c6786ff8588d193",
-    "/valholl/styles-BIYDKINS.css": "358201e38809cd310c10da5f0c5c86ba87427ecd"
+    "/valholl/styles-TFYTDGLJ.css": "07386e870989ce19b09e2de0a2b122b481edd0a2"
   },
   "navigationUrls": [
     {
