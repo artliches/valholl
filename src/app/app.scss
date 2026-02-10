@@ -9,23 +9,62 @@
     grid-template-rows: auto 1fr auto;
 
     .zerk-header {
-        margin: 1rem 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h1 {
-            font-size: 2rem;
-            margin: 0;
-            letter-spacing: 0.5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: max-content;
+        div.subtitle-section {
+            place-self: start center;
+            display: flex;
+            flex-direction: column;
+            .runes, .subtitle {
+                text-align: center;
+                font-size: 0.9rem;
+            }  
         }
-        .runes {
-            text-align: center;
-            font-size: 0.9rem;
-        }
-        .subtitle {
-            text-align: center;
-            font-size: 0.9rem;
-            color: colors.$section-border-color;
+        .valholl-title-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            img {
+                &.valholl-text-icon {
+                    place-self: center;
+                    height: 12rem;
+                    width: 18rem;
+                    grid-area: 1/1;
+                }
+                &.raven-icon {
+                    height: 6rem;
+                    width: 6rem;
+                }
+            }
+            div.reroll-section {
+                grid-area: 1/1;
+                z-index: 2;
+                place-self: end center;
+
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                place-items: center;
+                div {
+                    font-size: 0.8rem;
+                    grid-area: 1/1;
+                    z-index: 2;
+                    height: min-content;
+                    &:hover + img {
+                        filter: brightness(0) saturate(100%) invert(82%) sepia(75%) saturate(1175%) hue-rotate(343deg) brightness(96%) contrast(93%);
+                        transform: rotate(360deg);
+                    }
+                    &:active + img {
+                        filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(7500%) hue-rotate(279deg) brightness(91%) contrast(109%);
+                    }
+                }
+                img {
+                    grid-area: 1/1;
+                    transition: transform 1s ease-in-out;
+                    transform: rotate(0deg);
+                }
+            }
         }
     }
     .zerk-reroll-section {
@@ -117,14 +156,18 @@
 @media only screen and (min-width: 375px) {
     .zerk-layout {
         .zerk-header {
-            h1 {
-                font-size: 2.5rem;
+            div.subtitle-section {
+                .runes, .subtitle {
+                    font-size: 1rem;
+                }
             }
-            .runes {
-                font-size: 1rem;
-            }
-            img {
-                top: -31%;
+            .valholl-title-section {
+                img {
+                    &.valholl-text-icon {
+                        height: 13rem;
+                        width: 21rem;
+                    }
+                }
             }
         }
     }
@@ -134,14 +177,18 @@
 @media only screen and (min-width: 425px) {
     .zerk-layout {
         .zerk-header {
-            h1 {
-                font-size: 3rem;
+            div.subtitle-section {
+                .runes, .subtitle {
+                    font-size: 1.2rem;
+                }
             }
-            .runes {
-                font-size: 1.2rem;
-            }
-            img {
-                top: -35%;
+            .valholl-title-section {
+                img {
+                    &.valholl-text-icon {
+                        height: 14rem;
+                        width: 25rem;
+                    }
+                }
             }
         }
     }
@@ -151,15 +198,22 @@
 @media only screen and (min-width: 768px) {
     .zerk-layout {
         .zerk-header {
-            h1 {
-                font-size: 5rem;
-                letter-spacing: 1rem;
+            div.subtitle-section {
+                .runes {
+                    font-size: 2rem;
+                }
             }
-            .runes {
-                font-size: 2rem;
-            }
-            img {
-                top: -66%;
+            .valholl-title-section {
+                img {
+                    &.valholl-text-icon {
+                        height: 16rem;
+                        width: 41rem;
+                    }
+                    &.raven-icon {
+                        height: 7rem;
+                        width: 8rem;
+                    }
+                }
             }
         }
     }
@@ -169,15 +223,22 @@
 @media only screen and (min-width: 1024px) {
         .zerk-layout {
             .zerk-header {
-                h1 {
-                    font-size: 7rem;
-                    letter-spacing: 1rem;
+                div.subtitle-section {
+                    .runes {
+                        font-size: 2.5rem;
+                    }
                 }
-                .runes {
-                    font-size: 2.5rem;
-                }
-                img {
-                    top: -89%;
+                .valholl-title-section {
+                    img {
+                        &.valholl-text-icon {
+                            height: 20rem;
+                            width: 52rem;
+                        }
+                        &.raven-icon {
+                            height: 9rem;
+                            width: 10rem;
+                        }
+                    }
                 }
             }
             .zerk-body-layout {
@@ -201,36 +262,10 @@
 //LARGE DESKTOP
 @media only screen and (min-width: 1440px) {
     .zerk-layout {
-        .zerk-header {
-            img {
-                top: -107%;
-                // top: -146%;
-            }
-        }
         .zerk-body-layout {
             grid-template-columns: 1fr 65% 1fr;
             grid-template-areas:
                 ".  body    .";
         }        
-    }
-}
-
-@media only screen and (min-width: 1680px) {
-    .zerk-layout {
-        .zerk-header {
-            img {
-                top: -146%;
-            }
-        }
-    }
-}
-
-@media only screen and (min-width: 1681px) {
-    .zerk-layout {
-        .zerk-header {
-            img {
-                display: none;
-            }
-        }
     }
 }

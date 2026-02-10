@@ -1,16 +1,18 @@
 <span class="zerk-layout">
     <span class="zerk-header">
-        <span class="runes">baldr is dead ragnarok looms the only glory you'll find is in death</span>
-        <h1>V A L H O L L</h1>
-        <span class="runes">baldr is dead ragnarok looms the only glory you'll find is in death</span>
-        <em class="subtitle">a random viking generator for <strong>BERSERKR</strong></em>
-        <!-- <img class="no-print" src="assets/icons/berserkr_icon.png" alt=""> -->
-    </span>
+        <div class="subtitle-section">
+            <span class="subtitle">THE <strong>BERSERKR</strong> WARRIOR GENERATOR</span>
+            <span class="runes">baldr is dead ragnarok looms the only glory you'll find is in death</span>
+        </div>
+        <div class="valholl-title-section">
+            <img class="valholl-text-icon" src="assets/icons/Valholl.svg" alt="VALHOLL">
+            <div class="reroll-section">
+                <div (click)="rerollAll()" class="clickable shake no-print">{{ rerollText }}</div>
+                <img class="raven-icon" src="assets/icons/Raven.svg" alt="">
+            </div>
+        </div>
 
-    <div class="zerk-reroll-section no-print">
-        <div (click)="rerollAll()" class="clickable shake">{{ rerollText }}</div>
-        <img src="assets/icons/berserkr_icon.png" alt="">
-    </div>
+    </span>
 
     <div class="zerk-body-layout">
         <div class="zerk-body">
@@ -54,6 +56,6 @@
         </div>
         <div>MÖRK BORG is copyright Ockult Örtmästare Games and Stockholm Kartell.</div>
         <div>Web app by <a class="social-link" target="_blank" href="https://artliches.github.io/dungeons-coding/">{{'@codeLiches'}}</a></div>
-        <div class="dark-font">v0.91: <em>link by link</em></div>
+        <div class="dark-font">v0.92: <em>huginn & muninn</em></div>
     </div>
 </span>

@@ -37,6 +37,18 @@
     font-weight: 100 1000;
 }
 
+@font-face {
+    font-family: "Poppins-Bold";
+    src: local("Poppins-Bold"), url(../public/assets/fonts/Poppins-Bold.ttf) format('truetype');
+    font-weight: 100 1000;
+}
+
+@font-face {
+    font-family: "Poppins-Regular";
+    src: local("Poppins-Regular"), url(../public/assets/fonts/Poppins-Regular.ttf) format('truetype');
+    font-weight: 100 1000;
+}
+
 ::selection {
     background-color: colors.$section-border-color;
     color: white;
@@ -91,6 +103,13 @@ body {
 
     .runes {
         font-family: 'AncientRunes';
+    }
+
+    .subtitle {
+        font-family: 'Poppins-Regular';
+        strong {
+            font-family: 'Poppins-Bold';
+        }
     }
 
     .clickable {
@@ -182,8 +201,24 @@ body {
         display: block !important;
         min-height: 100%;
         .zerk-header {
-            display: flex !important;
-            flex-direction: column !important;
+            align-items: center !important;
+            div.subtitle-section {
+                .runes {
+                    font-size: 2rem !important;
+                }
+            }
+            .valholl-title-section {
+                img {
+                    &.valholl-text-icon {
+                        height: 16rem !important;
+                        width: 41rem !important;
+                    }
+                    &.raven-icon {
+                        height: 7rem !important;
+                        width: 8rem !important;
+                    }
+                }
+            }
         }
         .zerk-body-layout {
             display: flex !important;
