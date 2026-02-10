@@ -173,13 +173,24 @@ body {
         background-color: white !important;
         filter: unset !important;        
     }
+
     .zerk-layout {
+        display: block !important;
+        .zerk-header {
+            display: flex !important;
+            flex-direction: column !important;
+        }
         .zerk-body-layout {
+            display: flex !important;
+            gap: 1rem !important;
             .zerk-body {
-                row-gap: 1rem;
+                >div {
+                    display: block;
+                }
             }
         }
     }
+
     h2.clickable, h2>div {
         background-color: black !important;
         color: white !important;

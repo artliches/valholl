@@ -1,14 +1,5 @@
 @use '../../public/assets/colors';
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 .zerk-layout {
     display: grid;
     height: 100vh;
@@ -36,19 +27,6 @@
             font-size: 0.9rem;
             color: colors.$section-border-color;
         }
-        h1, .runes, .subtitle {
-            z-index: 2;
-        }
-        // img {
-        //     //min: 20rem
-        //     height: auto;
-        //     width: 65vw;
-        //     position:absolute;
-        //     animation: spin 120s infinite;
-        //     filter: brightness(0) saturate(100%) invert(28%) sepia(42%) saturate(1100%) hue-rotate(138deg) brightness(94%) contrast(101%);
-        //     // top: -26%;
-        //     top: 0;
-        // }
     }
     .zerk-reroll-section {
         display: grid;
