@@ -157,6 +157,10 @@ body {
 }
 
 @media print {
+    @page {
+        size: 8.5in 11in;
+        margin: 0.1in 0 0 0;
+    }
     * {
         overflow: visible !important;
         color: black !important;
@@ -176,6 +180,7 @@ body {
 
     .zerk-layout {
         display: block !important;
+        min-height: 100%;
         .zerk-header {
             display: flex !important;
             flex-direction: column !important;
