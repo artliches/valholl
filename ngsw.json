@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1770665072248,
+  "timestamp": 1770743502870,
   "index": "/valholl/index.html",
   "assetGroups": [
     {
@@ -13,9 +13,9 @@
       "urls": [
         "/valholl/favicon.ico",
         "/valholl/index.html",
-        "/valholl/main-IMMYM3EN.js",
+        "/valholl/main-SRJY3ZOJ.js",
         "/valholl/manifest.webmanifest",
-        "/valholl/styles-R26LD5G7.css"
+        "/valholl/styles-Q4DXKVDK.css"
       ],
       "patterns": []
     },
@@ -76,8 +76,8 @@
     "/valholl/icons/apple-touch-icon.png": "8efb43b4b4e94b2faabeb04087ecd183e888f46d",
     "/valholl/icons/favicon-16x16.png": "fe85aad5abae056ca0a3a8b0da73c9bb82707828",
     "/valholl/icons/favicon-32x32.png": "de1151d1ff28b1c27a69915c79a201dab796dcb8",
-    "/valholl/index.html": "07e6a2114abc6da51c1e2b60cd229494ca69ae4c",
-    "/valholl/main-IMMYM3EN.js": "3f040aab8b9a754c6db3a792cd3930f2ca47116d",
+    "/valholl/index.html": "28d9b4b01717a20fbaed1fe5d284be65c6370d51",
+    "/valholl/main-SRJY3ZOJ.js": "86a17daadebd88f1739555d8dd804f86988bc505",
     "/valholl/manifest.webmanifest": "8c3486121c5f68a5d4c75a4f4d88309fefe8fd93",
     "/valholl/media/Alegreya-WU5UNYNR.ttf": "92aba166a4ec4f651a40548bd9903e32f91e5d13",
     "/valholl/media/AncientRunes-KBSVL2DR.ttf": "bf42dc98cce1d0f9d4ecd40747b95b99168891c5",
@@ -85,7 +85,7 @@
     "/valholl/media/SQUEEG-7TKGBRGY.ttf": "28d4ef0ed8829e5a2155f460605f307ea6ecfeb7",
     "/valholl/media/Tagesschrift-BJ6BEKAC.ttf": "aa160c977a0586cf93d84c2421ce6e0967632b2b",
     "/valholl/media/Zamolxis-SJZGQOHX.ttf": "9ab539a9802ab7a76b10418f0c6786ff8588d193",
-    "/valholl/styles-R26LD5G7.css": "8df6840c55e4639637a53f79777914c26756da0a"
+    "/valholl/styles-Q4DXKVDK.css": "41d19caf62d6217a5909b01361e83fbff90d9023"
   },
   "navigationUrls": [
     {
