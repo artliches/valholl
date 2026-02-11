@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1770755355732,
+  "timestamp": 1770823805763,
   "index": "/valholl/index.html",
   "assetGroups": [
     {
@@ -80,13 +80,13 @@
     "/valholl/assets/icons/ranged.png": "8bf3ca79fb45b3d8d142c3f1cabb10e24debb917",
     "/valholl/assets/icons/spell.png": "733ffd0ac135989fb12cdf7a96808c778bb292fd",
     "/valholl/assets/icons/weapon.png": "5223e9f61a12d2da56348d418c88b7e6de0aaa82",
-    "/valholl/favicon.ico": "285ba3ae62f8bb691426bfddb7b1662b900f1a39",
-    "/valholl/icons/android-chrome-192x192.png": "0c22fefb9bc2e297d06bfac71f8391cd08fb47b2",
-    "/valholl/icons/android-chrome-512x512.png": "bd453cdce72fd39eea806009d27e21b97901336f",
-    "/valholl/icons/apple-touch-icon.png": "8efb43b4b4e94b2faabeb04087ecd183e888f46d",
-    "/valholl/icons/favicon-16x16.png": "fe85aad5abae056ca0a3a8b0da73c9bb82707828",
-    "/valholl/icons/favicon-32x32.png": "de1151d1ff28b1c27a69915c79a201dab796dcb8",
-    "/valholl/index.html": "e26e2e4e1c352ba0d53aaad2021917754c585746",
+    "/valholl/favicon.ico": "708e2ae926d99fc0650cc52fee8de2e117be07a7",
+    "/valholl/icons/android-chrome-192x192.png": "8b5dd9f86c5feaa08355e48e388fd361ed3760fc",
+    "/valholl/icons/android-chrome-512x512.png": "e8f0cc6a1924975d2f258c5e528cb9f888fe8adb",
+    "/valholl/icons/apple-touch-icon.png": "68d0dc8e6ddeafff8976330c032943c28ba05fc4",
+    "/valholl/icons/favicon-16x16.png": "b7beca1609f601aedc6be77ff15ebd8409975892",
+    "/valholl/icons/favicon-32x32.png": "0ab9aad7bca8bff50655cd724782053e48bdf4e7",
+    "/valholl/index.html": "4628e84d59a4eb5875e39d631bd970f27af97d70",
     "/valholl/main-XP7UAHX7.js": "5959148ec14ad3cb54f577535336571ad23b5efd",
     "/valholl/manifest.webmanifest": "8c3486121c5f68a5d4c75a4f4d88309fefe8fd93",
     "/valholl/media/Alegreya-WU5UNYNR.ttf": "92aba166a4ec4f651a40548bd9903e32f91e5d13",
