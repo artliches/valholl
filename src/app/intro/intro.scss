@@ -1,0 +1,24 @@
+div.intro-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+
+    .section-header {
+        display: grid;
+        text-align: center;
+        place-items: center;
+        h2 {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+    }
+    .section-body {
+        display: flex;
+        justify-content: center;
+        .clickable:not(:first-of-type) {
+            margin-left: 0.2rem;
+        }
+    }
+}

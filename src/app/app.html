@@ -1,5 +1,5 @@
 <span class="zerk-layout">
-    <span class="zerk-header">
+    <span class="zerk-header no-print">
         <div class="subtitle-section">
             <span class="subtitle">THE <strong>BERSERKR</strong> WARRIOR GENERATOR</span>
             <span class="runes">baldr is dead ragnarok looms the only glory you'll find is in death</span>
@@ -11,11 +11,15 @@
                 <img class="raven-icon" src="assets/icons/Raven.svg" alt="">
             </div>
         </div>
-
     </span>
 
     <div class="zerk-body-layout">
         <div class="zerk-body">
+            <div class="intro">
+                <app-intro
+                    [triggerReroll]="triggerReroll"
+                ></app-intro>
+            </div>
             <div class="job">
                 <app-job
                     (jobEmitter)="getNewJob($event)"
@@ -56,6 +60,6 @@
         </div>
         <div>MÖRK BORG is copyright Ockult Örtmästare Games and Stockholm Kartell.</div>
         <div>Web app by <a class="social-link" target="_blank" href="https://artliches.github.io/dungeons-coding/">{{'@codeLiches'}}</a></div>
-        <div class="dark-font">v0.92: <em>huginn & muninn</em></div>
+        <div class="dark-font">v0.94: <em>call out your name</em></div>
     </div>
 </span>

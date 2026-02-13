@@ -4,7 +4,7 @@
         </span>
         <span class="section-body">
             <span class="abilities-layout">
-                <div class="stats-layout">
+                <div class="stats-row-layout">
                     @for (ability of abilitiesArray; track $index) {
                         <div class="ability-layout">
                             <div (click)="rerollAbility(ability, false)" class="clickable">{{ ability.name | uppercase }}</div>

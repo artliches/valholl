@@ -5,10 +5,11 @@ import { Job } from "./job/job";
 import { JobObj, StartingEquipmentObj } from '../../public/assets/models/valholl-interfaces';
 import { Equipment } from "./equipment/equipment";
 import { RandomNumber } from './services/random-number';
+import { Intro } from './intro/intro';
 
 @Component({
   selector: 'app-root',
-  imports: [Names, Abilities, Job, Equipment],
+  imports: [Names, Abilities, Job, Equipment, Intro],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

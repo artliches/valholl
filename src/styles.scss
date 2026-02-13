@@ -239,14 +239,21 @@ body {
     .abilities-layout {
         .section-body {
             .abilities-layout {
+                .stats-row-layout {
+                    display: grid !important;
+                    grid-template-columns: repeat(5, auto) !important;
+                    grid-template-rows:1fr !important;
+                }
                 .stats-layout {
+                    flex-direction: unset !important;
+                    flex-flow: wrap !important;
+                    justify-content: space-evenly !important;
+                }
+                .stats-row-layout, .stats-layout {
                     .clickable {
                         font-size: 1.3rem;
                         text-decoration: underline;
                     }
-                    flex-direction: unset !important;
-                    flex-flow: wrap !important;
-                    justify-content: space-evenly !important;
                 }
             }
         }

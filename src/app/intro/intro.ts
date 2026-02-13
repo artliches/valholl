@@ -1,41 +1,35 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { BELIEFS, FIRST_NAME, HABITS, LAST_NAME, NICKNAME, PAST, QUIRKS } from '../../../public/assets/valholl.constants';
 import { RandomNumber } from '../services/random-number';
 import { UpperCasePipe } from '@angular/common';
+import { FIRST_NAME, LAST_NAME, NICKNAME } from '../../../public/assets/valholl.constants';
 
 @Component({
-  selector: 'app-names',
+  selector: 'app-intro',
   imports: [UpperCasePipe],
-  templateUrl: './names.html',
-  styleUrl: './names.scss',
+  templateUrl: './intro.html',
+  styleUrl: './intro.scss',
 })
-export class Names implements OnInit, OnChanges {
+export class Intro implements OnInit, OnChanges {
   constructor(
-    private randomNumberService: RandomNumber,
+    private randomNumberService: RandomNumber
   ) {}
 
   @Input() triggerReroll: boolean = false;
 
-  pastArray: string[] =[];
-  pastObj = {
+  firstNameArray: string[] = [];
+  firstNameObj = {
     descrip: '',
     currValue: -1,
   };
 
-  quirkArray: string[] =[];
-  quirkObj = {
+  lastNameArray: string[] = [];
+  lastNameObj = {
     descrip: '',
     currValue: -1,
   };
 
-  habitsArray: string[] =[];
-  habitsObj = {
-    descrip: '',
-    currValue: -1,
-  };
-
-  beliefArray: string[] =[];
-  beliefObj = {
+  nickNameArray: string[] = [];
+  nickNameObj = {
     descrip: '',
     currValue: -1,
   };
@@ -47,23 +41,15 @@ export class Names implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes && changes['triggerReroll'] && changes['triggerReroll'].previousValue !== undefined) {
-        this.shuffleArrays();
-        this.rerollAllObjects();
+      this.shuffleArrays();
+      this.rerollAllObjects();
     }
   }
 
   rerollAllObjects() {
-    this.pastObj = this.reroll(this.pastArray, this.pastObj);
-    this.quirkObj = this.reroll(this.quirkArray, this.quirkObj);
-    this.beliefObj = this.reroll(this.beliefArray, this.beliefObj);
-    this.habitsObj = this.reroll(this.habitsArray, this.habitsObj);
-  }
-
-  private shuffleArrays() {
-    this.pastArray = this.randomNumberService.shuffle(PAST);
-    this.quirkArray = this.randomNumberService.shuffle(QUIRKS);
-    this.beliefArray = this.randomNumberService.shuffle(BELIEFS);
-    this.habitsArray = this.randomNumberService.shuffle(HABITS);
+    this.firstNameObj = this.reroll(this.firstNameArray, this.firstNameObj);
+    this.lastNameObj = this.reroll(this.lastNameArray, this.lastNameObj);
+    this.nickNameObj = this.reroll(this.nickNameArray, this.nickNameObj);
   }
 
   reroll(constArray: string[], displayObj: {descrip: string, currValue: number}): {descrip: string, currValue: number} {
@@ -80,4 +66,10 @@ export class Names implements OnInit, OnChanges {
       currValue: newValue,
     };
   }
+
+    private shuffleArrays() {
+      this.firstNameArray = this.randomNumberService.shuffle(FIRST_NAME);
+      this.lastNameArray = this.randomNumberService.shuffle(LAST_NAME);
+      this.nickNameArray = this.randomNumberService.shuffle(NICKNAME);
+    }
 }

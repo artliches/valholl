@@ -40,7 +40,7 @@
             }
         }
 
-        .clickable {
+        .clickable:not(:first-of-type) {
             margin-left: 0.2rem;
         }
 }

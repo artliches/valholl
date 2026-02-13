@@ -12,6 +12,7 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-auto-rows: max-content;
+        margin-bottom: 0.5rem;
         div.subtitle-section {
             place-self: start center;
             display: flex;
@@ -104,10 +105,14 @@
             grid-template-columns: 1fr;
             grid-auto-rows: min-content;
             grid-template-areas: 
+                "intro"
                 "abilities"
                 "identity"
                 "job"
                 "equip";
+            .intro {
+                grid-area: intro;
+            }
             .abilities {
                 grid-area: abilities;
             }
@@ -245,6 +250,7 @@
                 .zerk-body {
                     grid-template-columns: repeat(2, 1fr);
                     grid-template-areas:
+                        "intro          intro"
                         "abilities      abilities"
                         "identity       job"
                         "equip          equip";
