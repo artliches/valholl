@@ -1,11 +1,10 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { BELIEFS, FIRST_NAME, HABITS, LAST_NAME, NICKNAME, PAST, QUIRKS } from '../../../public/assets/valholl.constants';
+import { BELIEFS, HABITS, PAST, QUIRKS } from '../../../public/assets/valholl.constants';
 import { RandomNumber } from '../services/random-number';
-import { UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-names',
-  imports: [UpperCasePipe],
+  imports: [],
   templateUrl: './names.html',
   styleUrl: './names.scss',
 })
