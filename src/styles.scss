@@ -8,26 +8,8 @@
 }
 
 @font-face {
-    font-family: "AsgardianWars";
-    src: local("AsgardianWars"), url(../public/assets/fonts/AsgardianWars.ttf) format('truetype');
-    font-weight: 100 1000;
-}
-
-@font-face {
-    font-family: "SQUEEG";
-    src: local("SQUEEG"), url(../public/assets/fonts/SQUEEG.ttf) format('truetype');
-    font-weight: 100 1000;
-}
-
-@font-face {
     font-family: "Tagesschrift";
     src: local("Tagesschrift"), url(../public/assets/fonts/Tagesschrift.ttf) format('truetype');
-    font-weight: 100 1000;
-}
-
-@font-face {
-    font-family: "Zamolxis";
-    src: local("Zamolxis"), url(../public/assets/fonts/Zamolxis.ttf) format('truetype');
     font-weight: 100 1000;
 }
 
@@ -84,10 +66,6 @@ body {
     color: white;
     font-family: 'Alegreya';
     font-size: 1.1rem;
-
-    h1 {
-        font-family: 'Zamolxis';
-    }
 
     h2 {
         margin: 0;
@@ -165,6 +143,7 @@ body {
     background-color: black;
     color: colors.$valholl;
     font-weight: bold;
+    font-family: 'Tagesschrift';
     &:hover {
         background-color: colors.$slightly-yellow;
         color: black;
