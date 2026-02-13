@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1771005120591,
+  "timestamp": 1771006189429,
   "index": "/valholl/index.html",
   "assetGroups": [
     {
@@ -13,9 +13,9 @@
       "urls": [
         "/valholl/favicon.ico",
         "/valholl/index.html",
-        "/valholl/main-JVT3UIWJ.js",
+        "/valholl/main-JCHNW6HZ.js",
         "/valholl/manifest.webmanifest",
-        "/valholl/styles-MVP7DLLZ.css"
+        "/valholl/styles-V57DOIN6.css"
       ],
       "patterns": []
     },
@@ -29,12 +29,9 @@
       "urls": [
         "/valholl/assets/fonts/Alegreya.ttf",
         "/valholl/assets/fonts/AncientRunes.ttf",
-        "/valholl/assets/fonts/AsgardianWars.ttf",
         "/valholl/assets/fonts/Poppins-Bold.ttf",
         "/valholl/assets/fonts/Poppins-Regular.ttf",
-        "/valholl/assets/fonts/SQUEEG.ttf",
         "/valholl/assets/fonts/Tagesschrift.ttf",
-        "/valholl/assets/fonts/Zamolxis.ttf",
         "/valholl/assets/icons/Raven.svg",
         "/valholl/assets/icons/Sowilo.svg",
         "/valholl/assets/icons/Valholl.svg",
@@ -51,12 +48,9 @@
         "/valholl/icons/favicon-32x32.png",
         "/valholl/media/Alegreya-WU5UNYNR.ttf",
         "/valholl/media/AncientRunes-KBSVL2DR.ttf",
-        "/valholl/media/AsgardianWars-FGDKQTCT.ttf",
         "/valholl/media/Poppins-Bold-QAA2AGZS.ttf",
         "/valholl/media/Poppins-Regular-JNHL4IDV.ttf",
-        "/valholl/media/SQUEEG-7TKGBRGY.ttf",
-        "/valholl/media/Tagesschrift-BJ6BEKAC.ttf",
-        "/valholl/media/Zamolxis-SJZGQOHX.ttf"
+        "/valholl/media/Tagesschrift-BJ6BEKAC.ttf"
       ],
       "patterns": []
     }
@@ -65,12 +59,9 @@
   "hashTable": {
     "/valholl/assets/fonts/Alegreya.ttf": "92aba166a4ec4f651a40548bd9903e32f91e5d13",
     "/valholl/assets/fonts/AncientRunes.ttf": "bf42dc98cce1d0f9d4ecd40747b95b99168891c5",
-    "/valholl/assets/fonts/AsgardianWars.ttf": "521c689628204eb7f11c32b49c39de0086e87afe",
     "/valholl/assets/fonts/Poppins-Bold.ttf": "875cf0cecd647bcf22e79d633d868c1b1ec98dfa",
     "/valholl/assets/fonts/Poppins-Regular.ttf": "fdd3002e7d814ee47c1c1b8487c72c6bbb3a2d00",
-    "/valholl/assets/fonts/SQUEEG.ttf": "28d4ef0ed8829e5a2155f460605f307ea6ecfeb7",
     "/valholl/assets/fonts/Tagesschrift.ttf": "aa160c977a0586cf93d84c2421ce6e0967632b2b",
-    "/valholl/assets/fonts/Zamolxis.ttf": "9ab539a9802ab7a76b10418f0c6786ff8588d193",
     "/valholl/assets/icons/Raven.svg": "3784a251e844248b2388a109ec4a1816b28253e1",
     "/valholl/assets/icons/Sowilo.svg": "3db139a1a9681b017dc483979f00743ab2183625",
     "/valholl/assets/icons/Valholl.svg": "ac4d599b775fd47499509266b2c1cdbf35d4cfcc",
@@ -86,18 +77,15 @@
     "/valholl/icons/apple-touch-icon.png": "68d0dc8e6ddeafff8976330c032943c28ba05fc4",
     "/valholl/icons/favicon-16x16.png": "b7beca1609f601aedc6be77ff15ebd8409975892",
     "/valholl/icons/favicon-32x32.png": "0ab9aad7bca8bff50655cd724782053e48bdf4e7",
-    "/valholl/index.html": "4acb17a3976f8d00ff6906d274c1d30435052553",
-    "/valholl/main-JVT3UIWJ.js": "70191e5e39eb8e7325cf230264a249eda07231ac",
+    "/valholl/index.html": "24cac4051f7b5a34fbaf2866d286d4d56308d85f",
+    "/valholl/main-JCHNW6HZ.js": "717c302c313769c088c585c75cefe63314bf1c6c",
     "/valholl/manifest.webmanifest": "8c3486121c5f68a5d4c75a4f4d88309fefe8fd93",
     "/valholl/media/Alegreya-WU5UNYNR.ttf": "92aba166a4ec4f651a40548bd9903e32f91e5d13",
     "/valholl/media/AncientRunes-KBSVL2DR.ttf": "bf42dc98cce1d0f9d4ecd40747b95b99168891c5",
-    "/valholl/media/AsgardianWars-FGDKQTCT.ttf": "521c689628204eb7f11c32b49c39de0086e87afe",
     "/valholl/media/Poppins-Bold-QAA2AGZS.ttf": "875cf0cecd647bcf22e79d633d868c1b1ec98dfa",
     "/valholl/media/Poppins-Regular-JNHL4IDV.ttf": "fdd3002e7d814ee47c1c1b8487c72c6bbb3a2d00",
-    "/valholl/media/SQUEEG-7TKGBRGY.ttf": "28d4ef0ed8829e5a2155f460605f307ea6ecfeb7",
     "/valholl/media/Tagesschrift-BJ6BEKAC.ttf": "aa160c977a0586cf93d84c2421ce6e0967632b2b",
-    "/valholl/media/Zamolxis-SJZGQOHX.ttf": "9ab539a9802ab7a76b10418f0c6786ff8588d193",
-    "/valholl/styles-MVP7DLLZ.css": "202d20c7b4a6b44e633942b247f3bd6078119604"
+    "/valholl/styles-V57DOIN6.css": "df0c8e8021b1adedb2295fb1787dd9a83b8c23e5"
   },
   "navigationUrls": [
     {
