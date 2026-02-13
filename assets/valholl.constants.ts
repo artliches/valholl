@@ -182,7 +182,7 @@ export const BELIEFS = [
 export const JOBS = [
     //MIDGARDS BERSERKERS
     {
-        name: `Midgard's Berserkers`,
+        name: `Midgard’s Berserker`,
         descrip: `Berserkrs, hailing from the wild and untamed lands of Midgard, are <strong>legendary warriors</strong> feared across
         the Nine Realms for their unmatched ferocity in battle. 
         <p>They fight with the <strong>strength of the gods</strong> and the <strong>fury of wild beasts</strong>, driven by an inner rage that ignites in the heat of combat.</p>
