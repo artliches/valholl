@@ -15,16 +15,17 @@
 
     <div class="zerk-body-layout">
         <div class="zerk-body">
-            <div class="intro">
-                <app-intro
-                    [triggerReroll]="triggerReroll"
-                ></app-intro>
-            </div>
             <div class="job">
                 <app-job
                     (jobEmitter)="getNewJob($event)"
                     [triggerReroll]="triggerReroll" 
                 ></app-job>
+            </div>
+            <div class="intro">
+                <app-intro
+                    [triggerReroll]="triggerReroll"
+                    [jobName]="currentJob.name"
+                ></app-intro>
             </div>
             <div class="abilities">
                 <app-abilities
@@ -60,6 +61,6 @@
         </div>
         <div>MÖRK BORG is copyright Ockult Örtmästare Games and Stockholm Kartell.</div>
         <div>Web app by <a class="social-link" target="_blank" href="https://artliches.github.io/dungeons-coding/">{{'@codeLiches'}}</a></div>
-        <div class="dark-font">v1.0: <em>by blood & deed be known</em></div>
+        <div class="dark-font">v1.1: <em>by blood & deed be known</em></div>
     </div>
 </span>

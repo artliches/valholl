@@ -15,6 +15,7 @@ export class Intro implements OnInit, OnChanges {
   ) {}
 
   @Input() triggerReroll: boolean = false;
+  @Input() jobName: string = '';
 
   firstNameArray: string[] = [];
   firstNameObj = {
@@ -37,12 +38,17 @@ export class Intro implements OnInit, OnChanges {
   ngOnInit(): void {
       this.shuffleArrays();
       this.rerollAllObjects();
+      this.removeRealm();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes && changes['triggerReroll'] && changes['triggerReroll'].previousValue !== undefined) {
       this.shuffleArrays();
       this.rerollAllObjects();
+    }
+
+    if (changes && changes['jobName'] && changes['jobName'].previousValue !== undefined) {
+      this.removeRealm();
     }
   }
 
@@ -67,9 +73,16 @@ export class Intro implements OnInit, OnChanges {
     };
   }
 
-    private shuffleArrays() {
-      this.firstNameArray = this.randomNumberService.shuffle(FIRST_NAME);
-      this.lastNameArray = this.randomNumberService.shuffle(LAST_NAME);
-      this.nickNameArray = this.randomNumberService.shuffle(NICKNAME);
+  private shuffleArrays() {
+    this.firstNameArray = this.randomNumberService.shuffle(FIRST_NAME);
+    this.lastNameArray = this.randomNumberService.shuffle(LAST_NAME);
+    this.nickNameArray = this.randomNumberService.shuffle(NICKNAME);
+  }
+
+  private removeRealm() {
+    if (this.jobName.includes("’")) {
+      const spaceIndex = this.jobName.indexOf(' ');
+      this.jobName = this.jobName.slice(spaceIndex + 1);
     }
+  }
 }

@@ -11,6 +11,8 @@ div.intro-layout {
         h2 {
             display: flex;
             align-items: center;
+            justify-content: center;
+            flex-flow: wrap;
             gap: 0.3rem;
         }
     }
