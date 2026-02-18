@@ -66,6 +66,8 @@ export class App implements OnInit, AfterViewChecked {
 
     window.parent.postMessage({
       height: this.currentHeight,
+      rect: this.elementRef.nativeElement.getBoundingClientRect(),
+      top: this.elementRef.nativeElement.getBoundingClientRect().top,
       bottom: this.elementRef.nativeElement.getBoundingClientRect().bottom
     }, "*");
   }
