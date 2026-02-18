@@ -6,7 +6,7 @@
     place-items: start center;
 
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: repeat(3, min-content);
 
     .zerk-header {
         display: grid;

@@ -60,9 +60,10 @@ export class App implements OnInit, AfterViewChecked {
   }
 
   private getCurrentHeight() {
-    const sHeight = document.getElementById('zerk-layout')?.scrollHeight;
+    const sHeight = document.getElementById('zerk-layout')?.offsetHeight;
     this.currentHeight = sHeight ? sHeight : this.currentHeight;
 
+    console.log(this.currentHeight);
     window.parent.postMessage(this.currentHeight, "*");
   }
 }
