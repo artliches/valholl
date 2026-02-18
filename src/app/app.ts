@@ -41,8 +41,8 @@ export class App implements OnInit, AfterViewChecked {
   }
 
   ngAfterViewChecked(): void {
-      window.postMessage('hello from valholl', '*');
-      this.getCurrentHeight();
+      if (window.self !== window.top) this.getCurrentHeight(); 
+      // this.getCurrentHeight();
   }
 
   getNewJob(currJob: JobObj) {
@@ -61,14 +61,12 @@ export class App implements OnInit, AfterViewChecked {
   }
 
   private getCurrentHeight() {
-    const sHeight = document.getElementById('zerk-layout')?.scrollHeight;
-    this.currentHeight = sHeight ? sHeight : this.currentHeight;
+    const zerkElement = document.getElementById('zerk-layout');
+    zerkElement!.style.height = 'auto';
+    this.currentHeight = zerkElement?.scrollHeight ? zerkElement.scrollHeight : this.currentHeight;
 
     window.parent.postMessage({
       height: this.currentHeight,
-      rect: this.elementRef.nativeElement.getBoundingClientRect(),
-      top: this.elementRef.nativeElement.getBoundingClientRect().top,
-      bottom: this.elementRef.nativeElement.getBoundingClientRect().bottom
     }, "*");
   }
 }
