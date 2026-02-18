@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1771431033600,
+  "timestamp": 1771435437316,
   "index": "/valholl/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/valholl/favicon.ico",
         "/valholl/index.html",
-        "/valholl/main-K4GVOWLB.js",
+        "/valholl/main-26WS7VZP.js",
         "/valholl/manifest.webmanifest",
         "/valholl/styles-V57DOIN6.css"
       ],
@@ -77,8 +77,8 @@
     "/valholl/icons/apple-touch-icon.png": "68d0dc8e6ddeafff8976330c032943c28ba05fc4",
     "/valholl/icons/favicon-16x16.png": "b7beca1609f601aedc6be77ff15ebd8409975892",
     "/valholl/icons/favicon-32x32.png": "0ab9aad7bca8bff50655cd724782053e48bdf4e7",
-    "/valholl/index.html": "167ca811227a0912fa4de0d6dfc5b04a484068d4",
-    "/valholl/main-K4GVOWLB.js": "1ba72142ce633ecbdaa96dc170d6508f8d0a2752",
+    "/valholl/index.html": "1913340df4e74a23c0640f7f822885c4c9013711",
+    "/valholl/main-26WS7VZP.js": "311fa7d76f541b15ba6a175c8830c10058123dd3",
     "/valholl/manifest.webmanifest": "8c3486121c5f68a5d4c75a4f4d88309fefe8fd93",
     "/valholl/media/Alegreya-WU5UNYNR.ttf": "92aba166a4ec4f651a40548bd9903e32f91e5d13",
     "/valholl/media/AncientRunes-KBSVL2DR.ttf": "bf42dc98cce1d0f9d4ecd40747b95b99168891c5",
