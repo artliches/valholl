@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { AfterViewChecked, Component, OnInit } from '@angular/core';
 import { Names } from "./names/names";
 import { Abilities } from "./abilities/abilities";
 import { Job } from "./job/job";
@@ -13,7 +13,7 @@ import { Intro } from './intro/intro';
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App implements OnInit {
+export class App implements OnInit, AfterViewChecked {
   constructor (
     private randomNumberService: RandomNumber
   ) {}
@@ -32,9 +32,15 @@ export class App implements OnInit {
 
   rerollText: string = '';
 
+  currentHeight: number = 0;
+
   ngOnInit(): void {
       this.rerollTexts = this.randomNumberService.shuffle(this.rerollTexts);
       this.rerollText = this.rerollTexts[0];
+  }
+
+  ngAfterViewChecked(): void {
+      this.getCurrentHeight();
   }
 
   getNewJob(currJob: JobObj) {
@@ -50,5 +56,12 @@ export class App implements OnInit {
 
   print() {
     window.print();
+  }
+
+  private getCurrentHeight() {
+    const sHeight = document.getElementById('zerk-layout')?.scrollHeight;
+    this.currentHeight = sHeight ? sHeight : this.currentHeight;
+
+    window.postMessage(this.currentHeight);
   }
 }
