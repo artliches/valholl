@@ -63,6 +63,6 @@ export class App implements OnInit, AfterViewChecked {
     const sHeight = document.getElementById('zerk-layout')?.scrollHeight;
     this.currentHeight = sHeight ? sHeight : this.currentHeight;
 
-    window.postMessage(this.currentHeight, "*");
+    window.parent.postMessage(this.currentHeight, "*");
   }
 }
