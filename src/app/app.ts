@@ -37,10 +37,10 @@ export class App implements OnInit, AfterViewChecked {
   ngOnInit(): void {
       this.rerollTexts = this.randomNumberService.shuffle(this.rerollTexts);
       this.rerollText = this.rerollTexts[0];
-      window.postMessage('hello from valholl');
   }
 
   ngAfterViewChecked(): void {
+      window.postMessage('hello from valholl', '*');
       this.getCurrentHeight();
   }
 
