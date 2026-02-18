@@ -1,4 +1,4 @@
-import { AfterViewChecked, Component, OnInit } from '@angular/core';
+import { AfterViewChecked, Component, ElementRef, OnInit } from '@angular/core';
 import { Names } from "./names/names";
 import { Abilities } from "./abilities/abilities";
 import { Job } from "./job/job";
@@ -15,6 +15,7 @@ import { Intro } from './intro/intro';
 })
 export class App implements OnInit, AfterViewChecked {
   constructor (
+    private elementRef: ElementRef,
     private randomNumberService: RandomNumber
   ) {}
   triggerReroll: boolean = false;
@@ -63,7 +64,9 @@ export class App implements OnInit, AfterViewChecked {
     const sHeight = document.getElementById('zerk-layout')?.scrollHeight;
     this.currentHeight = sHeight ? sHeight : this.currentHeight;
 
-    console.log(this.currentHeight);
-    window.parent.postMessage(this.currentHeight, "*");
+    window.parent.postMessage({
+      height: this.currentHeight,
+      bottom: this.elementRef.nativeElement.getBoundingClientRect().bottom
+    }, "*");
   }
 }
